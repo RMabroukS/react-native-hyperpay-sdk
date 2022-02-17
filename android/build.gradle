@@ -21,7 +21,7 @@ def safeExtGet(prop, fallback) {
 android {
     compileSdkVersion safeExtGet('HyperPay_compileSdkVersion', 29)
     defaultConfig {
-        minSdkVersion safeExtGet('HyperPay_minSdkVersion', 16)
+        minSdkVersion safeExtGet('HyperPay_minSdkVersion', 21)
         targetSdkVersion safeExtGet('HyperPay_targetSdkVersion', 29)
         versionCode 1
         versionName "1.0"
@@ -54,6 +54,9 @@ repositories {
 }
 
 dependencies {
-    //noinspection GradleDynamicVersion
-    implementation "com.facebook.react:react-native:+"  // From node_modules
+  implementation files('oppwa.mobile-2.44.0/oppwa.mobile-3.14.0-release.aar')
+
+  //noinspection GradleDynamicVersion
+  implementation "com.facebook.react:react-native:+"  // From node_modules
+
 }

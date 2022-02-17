@@ -7,7 +7,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
-
+import com.oppwa.mobile.connect.provider.Transaction;
 @ReactModule(name = HyperPayModule.NAME)
 public class HyperPayModule extends ReactContextBaseJavaModule {
     public static final String NAME = "HyperPay";
