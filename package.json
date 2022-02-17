@@ -15,7 +15,7 @@
     "cpp",
     "react-native-hyper-pay.podspec",
     "OPPWAMobile-Resources.bundle",
-    "OPPWAMobile-Resources.bundle",
+    "OPPWAMobile.framework",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
