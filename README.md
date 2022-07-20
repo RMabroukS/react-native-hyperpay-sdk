@@ -1,17 +1,17 @@
-# react-native-hyper-pay
+# react-native-hyperpay
 
 hyperpay
 
 ## Installation
 
 ```sh
-npm install react-native-hyper-pay
+npm install react-native-hyperpay
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-hyper-pay";
+import { multiply } from "react-native-hyperpay";
 
 // ...
 

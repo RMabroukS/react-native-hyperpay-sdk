@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-hyper-pay": ["./src/index"]
+      "react-native-hyperpay": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

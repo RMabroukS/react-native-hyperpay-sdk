@@ -6,14 +6,15 @@
 @implementation HyperPay
 
 OPPPaymentProvider *provider;
-
-
-
+NSString *shopperResultURL = @"";
 
 RCT_EXPORT_MODULE(HyperPay)
 
 -(instancetype)init
 {
+  
+
+    
     self = [super init];
     if (self) {
       #ifdef DEBUG
@@ -34,7 +35,14 @@ RCT_EXPORT_MODULE(HyperPay)
  React Native functions
  */
 
-RCT_EXPORT_METHOD(createTransaction: (NSDictionary*)options resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setConfig: (NSDictionary*)options) {
+    shopperResultURL=[options valueForKey:@"shopperResultURL"];
+    return options;
+}
+
+
+RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
   NSError * _Nullable error;
 
     OPPCardPaymentParams *params = [OPPCardPaymentParams cardPaymentParamsWithCheckoutID:[options valueForKey:@"checkoutID"]
@@ -51,7 +59,7 @@ RCT_EXPORT_METHOD(createTransaction: (NSDictionary*)options resolver:(RCTPromise
       reject(@"createTransaction",error.localizedDescription, error);
 
     } else {
-       params.shopperResultURL =[options valueForKey:@"shopperResultURL"];
+       params.shopperResultURL =shopperResultURL;
        
       OPPTransaction *transaction = [OPPTransaction transactionWithPaymentParams:params];
 
@@ -80,15 +88,6 @@ RCT_EXPORT_METHOD(createTransaction: (NSDictionary*)options resolver:(RCTPromise
     }
 }
 
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
-{
-  NSNumber *result = @([a floatValue] * [b floatValue]);
-
-  resolve(result);
-}
 
 @end
 

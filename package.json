@@ -1,6 +1,6 @@
 {
-  "name": "react-native-hyper-pay",
-  "version": "0.1.0",
+  "name": "react-native-hyperpay-sdk",
+  "version": "0.6.0",
   "description": "hyperpay",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-hyper-pay.podspec",
+    "react-native-hyperpay.podspec",
     "OPPWAMobile-Resources.bundle",
     "OPPWAMobile.framework",
     "!lib/typescript/example",
@@ -27,7 +27,6 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
@@ -38,13 +37,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/RMabroukS/react-native-hyper-pay",
+  "repository": "https://github.com/RMabroukS/react-native-hyperpay",
   "author": "RMabroukS <r.mabrouk.sayed@gmail.com> (https://github.com/RMabroukS)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RMabroukS/react-native-hyper-pay/issues"
+    "url": "https://github.com/RMabroukS/react-native-hyperpay/issues"
   },
-  "homepage": "https://github.com/RMabroukS/react-native-hyper-pay#readme",
+  "homepage": "https://github.com/RMabroukS/react-native-hyperpay#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

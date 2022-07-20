@@ -1,6 +1,6 @@
 {
-  "name": "react-native-hyper-pay-example",
-  "description": "Example app for react-native-hyper-pay",
+  "name": "react-native-hyperpay-example",
+  "description": "Example app for react-native-hyperpay",
   "version": "0.0.1",
   "private": true,
   "scripts": {
