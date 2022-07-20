@@ -1,13 +1,14 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-hyperpay';
+import { applePay } from 'react-native-hyperpay';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
+  const [result, setResult] = React.useState<string>("");
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    applePay("CheckoutId").then((res: any) => {
+      setResult(res)
+    })
   }, []);
 
   return (

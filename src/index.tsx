@@ -17,15 +17,16 @@ const HyperPay = NativeModules.HyperPay
     }
   );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return HyperPay.multiply(a, b);
-}
 
 export function createPaymentTransaction(params: CreateTransactionParams): Promise<CreateTransactionResponseType> {
   return HyperPay.createPaymentTransaction(params);
 }
+
 export function setConfig(params: ConfigType): ConfigType {
   return HyperPay.setConfig(params);
 }
 
 
+export function applePay(checkoutID: string): Promise<any> {
+  return HyperPay.applePay(checkoutID);
+}
