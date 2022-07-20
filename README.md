@@ -1,21 +1,42 @@
-# react-native-hyperpay
+# react-native-hyperpay-sdk
 
 hyperpay
 
 ## Installation
 
 ```sh
-npm install react-native-hyperpay
+npm i react-native-hyperpay-sdk
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-hyperpay";
+import { setConfig } from "react-native-hyperpay-sdk";
 
+// the firt step , set default configiration 
+// 1- shopperResultURL to redirect to this url after the payment completed
+// 2- select your country code from list
+// 3- merchantIdentifier is for apply pay only 
+setConfig({
+shopperResultURL:"shopperResultURL",
+countryCode:"SA",
+merchantIdentifier:"merchantIdentifier"
+})
 // ...
+// to pay with apple 
+const result = await applePay("CheckoutId")
 
-const result = await multiply(3, 7);
+// to pay with any brand
+ const result=await createPaymentTransaction(
+     { paymentBrand: "VISA",
+     holderName: "Test Test",
+     cardNumber: '4111111111111111',
+     expiryYear: '2027',
+     expiryMonth: '12',
+     cvv: '123',
+     checkoutID: `${res.data?.checkout_id}`,
+     shopperResultURL: "[YOUR_APP_IDENTIFIER]://[URL_SCHEMES]" 
+      })
 ```
 
 ## Contributing
