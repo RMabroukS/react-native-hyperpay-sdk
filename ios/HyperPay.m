@@ -9,7 +9,7 @@ OPPPaymentProvider *provider;
 NSString *shopperResultURL = @"";
 NSString *merchantIdentifier = @"";
 NSString *countryCode = @"";
-
+NSString *mode=@"Test";
 
 RCT_EXPORT_MODULE(HyperPay)
 
@@ -20,13 +20,12 @@ RCT_EXPORT_MODULE(HyperPay)
     
     self = [super init];
     if (self) {
-      #ifdef DEBUG
+//      #ifdef DEBUG
+        if ([mode isEqual:@"Test"])
         provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeTest];
-     #else
+        else
         provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeLive];
-     #endif
     }
-    
     return self;
 }
 
@@ -45,6 +44,8 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setConfig: (NSDictionary*)options) {
     shopperResultURL=[options valueForKey:@"merchantIdentifier"];
     if ([options valueForKey:@"countryCode"])
        countryCode=[options valueForKey:@"countryCode"];
+    if ([options valueForKey:@"mode"])
+       mode=[options valueForKey:@"mode"];
     return options;
 }
 
