@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.vendored_frameworks = "OPPWAMobile.framework"
   s.public_header_files = "OPPWAMobile.framework/Versions/2.47.0/Headers/*.h"
-  s.resource_bundle = { 'OPPWAMobile-Resources' => '*' }
+  s.resource_bundle = { 'OPPWAMobile-Resources' => 'OPPWAMobile.framework/Resources/**' }
 end
