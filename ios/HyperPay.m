@@ -9,19 +9,16 @@ OPPPaymentProvider *provider;
 NSString *shopperResultURL = @"";
 NSString *merchantIdentifier = @"";
 NSString *countryCode = @"";
-NSString *mode=@"Test";
+NSString *mode=@"TestMode";
 
 RCT_EXPORT_MODULE(HyperPay)
 
 -(instancetype)init
 {
   
-
-    
     self = [super init];
     if (self) {
-//      #ifdef DEBUG
-        if ([mode isEqual:@"Test"])
+        if ([mode isEqual:@"TestMode"])
         provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeTest];
         else
         provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeLive];

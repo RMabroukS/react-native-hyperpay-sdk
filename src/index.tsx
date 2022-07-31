@@ -26,7 +26,13 @@ export function setConfig(params: ConfigType): ConfigType {
   return HyperPay.setConfig(params);
 }
 
-
 export function applePay(checkoutID: string): Promise<any> {
   return HyperPay.applePay(checkoutID);
 }
+
+const hyperpay = {
+  applePay,
+  setConfig,
+  createPaymentTransaction
+}
+export default hyperpay
