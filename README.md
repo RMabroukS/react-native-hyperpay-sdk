@@ -39,7 +39,20 @@ const result = await hyperPay.applePay("CheckoutId")
      checkoutID: `${res.data?.checkout_id}`,
      shopperResultURL: "[YOUR_APP_IDENTIFIER]://[URL_SCHEMES]" 
       })
+      
+
+      // get payment status
+ const result=await hyperPay.getPaymentStatus("000.000.000")
+//  result={
+//             "code": "000.000.000",
+//             "description": "Transaction succeeded",
+//             "status": "successfully"
+// }
 ```
+
+```
+
+
 
 ## Contributing
 
