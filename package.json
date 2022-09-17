@@ -1,6 +1,6 @@
 {
   "name": "react-native-hyperpay-sdk",
-  "version": "0.16.0",
+  "version": "0.18.0",
   "description": "hyperpay",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -14,7 +14,8 @@
     "ios",
     "cpp",
     "react-native-hyperpay-sdk.podspec",
-    "OPPWAMobile.framework",
+    "ipworks3ds_sdk.xcframework",
+    "OPPWAMobile.xcframework",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",

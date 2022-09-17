@@ -14,7 +14,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm}"
   s.dependency "React-Core"
   s.requires_arc = true
-  s.vendored_frameworks = "OPPWAMobile.xcframework","ipworks3ds_sdk.xcframework"
-  # s.public_header_files = "OPPWAMobile.framework/Versions/2.47.0/Headers/*.h"
-  # s.resource_bundle = { 'OPPWAMobile-Resources' => 'OPPWAMobile.framework/Resources/**' }
+  s.vendored_frameworks = "ios/OPPWAMobile.xcframework","ios/ipworks3ds_sdk.xcframework"
 end
