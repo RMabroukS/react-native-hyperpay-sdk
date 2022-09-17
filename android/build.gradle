@@ -54,7 +54,7 @@ repositories {
 }
 
 dependencies {
-  implementation files('oppwa.mobile-2.44.0/oppwa.mobile-3.14.0-release.aar')
+  implementation fileTree(include: ["*.aar"], dir: "libs")
 
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"  // From node_modules
