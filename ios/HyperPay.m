@@ -18,10 +18,7 @@ RCT_EXPORT_MODULE(HyperPay)
   
     self = [super init];
     if (self) {
-        if ([mode isEqual:@"TestMode"])
         provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeTest];
-        else
-        provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeLive];
     }
     return self;
 }
@@ -41,8 +38,10 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setConfig: (NSDictionary*)options) {
     shopperResultURL=[options valueForKey:@"merchantIdentifier"];
     if ([options valueForKey:@"countryCode"])
        countryCode=[options valueForKey:@"countryCode"];
-    if ([options valueForKey:@"mode"])
-       mode=[options valueForKey:@"mode"];
+    if ([[options valueForKey:@"mode"] isEqual:@"LiveMode"])
+      provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeLive];
+    else
+      provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeTest];
     return options;
 }
 
