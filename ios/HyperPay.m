@@ -35,7 +35,7 @@ RCT_EXPORT_MODULE(HyperPay)
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setConfig: (NSDictionary*)options) {
     shopperResultURL=[options valueForKey:@"shopperResultURL"];
     if ([options valueForKey:@"merchantIdentifier"])
-    shopperResultURL=[options valueForKey:@"merchantIdentifier"];
+    merchantIdentifier=[options valueForKey:@"merchantIdentifier"];
     if ([options valueForKey:@"countryCode"])
        countryCode=[options valueForKey:@"countryCode"];
     if ([[options valueForKey:@"mode"] isEqual:@"LiveMode"])
@@ -99,12 +99,10 @@ RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBloc
   OPPPaymentProvider *provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeTest];
   OPPCheckoutSettings *checkoutSettings = [[OPPCheckoutSettings alloc] init];
   PKPaymentRequest *paymentRequest = [OPPPaymentProvider paymentRequestWithMerchantIdentifier:merchantIdentifier countryCode:countryCode];
-//   paymentRequest.supportedNetworks=[@"mada",@"visa",@"masterCard"];
-    paymentRequest.supportedNetworks = @ [PKPaymentNetworkMada,PKPaymentNetworkVisa,PKPaymentNetworkMasterCard];
-                   
-//   paymentRequest.supportedCountries
-   checkoutSettings.applePayPaymentRequest = paymentRequest;
-   OPPCheckoutProvider *checkoutProvider = [OPPCheckoutProvider checkoutProviderWithPaymentProvider:provider
+  paymentRequest.supportedNetworks = @ [PKPaymentNetworkMada,PKPaymentNetworkVisa,PKPaymentNetworkMasterCard];
+  checkoutSettings.shopperResultURL=shopperResultURL;
+  checkoutSettings.applePayPaymentRequest = paymentRequest;
+  OPPCheckoutProvider *checkoutProvider = [OPPCheckoutProvider checkoutProviderWithPaymentProvider:provider
                                                                                         checkoutID:checkoutID
                                                                                           settings:checkoutSettings];
 
@@ -124,7 +122,7 @@ RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBloc
               // Shopper was redirected to the issuer web page.
               // Request payment status when shopper returns to the app using transaction.resourcePath or just checkout id.
           } else {
-            reject(@"applePay",@"Request payment status for the synchronous transaction from your server using transactionPath.resourcePath or just checkout id..",error);
+              resolve(transaction.resourcePath);
               // Request payment status for the synchronous transaction from your server using transactionPath.resourcePath or just checkout id.
           }
       }
