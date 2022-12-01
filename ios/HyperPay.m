@@ -96,7 +96,6 @@ RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCT
 
 RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject){
   
-  OPPPaymentProvider *provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeTest];
   OPPCheckoutSettings *checkoutSettings = [[OPPCheckoutSettings alloc] init];
   PKPaymentRequest *paymentRequest = [OPPPaymentProvider paymentRequestWithMerchantIdentifier:merchantIdentifier countryCode:countryCode];
   paymentRequest.supportedNetworks = @ [PKPaymentNetworkMada,PKPaymentNetworkVisa,PKPaymentNetworkMasterCard];
