@@ -1,7 +1,6 @@
 import type { CountryCodes } from './CountryCodes';
 import { PaymentStatus } from './PaymentStatus';
 import type { SupportedNetworks } from './SupportedNetworks';
-
 export type CreateTransactionResponseType = {
     status: 'pending' | 'rejected' | 'risk' | 'chargeback' | 'declines' | 'successfully',
     checkoutId: string,
@@ -38,7 +37,14 @@ export type CreateTransactionParams = {
     checkoutID: string,
     shopperResultURL?: string,
 }
-
+export type ApplePayCallback = {
+    /** Shopper was redirected to the issuer web page.
+     Request payment status when shopper returns to the app using transaction.resourcePath or just checkout id. 
+     */
+    redirectURL?: string;
+    /**  Request payment status for the synchronous transaction from your server using transactionPath.resourcePath or just checkout id.*/
+    resourcePath?: string;
+}
 export default class HyperPay {
     /**
        * @param  {string} shopperResultURL
@@ -53,9 +59,10 @@ export default class HyperPay {
 
     /**
        * @param  {string} checkoutID
-       * @returns ```Promise<string>```
+       * @returns ```Promise<{ redirectURL?: string,
+        resourcePath?: string}>```
        */
-    static applePay(checkoutID: string): Promise<string>;
+    static applePay(checkoutID: string): Promise<ApplePayCallback>;
 
     /**
      * @param  {string} paymentBrand

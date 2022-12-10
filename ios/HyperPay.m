@@ -10,7 +10,7 @@ NSString *shopperResultURL = @"";
 NSString *merchantIdentifier = @"";
 NSString *countryCode = @"";
 NSString *mode=@"TestMode";
-
+NSArray *supportedNetworks;
 RCT_EXPORT_MODULE(HyperPay)
 
 -(instancetype)init
@@ -32,12 +32,14 @@ RCT_EXPORT_MODULE(HyperPay)
  */
 
 
-RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setConfig: (NSDictionary*)options) {
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setup: (NSDictionary*)options) {
     shopperResultURL=[options valueForKey:@"shopperResultURL"];
     if ([options valueForKey:@"merchantIdentifier"])
     merchantIdentifier=[options valueForKey:@"merchantIdentifier"];
     if ([options valueForKey:@"countryCode"])
        countryCode=[options valueForKey:@"countryCode"];
+    if ([options valueForKey:@"supportedNetworks"])
+        supportedNetworks=[options valueForKey:@"supportedNetworks"];
     if ([[options valueForKey:@"mode"] isEqual:@"LiveMode"])
       provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeLive];
     else
@@ -98,7 +100,7 @@ RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBloc
   
   OPPCheckoutSettings *checkoutSettings = [[OPPCheckoutSettings alloc] init];
   PKPaymentRequest *paymentRequest = [OPPPaymentProvider paymentRequestWithMerchantIdentifier:merchantIdentifier countryCode:countryCode];
-  paymentRequest.supportedNetworks = @ [PKPaymentNetworkMada,PKPaymentNetworkVisa,PKPaymentNetworkMasterCard];
+  paymentRequest.supportedNetworks = supportedNetworks;
   checkoutSettings.shopperResultURL=shopperResultURL;
   checkoutSettings.applePayPaymentRequest = paymentRequest;
   OPPCheckoutProvider *checkoutProvider = [OPPCheckoutProvider checkoutProviderWithPaymentProvider:provider
@@ -115,16 +117,7 @@ RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBloc
 //          reject(@"applePay",checkoutID,error);
         reject(@"applePay",error.localizedDescription, error);
           // See code attribute (OPPErrorCode) and NSLocalizedDescription to identify the reason of failure.
-      } else {
-          if (transaction.redirectURL) {
-             resolve(transaction.redirectURL);
-              // Shopper was redirected to the issuer web page.
-              // Request payment status when shopper returns to the app using transaction.resourcePath or just checkout id.
-          } else {
-              resolve(transaction.resourcePath);
-              // Request payment status for the synchronous transaction from your server using transactionPath.resourcePath or just checkout id.
-          }
-      }
+      } else {resolve(transaction); }
   } cancelHandler:^{
        reject(@"applePay",@"Executed if the shopper closes the payment page prematurely.",NULL);
       // Executed if the shopper closes the payment page prematurely.

@@ -5,12 +5,12 @@ import {
 import type {
   CreateTransactionResponseType,
   CreateTransactionParams,
-  Config
+  Config,
 } from '../lib/typescript'
 import {
   getPaymentStatus
 } from './paymentStatus'
-
+import type { ApplePayCallback } from '../'
 const LINKING_ERROR =
   `The package 'react-native-hyperpay-sdk' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
@@ -36,7 +36,8 @@ export function createPaymentTransaction(params: CreateTransactionParams):
   return HyperPaySDK.createPaymentTransaction(params);
 }
 
-export function applePay(checkoutID: string): Promise<any> {
+
+export function applePay(checkoutID: string): Promise<ApplePayCallback> {
   return HyperPaySDK.applePay(checkoutID);
 }
 
@@ -46,5 +47,6 @@ const Hyperpay = {
   createPaymentTransaction,
   getPaymentStatus
 }
+
 
 export default Hyperpay
