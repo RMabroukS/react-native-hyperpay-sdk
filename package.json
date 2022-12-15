@@ -1,6 +1,6 @@
 {
   "name": "react-native-hyperpay-sdk",
-  "version": "0.22.0",
+  "version": "0.24.0",
   "description": "hyperpay",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -35,7 +35,12 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "react-native-hyperpay-sdk",
+    "hyperpay",
+    "payment",
+    "apple-pay",
+    "react-native-hyperpay"
   ],
   "repository": "https://github.com/RMabroukS/react-native-hyperpay-sdk",
   "author": "RMabroukS <r.mabrouk.sayed@gmail.com> (https://github.com/RMabroukS)",
