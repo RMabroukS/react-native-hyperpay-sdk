@@ -117,7 +117,10 @@ RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBloc
 //          reject(@"applePay",checkoutID,error);
         reject(@"applePay",error.localizedDescription, error);
           // See code attribute (OPPErrorCode) and NSLocalizedDescription to identify the reason of failure.
-      } else {resolve(transaction); }
+      } else {
+          NSDictionary *response = @{@"resourcePath": transaction.resourcePath,@"redirectURL": transaction.redirectURL};
+          resolve(response);
+      }
   } cancelHandler:^{
        reject(@"applePay",@"Executed if the shopper closes the payment page prematurely.",NULL);
       // Executed if the shopper closes the payment page prematurely.
