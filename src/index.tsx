@@ -1,7 +1,3 @@
-import {
-  NativeModules,
-  Platform
-} from 'react-native';
 import type {
   CreateTransactionResponseType,
   CreateTransactionParams,
@@ -11,22 +7,8 @@ import {
   getPaymentStatus
 } from './paymentStatus'
 import type { ApplePayCallback } from '../'
-const LINKING_ERROR =
-  `The package 'react-native-hyperpay-sdk' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo managed workflow\n';
+import { HyperPaySDK, eventEmitter } from './utils';
 
-const HyperPaySDK = NativeModules.HyperPay
-  ? NativeModules.HyperPay
-  : new Proxy(
-    {},
-    {
-      get() {
-        throw new Error(LINKING_ERROR);
-      },
-    }
-  );
 export function init(params: Config): Config {
   return HyperPaySDK.setup(params);
 }
@@ -37,7 +19,17 @@ export function createPaymentTransaction(params: CreateTransactionParams):
 }
 
 
-export function applePay(checkoutID: string): Promise<ApplePayCallback> {
+
+export function applePay(checkoutID: string,
+  onProgress?: (isProgress: boolean) => void): Promise<ApplePayCallback> {
+
+  if (onProgress) {
+    const _event = eventEmitter.addListener('onProgress', (isLoading: boolean) => {
+      onProgress(isLoading)
+      if (!isLoading) _event.remove()
+    });
+  }
+
   return HyperPaySDK.applePay(checkoutID);
 }
 
@@ -45,8 +37,11 @@ const Hyperpay = {
   init,
   applePay,
   createPaymentTransaction,
-  getPaymentStatus
+  getPaymentStatus,
 }
+export {
+  useTransactionLoading
+} from './hooks'
 
 
 export default Hyperpay

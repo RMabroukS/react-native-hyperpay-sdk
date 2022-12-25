@@ -24,7 +24,7 @@ RCT_EXPORT_MODULE(HyperPay)
 }
 
 - (NSArray<NSString *> *)supportedEvents {
-    return @[@"onTransactionComplete"];
+    return @[@"onTransactionComplete",@"onProgress"];
 }
 
 /**
@@ -59,7 +59,7 @@ RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCT
                                                                           expiryYear:[options valueForKey:@"expiryYear"]
                                                                                  CVV:[options valueForKey:@"cvv"]
                                                                                error:&error];
- 
+
     if (error) {
       NSLog(@"%s", "error");
       reject(@"createTransaction",error.localizedDescription, error);
@@ -109,7 +109,7 @@ RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBloc
 
   [checkoutProvider presentCheckoutWithPaymentBrand:@"APPLEPAY"
     loadingHandler:^(BOOL inProgress) {
-    
+      [self sendEventWithName:@"onProgress" body:@(inProgress)];
       // Executed whenever SDK sends request to the server or receives the response.
       // You can start or stop loading animation based on inProgress parameter.
   } completionHandler:^(OPPTransaction * _Nullable transaction, NSError * _Nullable error) {
@@ -118,8 +118,10 @@ RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBloc
         reject(@"applePay",error.localizedDescription, error);
           // See code attribute (OPPErrorCode) and NSLocalizedDescription to identify the reason of failure.
       } else {
-          NSDictionary *response = @{@"resourcePath": transaction.resourcePath,@"redirectURL": transaction.redirectURL};
-          resolve(response);
+          if (transaction.redirectURL)
+              resolve(@{@"redirectURL": transaction.redirectURL.absoluteString});
+          else
+              resolve(@{@"resourcePath": transaction.resourcePath});
       }
   } cancelHandler:^{
        reject(@"applePay",@"Executed if the shopper closes the payment page prematurely.",NULL);

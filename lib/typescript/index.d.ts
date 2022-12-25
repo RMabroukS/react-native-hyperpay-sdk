@@ -59,10 +59,11 @@ export default class HyperPay {
 
     /**
        * @param  {string} checkoutID
+       * @param  {(isProgress: boolean) => void} onProgress
        * @returns ```Promise<{ redirectURL?: string,
         resourcePath?: string}>```
        */
-    static applePay(checkoutID: string): Promise<ApplePayCallback>;
+    static applePay(checkoutID: string, onProgress?: (isProgress: boolean) => void): Promise<ApplePayCallback>;
 
     /**
      * @param  {string} paymentBrand
@@ -81,6 +82,8 @@ export default class HyperPay {
 
     static createPaymentTransaction(params: CreateTransactionParams): Promise<CreateTransactionResponseType>;
 
+
+
     /**
        * @param  {string} statusCode
        * @returns```{ code: string, description: string,   status: 'successfully' | 
@@ -90,4 +93,6 @@ export default class HyperPay {
     static getPaymentStatus(status: string): PaymentStatus
 
 }
+export type { PaymentStatus }
 
+export declare function useTransactionLoading(): void
