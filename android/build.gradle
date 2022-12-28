@@ -19,7 +19,7 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('HyperPay_compileSdkVersion', 29)
+    compileSdkVersion safeExtGet('HyperPay_compileSdkVersion', 31)
     defaultConfig {
         minSdkVersion safeExtGet('HyperPay_minSdkVersion', 21)
         targetSdkVersion safeExtGet('HyperPay_targetSdkVersion', 29)
@@ -54,8 +54,19 @@ repositories {
 }
 
 dependencies {
-  implementation fileTree(include: ["*.aar"], dir: "libs")
 
+  if (project.gradle.startParameter.taskNames.any { it.toLowerCase().contains('release') }) {
+    compileOnly files('libs/ipworks3ds_sdk_deploy.aar')
+  }
+  else {
+    compileOnly files('libs/ipworks3ds_sdk.aar')
+  }
+  compileOnly files('libs/oppwa.mobile-4.5.0-release.aar')
+  implementation "androidx.appcompat:appcompat:1.4.2"
+  implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+  implementation "androidx.browser:browser:1.4.0"
+  implementation "androidx.fragment:fragment:1.5.5"
+  implementation "com.google.android.material:material:1.6.1"
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"  // From node_modules
 
