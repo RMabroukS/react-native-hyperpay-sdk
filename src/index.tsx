@@ -13,8 +13,15 @@ export function init(params: Config): Config {
   return HyperPaySDK.setup(params);
 }
 
-export function createPaymentTransaction(params: CreateTransactionParams):
+export function createPaymentTransaction(params: CreateTransactionParams, onProgress?: (isProgress: boolean) => void):
   Promise<CreateTransactionResponseType> {
+  if (onProgress) {
+    eventEmitter.removeAllListeners("onProgress")
+    const _event = eventEmitter.addListener('onProgress', (isLoading: boolean) => {
+      onProgress(isLoading)
+      if (!isLoading) _event.remove()
+    });
+  }
   return HyperPaySDK.createPaymentTransaction(params);
 }
 
