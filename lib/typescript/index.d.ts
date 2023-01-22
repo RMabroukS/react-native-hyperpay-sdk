@@ -1,6 +1,7 @@
 import type { CountryCodes } from './CountryCodes';
 import { PaymentStatus } from './PaymentStatus';
 import type { SupportedNetworks } from './SupportedNetworks';
+import type { CardAccountBrands } from './CardAccountBrands';
 export type CreateTransactionResponseType = {
     status: 'pending' | 'rejected' | 'risk' | 'chargeback' | 'declines' | 'successfully',
     checkoutId: string,
@@ -20,6 +21,11 @@ export interface Config {
     mode?: "TestMode" | "LiveMode";
 
     /**
+     * It will be prepended with the word "Pay" (i.e. "Pay Sportswear $100.00"), Apply pay only
+     */
+    companyName?:string;
+
+    /**
      *  set up supported payment networks for apple pay
     * @Platform IOS Only 
     */
@@ -27,8 +33,14 @@ export interface Config {
 
 }
 
+export type ApplyPayParams = {
+    checkoutID:string;
+    companyName?:string;
+    amount?:string;
+}
+
 export type CreateTransactionParams = {
-    paymentBrand: string,
+    paymentBrand: CardAccountBrands,
     holderName: string,
     cardNumber: string,
     expiryYear: string,
@@ -59,11 +71,13 @@ export default class HyperPay {
 
     /**
        * @param  {string} checkoutID
+       * @param  {string} companyName
+       * @param  {number} amount 
        * @param  {(isProgress: boolean) => void} onProgress
        * @returns ```Promise<{ redirectURL?: string,
         resourcePath?: string}>```
        */
-    static applePay(checkoutID: string, onProgress?: (isProgress: boolean) => void): Promise<ApplePayCallback>;
+    static applePay(checkoutID: ApplyPayParams, onProgress?: (isProgress: boolean) => void): Promise<ApplePayCallback>;
 
     /**
      * @param  {string} paymentBrand

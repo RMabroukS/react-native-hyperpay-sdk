@@ -11,6 +11,8 @@ NSString *merchantIdentifier = @"";
 NSString *countryCode = @"";
 NSString *mode=@"TestMode";
 NSArray *supportedNetworks;
+NSString *companyName=@"";
+
 RCT_EXPORT_MODULE(HyperPay)
 
 -(instancetype)init
@@ -35,7 +37,9 @@ RCT_EXPORT_MODULE(HyperPay)
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setup: (NSDictionary*)options) {
     shopperResultURL=[options valueForKey:@"shopperResultURL"];
     if ([options valueForKey:@"merchantIdentifier"])
-    merchantIdentifier=[options valueForKey:@"merchantIdentifier"];
+        merchantIdentifier=[options valueForKey:@"merchantIdentifier"];
+    if ([options valueForKey:@"companyName"])
+        companyName=[options valueForKey:@"companyName"];
     if ([options valueForKey:@"countryCode"])
        countryCode=[options valueForKey:@"countryCode"];
     if ([options valueForKey:@"supportedNetworks"])
@@ -96,15 +100,24 @@ RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCT
 
 
 
-RCT_EXPORT_METHOD(applePay:(NSString*)checkoutID resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject){
+RCT_EXPORT_METHOD(applePay:(NSDictionary*)params resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject){
   
   OPPCheckoutSettings *checkoutSettings = [[OPPCheckoutSettings alloc] init];
   PKPaymentRequest *paymentRequest = [OPPPaymentProvider paymentRequestWithMerchantIdentifier:merchantIdentifier countryCode:countryCode];
   paymentRequest.supportedNetworks = supportedNetworks;
+  
+
+    if ([params valueForKey:@"companyName"]){
+        companyName=[params valueForKey:@"companyName"];
+       }
+        NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithMantissa:[[params valueForKey:@"amount"] intValue] exponent:-2 isNegative:NO];
+        paymentRequest.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:companyName amount:amount]];
+ 
+    
   checkoutSettings.shopperResultURL=shopperResultURL;
   checkoutSettings.applePayPaymentRequest = paymentRequest;
   OPPCheckoutProvider *checkoutProvider = [OPPCheckoutProvider checkoutProviderWithPaymentProvider:provider
-                                                                                        checkoutID:checkoutID
+                                                                                        checkoutID:[params valueForKey:@"checkoutID"]
                                                                                           settings:checkoutSettings];
 
   [checkoutProvider presentCheckoutWithPaymentBrand:@"APPLEPAY"

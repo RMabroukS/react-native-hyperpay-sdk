@@ -2,6 +2,7 @@ import type {
   CreateTransactionResponseType,
   CreateTransactionParams,
   Config,
+  ApplyPayParams,
 } from '../lib/typescript'
 import {
   getPaymentStatus
@@ -27,7 +28,7 @@ export function createPaymentTransaction(params: CreateTransactionParams, onProg
 
 
 
-export function applePay(checkoutID: string,
+export function applePay(params: ApplyPayParams,
   onProgress?: (isProgress: boolean) => void): Promise<ApplePayCallback> {
 
   if (onProgress) {
@@ -37,7 +38,7 @@ export function applePay(checkoutID: string,
     });
   }
 
-  return HyperPaySDK.applePay(checkoutID);
+  return HyperPaySDK.applePay(params);
 }
 
 const Hyperpay = {
