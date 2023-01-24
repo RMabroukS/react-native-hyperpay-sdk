@@ -1,5 +1,6 @@
 package com.reactnativehyperpay;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import androidx.annotation.NonNull;
@@ -22,6 +23,7 @@ import com.oppwa.mobile.connect.payment.card.CardPaymentParams;
 import com.oppwa.mobile.connect.provider.Connect;
 import com.oppwa.mobile.connect.provider.ITransactionListener;
 import com.oppwa.mobile.connect.provider.OppPaymentProvider;
+import com.oppwa.mobile.connect.provider.ThreeDSWorkflowListener;
 import com.oppwa.mobile.connect.provider.Transaction;
 import com.oppwa.mobile.connect.provider.TransactionType;
 
@@ -87,6 +89,12 @@ public class HyperPayModule extends ReactContextBaseJavaModule implements ITrans
 
             try {
                 OppPaymentProvider paymentProvider = new OppPaymentProvider(appContext, Connect.ProviderMode.TEST);
+                paymentProvider.setThreeDSWorkflowListener(new ThreeDSWorkflowListener() {
+                    @Override
+                    public Activity onThreeDSChallengeRequired() {
+                        return getCurrentActivity();
+                    }
+                });
 
                 if (mode.equals("LiveMode")) {
                     paymentProvider.setProviderMode(Connect.ProviderMode.LIVE);
