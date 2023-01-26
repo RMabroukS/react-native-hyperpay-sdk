@@ -56,12 +56,12 @@ repositories {
 dependencies {
 
   if (project.gradle.startParameter.taskNames.any { it.toLowerCase().contains('release') }) {
-    compileOnly files('libs/ipworks3ds_sdk_deploy.aar')
+    implementation files('libs/ipworks3ds_sdk_deploy.aar')
   }
   else {
-    compileOnly files('libs/ipworks3ds_sdk.aar')
+    implementation files('libs/ipworks3ds_sdk.aar')
   }
-  compileOnly files('libs/oppwa.mobile-4.9.0-release.aar')
+  implementation files('libs/oppwa.mobile-4.9.0-release.aar')
   implementation "androidx.appcompat:appcompat:1.4.2"
   implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
   implementation "androidx.browser:browser:1.4.0"
