@@ -137,7 +137,7 @@ RCT_EXPORT_METHOD(applePay:(NSDictionary*)params resolver:(RCTPromiseResolveBloc
               resolve(@{@"resourcePath": transaction.resourcePath});
       }
   } cancelHandler:^{
-       reject(@"applePay",@"Executed if the shopper closes the payment page prematurely.",NULL);
+       reject(@"applePay",@"cancel",NULL);
       // Executed if the shopper closes the payment page prematurely.
   }];
 
