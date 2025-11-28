@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm}"
   s.dependency "React-Core"
   s.requires_arc = true
-  s.vendored_frameworks = "OPPWAMobile.xcframework","ipworks3ds_sdk_9048.xcframework","ipworks3ds_sdk_deploy_9048.xcframework"
+  s.vendored_frameworks = "OPPWAMobile.xcframework","ipworks3ds_sdk.xcframework","ipworks3ds_sdk_deploy.xcframework"
 end
