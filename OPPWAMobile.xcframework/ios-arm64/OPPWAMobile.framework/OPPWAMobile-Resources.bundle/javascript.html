@@ -1,0 +1,53 @@
+    var wpwlOptions = {
+        style: "plain",
+        enableSAQACompliance: true,
+        brandDetection: true,
+        brandDetectionType: "binlist",
+        brandDetectionPriority: {brandDetectionPriority},
+        requireCvv: {requireCvv},
+        locale: "{locale}",
+        labels: {
+            cardNumber: "{checkout_layout_hint_card_number}",
+            cardHolder: "{checkout_layout_hint_card_holder}",
+            expiryDate: "{checkout_layout_hint_card_expiration_date}",
+            cvv: "{checkout_layout_hint_card_cvv}"
+        },
+        placeholders: {
+            cardNumberPlaceholder: "{checkout_helper_card_number}",
+            cardHolderPlaceholder: "{checkout_helper_card_holder}",
+            expiryDatePlaceHolder: "{checkout_helper_expiry_date}",
+            cvvPlaceholder: "{checkout_helper_cvv}"
+        },
+        errorMessages: {
+            cardNumberError: "{checkout_error_card_number_invalid}",
+            expiryMonthError: "{checkout_error_expiry_date_invalid}",
+            expiryYearError: "{checkout_error_expiry_date_invalid}",
+            cardHolderError: "{checkout_error_card_holder_invalid}",
+            cvvError: "{checkout_error_cvv_invalid}"
+        },
+        onReady: function() {
+            // Show or hide token form
+            if ({isTokenForm}) {
+                $("div.wpwl-container-card").hide();
+            } else {
+                $("div#wpwl-registrations").hide();
+            }
+
+            $("button#cp_submit_button").click(function() {
+                // Submit token or card form
+                if ({isTokenForm}) {
+                    wpwl.executePayment("wpwl-container-registration");
+                } else {
+                    wpwl.executePayment("wpwl-container-card");
+                }
+            });
+        },
+        onBeforeSubmitCard: function() {
+            $("button#cp_submit_button").hide();
+            return true;
+        },
+        registrations: {
+            hideInitialPaymentForms: false,
+            requireCvv: {registrations.requireCvv}
+        }
+    };

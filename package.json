@@ -1,6 +1,6 @@
 {
   "name": "react-native-hyperpay-sdk",
-  "version": "0.38.0",
+  "version": "0.39.0",
   "description": "hyperpay",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -42,13 +42,13 @@
     "apple-pay",
     "react-native-hyperpay"
   ],
-  "repository": "https://github.com/RMabroukS/react-native-hyperpay-sdk",
-  "author": "RMabroukS <r.mabrouk.sayed@gmail.com> (https://github.com/RMabroukS)",
+  "repository": "https://github.com/ameensom/react-native-hyperpay-sdk",
+  "author": "ameensom <amin4mail@yahoo.com> (https://github.com/ameensom)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RMabroukS/react-native-hyperpay-sdk/issues"
+    "url": "https://github.com/ameensom/react-native-hyperpay-sdk/issues"
   },
-  "homepage": "https://github.com/RMabroukS/react-native-hyperpay-sdk#readme",
+  "homepage": "https://github.com/ameensom/react-native-hyperpay-sdk#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -149,5 +149,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "react-native-hyperpay-sdk": "github:ameensom/react-native-hyperpay-sdk"
   }
 }

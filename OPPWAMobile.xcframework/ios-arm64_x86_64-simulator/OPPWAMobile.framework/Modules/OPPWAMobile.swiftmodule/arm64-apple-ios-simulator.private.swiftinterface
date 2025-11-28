@@ -1,0 +1,1862 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name OPPWAMobile
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+import AVFoundation
+import AVKit
+import Foundation
+import LocalAuthentication
+@_exported import OPPWAMobile
+import PassKit
+import SafariServices
+import Swift
+import UIKit
+import Vision
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import ipworks3ds_sdk
+@_inheritsConvenienceInitializers @objc public class OPPThreeDSConfig : ObjectiveC.NSObject {
+  @objc public var challengeUiTypes: OPPWAMobile.OPPThreeDSChallengeUiType
+  @objc public var sdkMaxTimeout: Swift.Int
+  @objc public var clientConfigParams: [Swift.String : Swift.String] {
+    @objc get
+    @objc set
+  }
+  @objc public var appBundleID: Swift.String
+  @objc public var locale: Swift.String?
+  @objc public var deviceParameterBlacklist: [Swift.String]?
+  @objc public var uiCustomization: ipworks3ds_sdk.UiCustomization
+  @objc public var threeDSRequestorAppURL: Swift.String?
+  @objc public var isBrowserDataRequired: Swift.Bool
+  @objc override dynamic public init()
+  @objc public func getClientConfig() -> Swift.Set<Swift.String>
+  @objc public func getUngroupedConfigParams() -> [Swift.String : Swift.String]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPCheckoutDeviceAuth : ObjectiveC.NSObject {
+  @objc public static func cpd_requestDeviceAuthIfNeeded(for paymentBrand: Swift.String, isToken: Swift.Bool, paymentParams: OPPWAMobile.OPPPaymentParams, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public static func cpd_deviceAuthMode(for paymentBrand: Swift.String) -> OPPWAMobile.OPPSecurityPolicyMode
+  @objc public static func cpd_deviceAuthModeForTokens() -> OPPWAMobile.OPPSecurityPolicyMode
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPIkanoPrivateLabelVADetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPIkanoPrivateLabelVADetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPIkanoPrivateLabelVADetailsViewModel)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc final public func cancelButtonAction()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didBecomeActive(_ notification: Foundation.Notification)
+}
+extension OPPWAMobile.OPPIkanoPrivateLabelVADetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc public class OPPIOUtil : ObjectiveC.NSObject {
+  @objc public static func nibPath(forResource fileName: Swift.String) -> Swift.String?
+  @objc public static func shortPath(forResource fileName: Swift.String, type: Swift.String) -> Swift.String?
+  @objc public static func path(forResource fileName: Swift.String, type: Swift.String) -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class OPPAddressSelectorViewModel : ObjectiveC.NSObject {
+  @objc public init(array: [Swift.String], addressField: OPPWAMobile.OPPAddressField = .street1, backButtonTitle: Swift.String? = nil)
+  public var sectionCount: Swift.Int {
+    get
+  }
+  public func title(for section: Swift.Int) -> Swift.String?
+  public func numberOfRows(in section: Swift.Int) -> Swift.Int
+  public func titleForRow(at row: Swift.Int, in section: Swift.Int) -> Swift.String?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPTokenCollectionViewCell) @_Concurrency.MainActor @preconcurrency final public class OPPTokenCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var paymentBrandLogoView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var paymentBrandImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var paymentBrandDetailLabel: UIKit.UILabel!
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public class OPPCardsSectionDelegate : ObjectiveC.NSObject {
+  @objc public static let OPPCardCollectionViewCellReuseId: Swift.String
+  @objc public init(paymentBrands: [Swift.String])
+  @objc deinit
+}
+extension OPPWAMobile.OPPCardsSectionDelegate : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension OPPWAMobile.OPPCardsSectionDelegate : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+}
+@objc final public class OPPRatePayDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPAffirmPaymentParams : OPPWAMobile.OPPPaymentParams {
+  @objc final public var token: Swift.String?
+  @objc public static func affirmPaymentParamsWith(checkoutId: Swift.String) throws -> OPPWAMobile.OPPAffirmPaymentParams
+  @objc override final public func copy() -> Any
+  @objc override final public func dictionaryForExecutingTransaction() -> [Swift.AnyHashable : Any]
+  @objc override dynamic public init(checkoutID: Swift.String, paymentBrand: Swift.String?) throws
+  @objc deinit
+}
+@objc public enum OPPExpandIcon : Swift.Int {
+  case expand
+  case collapse
+  case hidden
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OPPCheckoutTextFieldView) @_Concurrency.MainActor @preconcurrency final public class OPPCheckoutTextFieldView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var textField: OPPWAMobile.OPPSCheckoutTextField!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var leftTextField: UIKit.UITextField!
+  @objc @_Concurrency.MainActor @preconcurrency final public var title: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var helper: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var error: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var accessibilityId: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var parentView: UIKit.UIView?
+  @objc @_Concurrency.MainActor @preconcurrency final public var isEditing: Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency final public var expandIcon: OPPWAMobile.OPPExpandIcon {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var enabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor @preconcurrency final public var text: Swift.String? {
+    @objc get
+    @objc set(newText)
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func updateConstraints()
+  @objc @_Concurrency.MainActor @preconcurrency final public func getText() -> Swift.String?
+  @objc @_Concurrency.MainActor @preconcurrency final public func updateText(_ text: Swift.String?)
+  @objc @_Concurrency.MainActor @preconcurrency final public func setLogoImage(with paymentBrand: Swift.String, handler: (() -> Swift.Void)?)
+  @objc @_Concurrency.MainActor @preconcurrency final public func beginEditing()
+  @objc @_Concurrency.MainActor @preconcurrency final public func endEditing()
+  @objc @_Concurrency.MainActor @preconcurrency final public func clear()
+  @objc @_Concurrency.MainActor @preconcurrency final public func enableLeftTextField(with helper: Swift.String, accessibiltyId: Swift.String?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPPKPaymentButtonTableViewCell) @_Concurrency.MainActor @preconcurrency final public class OPPPKPaymentButtonTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var pkPaymentButton: PassKit.PKPaymentButton!
+  @objc @_Concurrency.MainActor @preconcurrency public static let OPPPKPaymentButtonTableViewCellHeight: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol OPPEditAddressViewControllerDelegate {
+  @objc func updateAddress(_ address: OPPWAMobile.OPPBillingAddress)
+}
+@_hasMissingDesignatedInitializers @objc(OPPEditAddressViewController) @_Concurrency.MainActor @preconcurrency final public class OPPEditAddressViewController : UIKit.UIViewController {
+  @objc @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any OPPWAMobile.OPPEditAddressViewControllerDelegate)?
+  @objc @_Concurrency.MainActor @preconcurrency public init(viewModel: OPPWAMobile.OPPEditAddressViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+extension OPPWAMobile.OPPEditAddressViewController {
+  @_Concurrency.MainActor @preconcurrency final public func isStateFieldEditable() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency final public func getTextFieldValue(tag: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency final public func getTextFieldHint(tag: Swift.Int) -> Swift.String
+  @_Concurrency.MainActor @preconcurrency final public func updateAddress(value: Swift.String?, textFieldTag: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency final public func selectedActiveTextField(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension OPPWAMobile.OPPEditAddressViewController : OPPWAMobile.OPPAddressSelectorViewControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func returnSelected(_ value: Swift.String?, and tag: Swift.Int)
+}
+@_hasMissingDesignatedInitializers @objc(OPPListDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPListDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPListDetailsViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @objc deinit
+}
+extension OPPWAMobile.OPPListDetailsViewController : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension OPPWAMobile.OPPListDetailsViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OPPPaymentFormHeaderView) @_Concurrency.MainActor @preconcurrency final public class OPPPaymentFormHeaderView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var logoView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var formTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var logoImageView: UIKit.UIImageView!
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc final public class OPPAffirmConfig : ObjectiveC.NSObject {
+  @objc final public let publicKey: Swift.String
+  @objc final public let isActive: Swift.Bool
+  @objc public init(publicKey: Swift.String, isActive: Swift.Bool)
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+extension OPPWAMobile.OPPCardViewController : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc final public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+}
+@objc public enum OPPAddressField : Swift.Int {
+  case street1 = 0
+  case street2 = 1
+  case city = 2
+  case state = 3
+  case country = 4
+  case postCode = 5
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc(OPPGiropayDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPGiropayDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPGiropayViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc final public func cancelButtonAction()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didBecomeActive(_ notification: Foundation.Notification)
+}
+extension OPPWAMobile.OPPGiropayDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@objc public class OPPThreeDSSchemeConfig : ObjectiveC.NSObject {
+  @objc public var dsRefId: Swift.String {
+    get
+  }
+  @objc public var dsEncryptCert: Swift.String {
+    get
+  }
+  @objc public var dsCaRootCert: Swift.String {
+    get
+  }
+  @objc public init(dsRefId: Swift.String, dsEncryptCert: Swift.String, dsCaRootCert: Swift.String)
+  @objc deinit
+}
+@objc extension UIKit.UILabel {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func configure(title: Swift.String, font: UIKit.UIFont, isHighLighted: Swift.Bool, theme: OPPWAMobile.OPPCheckoutTheme)
+}
+@_hasMissingDesignatedInitializers @objc(OPPBlikDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPBlikDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPBlikDetailsViewModel)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @objc @_Concurrency.MainActor @preconcurrency final public func loadURL(_ transaction: OPPWAMobile.OPPTransaction)
+  @objc @_Concurrency.MainActor @preconcurrency final public func reEnterPin()
+}
+extension OPPWAMobile.OPPBlikDetailsViewController : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+}
+extension OPPWAMobile.OPPBlikDetailsViewController : SafariServices.SFSafariViewControllerDelegate {
+}
+extension OPPWAMobile.OPPBlikDetailsViewController : UIKit.UITextViewDelegate {
+  @available(iOS 17.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textView(_ textView: UIKit.UITextView, primaryActionFor textItem: UIKit.UITextItem, defaultAction: UIKit.UIAction) -> UIKit.UIAction?
+}
+@objc final public class OPPCopyAndPayViewModel : ObjectiveC.NSObject {
+  @objc final public var tokenEnabled: Swift.Bool
+  @objc public init?(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, paymentBrand: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPCardViewController) @_Concurrency.MainActor @preconcurrency final public class OPPCardViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc final public var cardControllerDelegate: (any OPPWAMobile.OPPCardControllerDelegate)?
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func updateViewConstraints()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension OPPWAMobile.OPPCardViewController : OPPWAMobile.OPPCardDetailsDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerCardNumberTextField() -> UIKit.UITextField
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerCardHolderTextField() -> UIKit.UITextField
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerExpirationDateTextField() -> UIKit.UITextField
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerCVVTextField() -> UIKit.UITextField
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerMobilePhoneField() -> UIKit.UITextField
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerCountryCodeField() -> UIKit.UITextField
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerTextField(_ textField: UIKit.UITextField, errorDidHappen error: (any Swift.Error)?)
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardControllerTextField(_ textField: UIKit.UITextField, shouldChangeVisibility hidden: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc final public func cardController(onPaymentBrandsDetected paymentBrands: [Swift.String]?, error: (any Swift.Error)?)
+}
+@_hasMissingDesignatedInitializers @objc(OPPInstantPayDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPInstantPayDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPInstantPayViewModel)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency @objc final public func cancelButtonAction()
+  @_Concurrency.MainActor @preconcurrency @objc final public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didBecomeActive(_ notification: Foundation.Notification)
+}
+extension OPPWAMobile.OPPInstantPayDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+}
+@objc extension OPPWAMobile.OPPBankAccountPaymentParams {
+  @objc public static func tvr_titles(for paymentBrand: Swift.String?) -> [Swift.String]?
+  @objc public static func tvr_value(for title: Swift.String, paymentBrand: Swift.String?) -> Swift.String?
+  @objc public static func tvr_countryCode(with country: Swift.String) -> Swift.String?
+  @objc public static func tvr_bankNameCode(with bankName: Swift.String) -> Swift.String?
+}
+@_inheritsConvenienceInitializers @objc public class OPPCDShipping : ObjectiveC.NSObject {
+  @objc public var street1: Swift.String?
+  @objc public var street2: Swift.String?
+  @objc public var city: Swift.String?
+  @objc public var state: Swift.String?
+  @objc public var postcode: Swift.String?
+  @objc public var country: Swift.String?
+  @objc public var cost: Swift.String?
+  @objc public var customer: OPPWAMobile.OPPCDCustomer?
+  @objc public var phone: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum OPPTextFieldContentType : Swift.Int {
+  case creditCardName
+  case creditCardExpiration
+  case creditCardSecurityCode
+  case telephoneNumber
+  case name
+  case birthdate
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc extension UIKit.UITextField {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func updateOPPTextContentType(_ contentType: OPPWAMobile.OPPTextFieldContentType)
+}
+@_inheritsConvenienceInitializers @objc public class OPPAnalyticsData : ObjectiveC.NSObject {
+  @objc public static func getOS() -> Swift.String
+  @objc public static func getRedShieldBlackbox() -> Swift.String?
+  @objc public static func getMSDKVersion() -> Swift.String
+  @objc public static func getDeviceModel() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension OPPWAMobile.OPPSThreeDSManager : ipworks3ds_sdk.SecurityEventListener {
+  @objc dynamic public func alarm(_ severity: ipworks3ds_sdk.Severity, _ event: ipworks3ds_sdk.SecurityEvent)
+}
+extension OPPWAMobile.OPPSThreeDSManager : ipworks3ds_sdk.ClientEventListener {
+  @objc dynamic public func onDataPacketIn(_ dataPacket: Foundation.Data)
+  @objc dynamic public func onDataPacketOut(_ dataPacket: Foundation.Data)
+  @objc dynamic public func onError(_ errorCode: Swift.Int32, _ description: Swift.String)
+  @objc dynamic public func onLog(_ logLevel: Swift.Int32, _ message: Swift.String, _ logType: Swift.String)
+  @objc dynamic public func onSSLServerAuthentication(_ certEncoded: Foundation.Data, _ certSubject: Swift.String, _ certIssuer: Swift.String, _ status: Swift.String, _ accept: Swift.UnsafeMutablePointer<Swift.Int32>)
+  @objc dynamic public func onSSLStatus(_ message: Swift.String)
+}
+extension OPPWAMobile.OPPSThreeDSManager : ipworks3ds_sdk.ChallengeStatusReceiver {
+  @objc dynamic public func completed(_ completionEvent: ipworks3ds_sdk.CompletionEvent)
+  @objc dynamic public func cancelled()
+  @objc dynamic public func timedout()
+  @objc dynamic public func protocolError(_ protocolErrorEvent: ipworks3ds_sdk.ProtocolErrorEvent)
+  @objc dynamic public func runtimeError(_ runtimeErrorEvent: ipworks3ds_sdk.RuntimeErrorEvent)
+}
+@objc final public class OPPSTCPayDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCheckoutData : ObjectiveC.NSObject {
+  @objc public var shipping: OPPWAMobile.OPPCDShipping?
+  @objc public var billing: OPPWAMobile.OPPCDBilling?
+  @objc public var cart: OPPWAMobile.OPPCDCart?
+  @objc public var amount: Swift.String?
+  @objc public var currency: Swift.String?
+  @objc public var taxAmount: Swift.String?
+  @objc public var merchantTransactionID: Swift.String?
+  @objc public var merchant: OPPWAMobile.OPPCDMerchant?
+  @objc public static func checkoutData(_ JSON: [Swift.String : Any]) throws -> OPPWAMobile.OPPCheckoutData
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol OPPLoggerServiceProtocol {
+  @objc func sendLog(messages: [OPPWAMobile.OPPLogMessage], checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode, _ completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+}
+@objc extension OPPWAMobile.OPPSConcreteCheckoutProvider {
+  @objc public static func obtainCheckoutInfoCompletionHandler(_ completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc final public func updateCheckoutId(with transaction: OPPWAMobile.OPPTransaction, currentVC: UIKit.UIViewController)
+  @objc final public func handleCheckoutIdUpdate(_ transaction: OPPWAMobile.OPPTransaction, checkoutID: Swift.String?, abort: Swift.Bool, currentVC: UIKit.UIViewController)
+  @objc public static func initCheckout(_ completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public static func initValidator(forPaymentBrands paymentBrands: [Swift.String], completion: @escaping (Foundation.NSError?) -> Swift.Void)
+  @objc public static func initImageLoader(forPaymentBrands paymentBrands: [Swift.String], provider: OPPWAMobile.OPPPaymentProvider, completion: @escaping (Foundation.NSError?) -> Swift.Void)
+}
+@objc extension OPPWAMobile.OPPSConcreteCheckoutProvider {
+  @objc final public func trySendTransaction(with paymentParams: OPPWAMobile.OPPPaymentParams, dismissCurrentVC currentVC: (any UIKit.UIViewController & SafariServices.SFSafariViewControllerDelegate)?)
+  @objc final public func sendTransaction(with paymentParams: OPPWAMobile.OPPPaymentParams, dismissCurrentVC currentVC: (any UIKit.UIViewController & SafariServices.SFSafariViewControllerDelegate)?)
+  @objc final public func submit(transaction: OPPWAMobile.OPPTransaction, endPoint: Swift.String, dismiss currentVC: UIKit.UIViewController?)
+  @objc final public func send(transaction: OPPWAMobile.OPPTransaction, endPoint: Swift.String, dismiss currentVC: UIKit.UIViewController?)
+}
+@objc extension OPPWAMobile.OPPSConcreteCheckoutProvider {
+  @objc final public func createPaymentParamsWithoutUi(for paymentBrand: Swift.String, token: OPPWAMobile.OPPToken?) throws -> OPPWAMobile.OPPPaymentParams
+  @objc final public func update(_ paymentParams: OPPWAMobile.OPPPaymentParams, checkoutID: Swift.String)
+  @objc final public func prepareTransaction(with paymentParams: OPPWAMobile.OPPPaymentParams) -> OPPWAMobile.OPPTransaction
+  @objc final public func closeTransactionProcessing(_ paymentParams: OPPWAMobile.OPPPaymentParams, on viewController: UIKit.UIViewController)
+}
+@_hasMissingDesignatedInitializers @objc(OPPChinaUnionPayDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPChinaUnionPayDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPChinaUnionPayDetailsViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc final public func cancelButtonAction()
+  @_Concurrency.MainActor @preconcurrency @objc final public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didBecomeActive(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @objc deinit
+}
+extension OPPWAMobile.OPPChinaUnionPayDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@objc public protocol OPPPaymentSelectionDelegate {
+  @objc func paymentSelectionControllerDidSelectPaymentBrand(_ brand: Swift.String, completionHandler: ((Swift.Bool) -> Swift.Void)?)
+  @objc func paymentSelectionControllerDidSelectToken(_ token: OPPWAMobile.OPPToken, completionHandler: ((Swift.Bool) -> Swift.Void)?)
+  @objc func paymentSelectionControllerDidCancel()
+  @objc func paymentSelectionControllerCardTokens(_ cardTokens: [OPPWAMobile.OPPToken])
+  @objc func paymentSelectionControllerPaymentBrands(_ paymentBrands: [Swift.String])
+}
+@_inheritsConvenienceInitializers @objc(OPPPaymentSelectionViewController) @_Concurrency.MainActor @preconcurrency public class OPPPaymentSelectionViewController : UIKit.UIViewController, UIKit.UITableViewDataSource, UIKit.UITableViewDelegate, OPPWAMobile.OPPPaymentSelectionDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc public var paymentSchemeActionDelegate: (any OPPWAMobile.OPPPaymentSchemeSelectionActionDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc public func paymentSelectionControllerCardTokens(_ cardTokens: [OPPWAMobile.OPPToken])
+  @_Concurrency.MainActor @preconcurrency @objc public func paymentSelectionControllerPaymentBrands(_ paymentBrands: [Swift.String])
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension OPPWAMobile.OPPPaymentSelectionViewController : UIKit.UIViewControllerTransitioningDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
+}
+extension OPPWAMobile.OPPPaymentSelectionViewController : UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func navigationController(_ navigationController: UIKit.UINavigationController, didShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
+}
+@objc final public class OPPKlarnaInlineViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, transaction: OPPWAMobile.OPPTransaction)
+  @objc deinit
+}
+extension OPPWAMobile.OPPKlarnaInlineViewModel : Foundation.URLSessionTaskDelegate {
+  @objc final public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+}
+@objc final public class OPPWAProcessorService : ObjectiveC.NSObject, OPPWAMobile.OPPWAProcessorServiceProtocol {
+  final public let mode: OPPWAMobile.OPPProviderMode
+  final public let parser: OPPWAMobile.OPPWAResponseParser
+  @objc public init(mode: OPPWAMobile.OPPProviderMode, parser: OPPWAMobile.OPPWAResponseParser)
+  @objc final public func sendTransaction(for transaction: OPPWAMobile.OPPTransaction, endpoint: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc final public func checkoutInfo(for checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func logoUrls(for brands: [Swift.String], _ completionHandler: @escaping ([Swift.String : Foundation.URL]?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func sendThreeDS2(for transaction: OPPWAMobile.OPPTransaction, with authParams: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc final public func validation(for brands: [Swift.String], checkoutID: Swift.String, _ completionHandler: @escaping ([OPPWAMobile.OPPBrandInfo]?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func binInfo(for bin: Swift.String, checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPBinInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func idealBanks(for checkoutID: Swift.String, _ completionHandler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func appleToken(for checkoutID: Swift.String, _ completionHandler: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func checkoutData(for checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutData?, Foundation.NSError?) -> Swift.Void)
+  @objc deinit
+}
+extension Foundation.NSError {
+  @objc public static func afterPayFamilyErrorWith(transaction: OPPWAMobile.OPPTransaction) -> Foundation.NSError
+}
+@objc public protocol OPPAddressViewDelegate {
+  @objc func addressViewClickedAction()
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OPPAddressView) @_Concurrency.MainActor @preconcurrency final public class OPPAddressView : UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any OPPWAMobile.OPPAddressViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  @objc @_Concurrency.MainActor @preconcurrency final public func setStreet1Line(_ street1Line: Swift.String?)
+  @objc @_Concurrency.MainActor @preconcurrency final public func setStreet2Line(_ street2Line: Swift.String?)
+  @objc @_Concurrency.MainActor @preconcurrency final public func setCityStatePostCodeLine(_ cityLine: Swift.String?)
+  @objc @_Concurrency.MainActor @preconcurrency final public func setCountryLine(_ countyLine: Swift.String?)
+  @objc @_Concurrency.MainActor @preconcurrency final public func switchToEnabledState(_ enabled: Swift.Bool)
+  @objc @_Concurrency.MainActor @preconcurrency final public func isAddressInEnabledState() -> Swift.Bool
+  @objc deinit
+}
+@objc final public class OPPIkanoDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, paymentBrand: OPPWAMobile.OPPPaymentBrand)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPCheckoutPaymentValidation : ObjectiveC.NSObject {
+  @objc public static func isPaymentBrandValid(paymentBrand: Swift.String, completionHandler: (Foundation.NSError?, Swift.Bool) -> Swift.Void)
+  @objc public static func isApplePayConfigured(with completionHandler: (Foundation.NSError?, Swift.Bool) -> Swift.Void)
+  @objc public static func isKlarnaConfigured(with completionHandler: (Foundation.NSError?, Swift.Bool) -> Swift.Void)
+  @objc public static func isKlarnaInlineConfigured(completionHandler: (Foundation.NSError?, Swift.Bool) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol OPPAddressSelectorViewControllerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func returnSelected(_ value: Swift.String?, and tag: Swift.Int)
+}
+@_hasMissingDesignatedInitializers @objc(OPPAddressSelectorViewController) @_Concurrency.MainActor @preconcurrency final public class OPPAddressSelectorViewController : UIKit.UIViewController {
+  @objc @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any OPPWAMobile.OPPAddressSelectorViewControllerDelegate)?
+  @objc @_Concurrency.MainActor @preconcurrency public init(viewModel: OPPWAMobile.OPPAddressSelectorViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @objc deinit
+}
+@objc final public class OPPSCardDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, paymentBrand: OPPWAMobile.OPPPaymentBrand, token: OPPWAMobile.OPPToken? = nil)
+  @objc deinit
+}
+extension OPPWAMobile.OPPCardDetailsViewController : UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+}
+@_inheritsConvenienceInitializers @objc(OPPPaymentSchemeTableViewCell) @_Concurrency.MainActor @preconcurrency final public class OPPPaymentSchemeTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var paymentSchemeLogoImageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var paymentSchemeTitleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var logoView: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public enum OPPCardBrandInfoCvvMode : Swift.Int {
+  case none
+  case required
+  case optional
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class OPPCardBrandInfo : ObjectiveC.NSObject {
+  @objc final public let validationRegex: Swift.String
+  @objc final public let detectionRegex: Swift.String?
+  @objc final public let pattern: Swift.String
+  @objc public var cvvLength: Swift.Int
+  @objc public var isLuhnCheckRequired: Swift.Bool
+  @objc public var isExpiryDateOptional: Swift.Bool
+  @objc public var cvvMode: OPPWAMobile.OPPCardBrandInfoCvvMode
+  @objc public var isMobilePhoneRequired: Swift.Bool
+  @objc public init?(validationRegex: Swift.String, detectionRegex: Swift.String?, pattern: Swift.String)
+  @objc convenience public init?(json: [Swift.String : Any])
+  @objc deinit
+}
+@objc final public class OPPPaymentSchemeViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class OPPDirectDebitDetailsViewModel : ObjectiveC.NSObject {
+  @objc convenience public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, paymentBrand: Swift.String, checkoutSettings: OPPWAMobile.OPPCheckoutSettings?, checkoutInfo: OPPWAMobile.OPPCheckoutInfo?, checkoutID: Swift.String)
+  @objc convenience public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, token: OPPWAMobile.OPPToken, checkoutSettings: OPPWAMobile.OPPCheckoutSettings?, checkoutInfo: OPPWAMobile.OPPCheckoutInfo?, checkoutID: Swift.String)
+  @objc deinit
+}
+@objc final public class OPPWASProcessor : ObjectiveC.NSObject, OPPWAMobile.OPPWAProcessorProtocol {
+  final public var getNavigationController: (() -> UIKit.UINavigationController)?
+  final public var onThreeDSConfigRequired: ((OPPWAMobile.OPPThreeDSConfig?) -> Swift.Void)?
+  @objc final public var threeDSManager: OPPWAMobile.OPPSThreeDSManager?
+  final public let mode: OPPWAMobile.OPPProviderMode
+  final public let service: (any OPPWAMobile.OPPWAProcessorServiceProtocol)?
+  @objc public init(threeDSManager: OPPWAMobile.OPPSThreeDSManager?, mode: OPPWAMobile.OPPProviderMode, service: any OPPWAMobile.OPPWAProcessorServiceProtocol)
+  @objc final public func send(transaction: OPPWAMobile.OPPTransaction, toEndPoint: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc final public func requestCheckoutInfo(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func requestLogoURLs(forPaymentBrands paymentBrands: [Swift.String], _ completionHandler: @escaping ([Swift.String : Foundation.URL]?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func sendThreeDS2(authParams: Swift.String, transaction: OPPWAMobile.OPPTransaction, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc final public func requestValidations(forPaymentBrands paymentBrands: [Swift.String], checkoutID: Swift.String, _ completionHandler: @escaping ([OPPWAMobile.OPPBrandInfo]?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func requestBinInfo(withCheckoutID checkoutID: Swift.String, bin: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPBinInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func requestIdealBanks(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func requestApplesTokenId(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func requestCheckoutData(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutData?, Foundation.NSError?) -> Swift.Void)
+  @objc final public func securityWarnings(withCompletionHandler completionHandler: @escaping ([ipworks3ds_sdk.Warning]?, Foundation.NSError?) -> Swift.Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCDItem : ObjectiveC.NSObject {
+  @objc public var name: Swift.String?
+  @objc public var quantity: Swift.String?
+  @objc public var price: Swift.String?
+  @objc public var sku: Swift.String?
+  @objc public var productURL: Swift.String?
+  @objc public var imageURL: Swift.String?
+  @objc public var totalDiscountAmount: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCDBilling : ObjectiveC.NSObject {
+  @objc public var street1: Swift.String?
+  @objc public var street2: Swift.String?
+  @objc public var city: Swift.String?
+  @objc public var state: Swift.String?
+  @objc public var postcode: Swift.String?
+  @objc public var country: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCDMerchant : ObjectiveC.NSObject {
+  @objc public var name: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc final public class OPPBlikDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCDCustomer : ObjectiveC.NSObject {
+  @objc public var givenName: Swift.String?
+  @objc public var surname: Swift.String?
+  @objc public var email: Swift.String?
+  @objc public var fullName: Swift.String? {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCDCart : ObjectiveC.NSObject {
+  @objc public var items: [OPPWAMobile.OPPCDItem]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPCheckoutLocalization : ObjectiveC.NSObject {
+  @objc public var language: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public static let sharedInstance: OPPWAMobile.OPPCheckoutLocalization
+  @objc public func viewControllerTitlePaymentMethodSelection() -> Swift.String
+  @objc public func viewControllerTitlePaymentDetails() -> Swift.String
+  @objc public func viewControllerTitleProcessing() -> Swift.String
+  @objc public func viewControllerTitleAddress() -> Swift.String
+  @objc public func alertTitleCardScanningFailed() -> Swift.String
+  @objc public func labelTotalAmount() -> Swift.String
+  @objc public func labelMBWayPushNotification() -> Swift.String
+  @objc public func labelMBWayAcceptPin() -> Swift.String
+  @objc public func labelTermsAndConditions() -> Swift.String
+  @objc public func labelTermsAndConditionsAgreement() -> Swift.String
+  @objc public func labelSwedish() -> Swift.String
+  @objc public func labelFinnish() -> Swift.String
+  @objc public func labelSTCPaySelectPaymentMethod() -> Swift.String
+  @objc public func labelCardScanHoldHere() -> Swift.String
+  @objc public func labelBlikTermsAndConditions() -> Swift.String
+  @objc public func labelBlikRegulations() -> Swift.String
+  @objc public func labelBlikTncUrl() -> Swift.String
+  @objc public func messagePleaseWait() -> Swift.String
+  @objc public func processingLabelForBlik() -> Swift.String
+  @objc public func accessibilityLabelForBlik() -> Swift.String
+  @objc public func deviceAuthReason() -> Swift.String
+  @objc public func buttonTitlePay() -> Swift.String
+  @objc public func buttonTitlePayAmount() -> Swift.String
+  @objc public func buttonTitleRegister() -> Swift.String
+  @objc public func buttonTitleCancel() -> Swift.String
+  @objc public func buttonTitleBack() -> Swift.String
+  @objc public func buttonTitleDone() -> Swift.String
+  @objc public func buttonTitleOK() -> Swift.String
+  @objc public func fieldLabelCardHolderName() -> Swift.String
+  @objc public func fieldLabelCreditCardNumber() -> Swift.String
+  @objc public func fieldLabelExpiryDate() -> Swift.String
+  @objc public func fieldLabelCVV() -> Swift.String
+  @objc public func fieldLabelMobilePhoneNumber() -> Swift.String
+  @objc public func fieldLabelBankAccountHolderName() -> Swift.String
+  @objc public func fieldLabelIBAN() -> Swift.String
+  @objc public func fieldLabelIBANOrAccountNumber() -> Swift.String
+  @objc public func fieldLabelBICOrBankCode() -> Swift.String
+  @objc public func fieldLabelSelectCountry() -> Swift.String
+  @objc public func fieldLabelSelectBank() -> Swift.String
+  @objc public func fieldLabelStorePaymentDetails() -> Swift.String
+  @objc public func fieldLabelChooseCardType() -> Swift.String
+  @objc public func fieldLabelNumberOfInstallments() -> Swift.String
+  @objc public func fieldLabelEmail() -> Swift.String
+  @objc public func fieldLabelQRCode() -> Swift.String
+  @objc public func fieldLabelCountryCode() -> Swift.String
+  @objc public func fieldLabelNationalIdentifier() -> Swift.String
+  @objc public func fieldLabelAccountNumber() -> Swift.String
+  @objc public func fieldLabelRoutingNumber() -> Swift.String
+  @objc public func fieldLabelAccountVerification() -> Swift.String
+  @objc public func fieldLabelDateOfBirth() -> Swift.String
+  @objc public func fieldLabelOTP() -> Swift.String
+  @objc public func fieldPlaceholderCardHolderName() -> Swift.String
+  @objc public func fieldPlaceholderCardNumber() -> Swift.String
+  @objc public func fieldPlaceholderExpiryDate() -> Swift.String
+  @objc public func fieldPlaceholderCVV3Digits() -> Swift.String
+  @objc public func fieldPlaceholderCVV4Digits() -> Swift.String
+  @objc public func fieldPlaceholderBankAccountHolderName() -> Swift.String
+  @objc public func fieldPlaceholderIBAN() -> Swift.String
+  @objc public func fieldPlaceholderIBANOrAccountNumber() -> Swift.String
+  @objc public func fieldPlaceholderBICOrBankCode() -> Swift.String
+  @objc public func fieldPlaceholderMobilePhoneNumber() -> Swift.String
+  @objc public func fieldPlaceholderCountryCode() -> Swift.String
+  @objc public func fieldPlaceholderEmail() -> Swift.String
+  @objc public func fieldPlaceholderNationalIdentifier() -> Swift.String
+  @objc public func fieldPlaceholderAccountNumber() -> Swift.String
+  @objc public func fieldPlaceholderRoutingNumber() -> Swift.String
+  @objc public func fieldPlaceholderAccountVerification() -> Swift.String
+  @objc public func fieldPlaceholderStreet1() -> Swift.String
+  @objc public func fieldPlaceholderStreet2() -> Swift.String
+  @objc public func fieldPlaceholderCity() -> Swift.String
+  @objc public func fieldPlaceholderState() -> Swift.String
+  @objc public func fieldPlaceholderCounty() -> Swift.String
+  @objc public func fieldPlaceholderPostcode() -> Swift.String
+  @objc public func fieldPlaceholderOptional() -> Swift.String
+  @objc public func fieldPlaceholderDateOfBirth() -> Swift.String
+  @objc public func fieldErrorCardHolderNameInvalid() -> Swift.String
+  @objc public func fieldErrorCardNumberInvalid() -> Swift.String
+  @objc public func fieldErrorCardExpiryDateInvalid() -> Swift.String
+  @objc public func fieldErrorCardExpired() -> Swift.String
+  @objc public func fieldErrorCardCVV3DigitsInvalid() -> Swift.String
+  @objc public func fieldErrorCardCVV4DigitsInvalid() -> Swift.String
+  @objc public func fieldErrorBankAccountHolderInvalid() -> Swift.String
+  @objc public func fieldErrorIBANInvalid() -> Swift.String
+  @objc public func fieldErrorIBANOrAccountNumberInvalid() -> Swift.String
+  @objc public func fieldErrorRoutingNumberInvalid() -> Swift.String
+  @objc public func fieldErrorBICOrBankCodeInvalid() -> Swift.String
+  @objc public func fieldErrorEmailInvalid() -> Swift.String
+  @objc public func fieldErrorMobilePhoneInvalid() -> Swift.String
+  @objc public func fieldErrorCountryCodeInvalid() -> Swift.String
+  @objc public func fieldErrorNationalIdentifierInvalid() -> Swift.String
+  @objc public func fieldErrorAccountNumberInvalid() -> Swift.String
+  @objc public func fieldErrorAccountExpiryDateInvalid() -> Swift.String
+  @objc public func fieldErrorAccountExpired() -> Swift.String
+  @objc public func fieldErrorAddressInvalid() -> Swift.String
+  @objc public func fieldErrorDateOfBirthInvalid() -> Swift.String
+  @objc public func fieldErrorBankCodeInvalid() -> Swift.String
+  @objc public func paymentMethodGroupStored() -> Swift.String
+  @objc public func paymentMethodGroupOther() -> Swift.String
+  @objc public func paymentMethodGroupCards() -> Swift.String
+  @objc public func title(forPaymentBrand paymentBrand: Swift.String) -> Swift.String
+  @objc public func accessibilityPayWith() -> Swift.String
+  @objc public func accessibilityCancelCheckout() -> Swift.String
+  @objc public func accessibilityScanCard() -> Swift.String
+  @objc public func accessibilityPayWithStoredPaymentMethod() -> Swift.String
+  @objc public func fieldPlaceholderExpiryDateWeb() -> Swift.String
+  @objc public func fieldPlaceholderCVVWeb() -> Swift.String
+  @objc public func fieldErrorCardExpiryDateInvalidWeb() -> Swift.String
+  @objc public func fieldErrorCardCVVInvalidWeb() -> Swift.String
+  @objc public func localizedString(forDeprecatedKey deprecatedKey: Swift.String, actualKey: Swift.String, defaultValue: Swift.String?) -> Swift.String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPBrowserData : ObjectiveC.NSObject {
+  @objc public static func m3dspAddWebThreeDSParams(to params: OPPWAMobile.OPPPaymentParams, controller: UIKit.UINavigationController, _ completionHandler: @escaping () -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPApplePayUtil : ObjectiveC.NSObject {
+  @objc public static func applePayPaymentRequest(for request: PassKit.PKPaymentRequest?, and checkoutInfo: OPPWAMobile.OPPCheckoutInfo?) -> PassKit.PKPaymentRequest?
+  @objc public static func canSubmitApplePayRequest(for request: PassKit.PKPaymentRequest?) -> Swift.Bool
+  @objc public static func getApplePayViewController(for request: PassKit.PKPaymentRequest) -> PassKit.PKPaymentAuthorizationViewController?
+  @objc public static func isRecurringPaymentRequestEnabled(with request: PassKit.PKPaymentRequest?) -> Swift.Bool
+  @objc public static func convertAuthorization(result: OPPWAMobile.OPPApplePayRequestAuthorizationResult) -> PassKit.PKPaymentAuthorizationResult
+  @objc public static func convertShippingContact(update: OPPWAMobile.OPPApplePayRequestShippingContactUpdate) -> PassKit.PKPaymentRequestShippingContactUpdate
+  @objc public static func convertShippingMethod(update: OPPWAMobile.OPPApplePayRequestShippingMethodUpdate) -> PassKit.PKPaymentRequestShippingMethodUpdate
+  @objc public static func getNameForPaymentMethodType(_ type: PassKit.PKPaymentMethodType) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc final public class OPPPaymentProcessingViewModel : ObjectiveC.NSObject {
+  @objc public init(paymentParams: OPPWAMobile.OPPPaymentParams, checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPCardDetailsViewController) @_Concurrency.MainActor @preconcurrency public class OPPCardDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency final public let viewModel: OPPWAMobile.OPPSCardDetailsViewModel
+  @objc @_Concurrency.MainActor @preconcurrency public var activeTextField: UIKit.UITextField?
+  @objc @_Concurrency.MainActor @preconcurrency public var installmentsPickerView: UIKit.UIPickerView?
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPSCardDetailsViewModel)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc public func cancelButtonAction()
+  @_Concurrency.MainActor @preconcurrency public func configureUI()
+  @_Concurrency.MainActor @preconcurrency public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @_Concurrency.MainActor @preconcurrency @objc public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc public func didBecomeActive(_ notification: Foundation.Notification)
+}
+extension OPPWAMobile.OPPCardDetailsViewController {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func updateViewWithAnimation()
+}
+extension OPPWAMobile.OPPCardDetailsViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func updateViewConstraints()
+}
+extension OPPWAMobile.OPPCardDetailsViewController : OPPWAMobile.OPPAddressViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func addressViewClickedAction()
+}
+extension OPPWAMobile.OPPCardDetailsViewController : OPPWAMobile.OPPEditAddressViewControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func updateAddress(_ address: OPPWAMobile.OPPBillingAddress)
+}
+@_hasMissingDesignatedInitializers @objc(OPPMBWAYDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPMBWAYDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPMBWayDetailsViewModel)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @_Concurrency.MainActor @preconcurrency final public func expiryDateTextField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+extension OPPWAMobile.OPPMBWAYDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+}
+@_inheritsConvenienceInitializers @objc(OPPBaseCardScanningViewController) @_Concurrency.MainActor @preconcurrency public class OPPBaseCardScanningViewController : UIKit.UIViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency public func closeWithError(_ error: (any Swift.Error)?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPKlarnaDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPKlarnaDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPKlarnaDetailsViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func updateViewConstraints()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentButton(_ paymentButton: UIKit.UIButton)
+  @objc deinit
+}
+extension OPPWAMobile.OPPKlarnaDetailsViewController : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension OPPWAMobile.OPPKlarnaDetailsViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+}
+extension OPPWAMobile.OPPKlarnaDetailsViewController : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textView(_ textView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc public class OPPDeviceAuthProvider : ObjectiveC.NSObject {
+  @objc public static var isDeviceAuthEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc public static func performDeviceAuthentication(withLocalizedReason localizedReason: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPLibValidator : ObjectiveC.NSObject {
+  @objc public static func isThreeDSFrameworksLoaded() -> Swift.Bool
+  @objc public static func isFraudForceLibLoaded() -> Swift.Bool
+  @objc public static func isKlarnaInlineLibLoaded() -> Swift.Bool
+  @objc public static func isAfterPayLibLoaded() -> Swift.Bool
+  @objc public static func isCashAppPayLibLoaded() -> Swift.Bool
+  @objc public static func isAffirmLibLoaded() -> Swift.Bool
+  @objc public static func validLoadedLibs() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCardValidator : ObjectiveC.NSObject {
+  @objc public static let OPPCardValidatorDefaultNumberRegex: Swift.String
+  @objc public static let OPPCardValidatorDefaultNumberPattern: Swift.String
+  @objc public static let OPPCardValidatorDefaultCVVLength: Swift.Int
+  @objc public static func cvvLength(forPaymentBrand paymentBrand: Swift.String) -> ObjectiveC.NSInteger
+  @objc public static func paymentBrandsDetected(forCardNumber cardNumber: Swift.String, includeUnknown: Swift.Bool) -> [Swift.String]
+  @objc public static func validate(cardNumber: Swift.String, paymentBrand: Swift.String, detectedBrands: [Swift.String]?) -> Swift.Bool
+  @objc public static func patternForCardNumber(withPaymentBrand paymentBrand: Swift.String) -> Swift.String
+  @objc public static func isExpiryDateOptional(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func cvvMode(forPaymentBrand paymentBrand: Swift.String) -> OPPWAMobile.OPPCardBrandInfoCvvMode
+  @objc public static func isMobilePhoneRequired(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func detectionRegex(forPaymentBrand paymentBrand: Swift.String) -> Swift.String?
+  @objc public static func isPassingLuhnCheck(withCardNumber cardNumber: Swift.String) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc final public class OPPWASPaymentProvider : OPPWAMobile.OPPPaymentProvider {
+  final public var processor: (any OPPWAMobile.OPPWAProcessorProtocol)?
+  @objc public init(mode: OPPWAMobile.OPPProviderMode, processor: (any OPPWAMobile.OPPWAProcessorProtocol)?)
+  @objc override final public func send(_ transaction: OPPWAMobile.OPPTransaction, toEndpoint endpoint: Swift.String, completionHandler: @escaping (OPPWAMobile.OPPTransaction, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func submitTransaction(_ transaction: OPPWAMobile.OPPTransaction, completionHandler: @escaping (OPPWAMobile.OPPTransaction, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func register(_ transaction: OPPWAMobile.OPPTransaction, completionHandler: @escaping (OPPWAMobile.OPPTransaction, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func requestCheckoutInfo(withCheckoutID checkoutID: Swift.String, completionHandler: @escaping (OPPWAMobile.OPPCheckoutInfo?, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func requestLogoURLs(forPaymentBrands paymentBrands: [Swift.String], completionHandler: @escaping ([Swift.String : Foundation.URL]?, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func requestBinInfo(withCheckoutID checkoutID: Swift.String, bin: Swift.String, completionHandler: @escaping (OPPWAMobile.OPPBinInfo?, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func requestIdealBanks(withCheckoutID checkoutID: Swift.String, completionHandler: @escaping ([[Swift.AnyHashable : Any]]?, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func securityWarnings(completionHandler: @escaping ([ipworks3ds_sdk.Warning]?, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func sendThreeDS2AuthParams(_ authParams: Swift.String, transaction: OPPWAMobile.OPPTransaction, completionHandler: @escaping (OPPWAMobile.OPPTransaction, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func requestApplesTokenId(withCheckoutID checkoutID: Swift.String, completionHandler: @escaping (Swift.String?, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func requestValidations(forPaymentBrands paymentBrands: [Swift.String], checkoutID: Swift.String, completionHandler: @escaping ([OPPWAMobile.OPPBrandInfo]?, (any Swift.Error)?) -> Swift.Void)
+  @objc override final public func requestCheckoutData(withCheckoutID checkoutID: Swift.String, completionHandler: @escaping (OPPWAMobile.OPPCheckoutData?, (any Swift.Error)?) -> Swift.Void)
+  @objc deinit
+}
+extension OPPWAMobile.OPPWASPaymentProvider : OPPWAMobile.OPPSThreeDSManagerDelegate {
+  @objc final public func onThreeDSChallengeRequired(with completion: @escaping (UIKit.UINavigationController?) -> Swift.Void)
+  @objc final public func onThreeDSConfigRequired(with completion: @escaping (OPPWAMobile.OPPThreeDSConfig?) -> Swift.Void)
+  @objc final public func sendThreeDS2AuthParams(params: Swift.String, transaction: OPPWAMobile.OPPTransaction, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+}
+@objc extension OPPWAMobile.OPPCashAppPayProcessor {
+  @objc public static let kFailedToSigningOrderToken: Swift.String
+  @objc public static let kFailedToSigningOrderTokenDueToInvalidAmount: Swift.String
+  @objc public static let kFailedToSigningOrderTokenDueToInvalidRedirectURL: Swift.String
+  @objc public static let kFailedToSigningOrderTokenDueToInvalidJwtDecodeNull: Swift.String
+  @objc public static let kFailedToSigningOrderTokenDueToDecodeError: Swift.String
+  @objc public static let kFailedToSigningOrderTokenDueToJwtDecodeError: Swift.String
+  @objc public static let kFailedToSigningOrderTokenDueToHttpError: Swift.String
+  @objc public static let kFailedToSigningOrderTokenDueToSignInError: Swift.String
+  @objc public static let kCashAppValidationFailed: Swift.String
+  @objc public static let kCashAppValidationFailedDueToNilData: Swift.String
+  @objc public static let kCashAppValidationFailedDueToDecodeError: Swift.String
+  @objc public static let kCashAppValidationFailedDueToUnknownError: Swift.String
+  @objc public static let kCashAppValidationFailedDueToInvalidData: Swift.String
+  @objc public static let kCashAppValidationFailedDueToHttpError: Swift.String
+  @objc public static let kCashAppValidationFailedDueToValidationError: Swift.String
+  @objc public static let kCashAppStateError: Swift.String
+  @objc public static let kCashAppIntegrationError: Swift.String
+  @objc public static let kCashAppNetworkError: Swift.String
+  @objc public static let kCashAppApiError: Swift.String
+  @objc public static let kCashAppUnexpectedError: Swift.String
+  @objc public static let kCashAppUnknownTransactionState: Swift.String
+}
+@objc final public class OPPAmazonPayConfig : OPPWAMobile.OPPBrandConfig {
+  @objc public enum OPPAmazonPayRegion : Swift.Int {
+    case US
+    case DE
+    case UK
+    case FR
+    case IT
+    case ES
+    case JP
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc final public let region: OPPWAMobile.OPPAmazonPayConfig.OPPAmazonPayRegion
+  @objc public init(region: OPPWAMobile.OPPAmazonPayConfig.OPPAmazonPayRegion)
+  @objc override final public var paymentBrand: OPPWAMobile.OPPPaymentBrand {
+    @objc get
+  }
+  @objc deinit
+}
+extension OPPWAMobile.OPPCardDetailsViewController : OPPWAMobile.OPPCardScanningViewControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func cardScan(_ viewController: UIKit.UIViewController, didFinishWith result: OPPWAMobile.OPPCardScanningResult?, and error: Foundation.NSError?)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func cardScanDidCancel(_ viewController: UIKit.UIViewController)
+}
+@_inheritsConvenienceInitializers @objc public class OPPCardScanningConstants : ObjectiveC.NSObject {
+  @objc public static let kCardScanningAvailabilityMessage: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol OPPCardScanningViewControllerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func cardScan(_ viewController: UIKit.UIViewController, didFinishWith result: OPPWAMobile.OPPCardScanningResult?, and error: Foundation.NSError?)
+  @objc func cardScanDidCancel(_ viewController: UIKit.UIViewController)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OPPCardScanningViewController) @_Concurrency.MainActor @preconcurrency final public class OPPCardScanningViewController : OPPWAMobile.OPPBaseCardScanningViewController {
+  @objc @_Concurrency.MainActor @preconcurrency weak final public var delegate: (any OPPWAMobile.OPPCardScanningViewControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override final public func closeWithError(_ error: (any Swift.Error)?)
+  @objc deinit
+}
+extension OPPWAMobile.OPPCardScanningViewController {
+  @_Concurrency.MainActor @preconcurrency @objc final public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPBinCache : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: OPPWAMobile.OPPBinCache
+  @objc public func add(paymentBrands: [Swift.String], for bin: Swift.String)
+  @objc public func hasValue(for bin: Swift.String) -> Swift.Bool
+  @objc public func paymentBrands(for bin: Swift.String) -> [Swift.String]?
+  @objc public func clear()
+  @objc public func clear(for bin: Swift.String)
+  @objc deinit
+}
+@objc extension UIKit.UIImageView {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func loadImage(forPaymentBrand paymentBrand: Swift.String)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func loadImage(forPaymentBrand paymentBrand: Swift.String, accessibilityId: Swift.String?)
+}
+@objc final public class OPPCheckoutViewRouting : ObjectiveC.NSObject {
+  @objc public init(msdkUiType: OPPWAMobile.OPPMsdkUiType, checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc final public func detailsViewController(with paymentBrand: Swift.String, and token: OPPWAMobile.OPPToken?) -> UIKit.UIViewController?
+  @objc final public func detailsViewController(with paymentBrand: Swift.String, token: OPPWAMobile.OPPToken?, and transaction: OPPWAMobile.OPPTransaction?) -> UIKit.UIViewController?
+  @objc final public func presentCopyAndPayViewController(currentVC: UIKit.UIViewController, transaction: OPPWAMobile.OPPTransaction)
+  @objc deinit
+}
+@objc final public class OPPMBWayDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, mbwayConfig: OPPWAMobile.OPPMBWayConfig?, checkoutID: Swift.String)
+  @objc deinit
+}
+@objc public protocol OPPNetworkLogger {
+  @objc func logRequest(_ request: Foundation.URLRequest?)
+  @objc func logResponse(_ response: Foundation.URLResponse?)
+}
+extension OPPWAMobile.OPPCardViewController : UIKit.UIPickerViewDataSource, UIKit.UIPickerViewDelegate, UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc final public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+}
+@_inheritsConvenienceInitializers @objc public class OPPFileUtil : ObjectiveC.NSObject {
+  @objc public static func read(fromPath path: Swift.String) -> Foundation.Data?
+  @objc public static func write(data: Foundation.Data, to path: Swift.String) -> Swift.Bool
+  @objc public static func createDirectory(withPath path: Swift.String)
+  @objc public static func removeFile(atPath path: Swift.String) -> Swift.Bool
+  @objc public static func fileCreationTime(atPath path: Swift.String) -> Foundation.TimeInterval
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPRootViewController) @_Concurrency.MainActor @preconcurrency public class OPPRootViewController : UIKit.UIViewController {
+  @objc @_Concurrency.MainActor @preconcurrency weak public var presentationControllerDelegate: OPPWAMobile.OPPCustomPresentationControllerDelegate?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc deinit
+}
+extension OPPWAMobile.OPPRootViewController : UIKit.UIViewControllerTransitioningDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
+}
+extension OPPWAMobile.OPPRootViewController : UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UIKit.UINavigationController) -> UIKit.UIInterfaceOrientationMask
+}
+@objc extension OPPWAMobile.OPPAffirmProcessor {
+  @objc public static let kNilAffirmCheckoutConfig: Swift.String
+  @objc public static let kNilCheckoutData: Swift.String
+  @objc public static let kNilAffirmCheckoutData: Swift.String
+  @objc public static let kNilAffirmCheckoutView: Swift.String
+  @objc public static let kShopperCancelledTransaction: Swift.String
+  @objc public static let kCheckoutCancelledWithReason: Swift.String
+  @objc public static let kAffirmSdkNotLoaded: Swift.String
+  @objc public static let kInvalidUnitPrice: Swift.String
+  @objc public static let kInvalidCheckoutAmount: Swift.String
+  @objc public static let kInvalidDiscountAmount: Swift.String
+}
+extension OPPWAMobile.OPPCardDetailsViewController : UIKit.UICollectionViewDelegate, UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+}
+@objc public enum OPPAnalyticsDataIntegrationType : ObjectiveC.NSInteger {
+  case custom
+  case checkoutUI
+  case dropInButton
+  public func getIntegrationTypeString(_ paymentBrand: Swift.String) -> Swift.String
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public typealias RawValue = ObjectiveC.NSInteger
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPCheckoutSharedPaymentDetails : ObjectiveC.NSObject {
+  public typealias CompleteBlock = (OPPWAMobile.OPPTransaction?, (any Swift.Error)?) -> Swift.Void
+  public typealias CancelBlock = () -> Swift.Void
+  public typealias LoadingBlock = (Swift.Bool) -> Swift.Void
+  @objc public var checkoutSettings: OPPWAMobile.OPPCheckoutSettings?
+  @objc public var checkoutID: Swift.String?
+  @objc public var checkoutInfo: OPPWAMobile.OPPCheckoutInfo?
+  @objc public var paymentBrand: Swift.String?
+  @objc public var detectedBrandsPriority: [Swift.String]?
+  @objc public var provider: OPPWAMobile.OPPPaymentProvider?
+  @objc public var brandRules: [OPPWAMobile.OPPBrandInfo]?
+  @objc public var isPaymentSchemeScreenEnabled: Swift.Bool
+  @objc public var isCheckoutPresented: Swift.Bool
+  @objc public var integrationType: OPPWAMobile.OPPAnalyticsDataIntegrationType
+  @objc public var completeBlock: OPPWAMobile.OPPCheckoutSharedPaymentDetails.CompleteBlock?
+  @objc public var canceledBlock: OPPWAMobile.OPPCheckoutSharedPaymentDetails.CancelBlock?
+  @objc public var loadingBlock: OPPWAMobile.OPPCheckoutSharedPaymentDetails.LoadingBlock?
+  @objc public var applePayDelegate: OPPWAMobile.OPPApplePayDelegate {
+    @objc get
+    @objc set
+  }
+  @objc public var configuredPaymentBrands: [Swift.String]? {
+    @objc get
+    @objc set
+  }
+  @objc public static let sharedInstance: OPPWAMobile.OPPCheckoutSharedPaymentDetails
+  @objc public var shouldEnablePaymentMethodSelectionScreen: Swift.Bool {
+    @objc get
+  }
+  @objc public func callCompleteBlock(withTransaction transaction: OPPWAMobile.OPPTransaction?, error: Foundation.NSError?)
+  @objc public func callCanceledBlock()
+  @objc public func callLoadingBlock(InProgress inProgress: Swift.Bool)
+  @objc public func clear()
+  @objc public func isCopyAndPayOverride(for brand: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPSTCPayDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPSTCPayDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPSTCPayDetailsViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didBecomeActive(_ notification: Foundation.Notification)
+  @objc deinit
+}
+extension OPPWAMobile.OPPSTCPayDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers @objc(OPPPaymentSchemeViewController) @_Concurrency.MainActor @preconcurrency final public class OPPPaymentSchemeViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPPaymentSchemeViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency final public func preferredPresentationHeight() -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @objc deinit
+}
+extension OPPWAMobile.OPPPaymentSchemeViewController : UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc final public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension OPPWAMobile.OPPPaymentSchemeViewController : UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc final public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+}
+extension OPPWAMobile.OPPPaymentSchemeViewController {
+  @_Concurrency.MainActor @preconcurrency @objc final public func navigationController(_ navigationController: UIKit.UINavigationController, didShow viewController: UIKit.UIViewController, animated: Swift.Bool)
+}
+@_inheritsConvenienceInitializers @objc public class OPPWebViewUtils : ObjectiveC.NSObject {
+  @objc public static func isFinalAsyncReached(with redirectString: Swift.String?, shopperResultUrl: Swift.String?) -> Swift.Bool
+  @objc public static func redirectUrlPresent(redirectString: Swift.String?, contain shopperResultUrl: Swift.String?) -> Swift.Bool
+  @objc public static func redirectUrlPresent(redirectString: Swift.String?, conformsTo pattern: Swift.String) -> Swift.Bool
+  @objc public static func colorToString(_ color: UIKit.UIColor) -> Swift.String
+  @objc public static func fileContent(withName filename: Swift.String) throws -> Swift.String
+  @objc public static func boolToString(_ boolValue: Swift.Bool) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class OPPBrandInfo : ObjectiveC.NSObject {
+  @objc final public let brand: Swift.String
+  @objc final public let label: Swift.String
+  @objc final public let renderType: Swift.String
+  @objc public var cardBrandInfo: OPPWAMobile.OPPCardBrandInfo?
+  @objc public var isCustomUiRequired: Swift.Bool
+  @objc public init?(brand: Swift.String, renderType: Swift.String, label: Swift.String)
+  @objc convenience public init?(brand: Swift.String, json: [Swift.String : Any])
+  @objc deinit
+}
+extension OPPWAMobile.OPPCardDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+@objc final public class OPPGiropayViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@objc final public class OPPSConcreteCheckoutProvider : OPPWAMobile.OPPCheckoutProvider {
+  @objc public init(provider: OPPWAMobile.OPPPaymentProvider, checkoutID: Swift.String, settings: OPPWAMobile.OPPCheckoutSettings?)
+  @objc override final public func presentCheckout(forSubmittingTransactionCompletionHandler completionHandler: @escaping (OPPWAMobile.OPPTransaction?, (any Swift.Error)?) -> Swift.Void, cancelHandler: (() -> Swift.Void)? = nil)
+  @objc override final public func presentCheckout(withPaymentBrand paymentBrand: Swift.String, loadingHandler: ((Swift.Bool) -> Swift.Void)?, completionHandler: @escaping (OPPWAMobile.OPPTransaction?, (any Swift.Error)?) -> Swift.Void, cancelHandler: (() -> Swift.Void)? = nil)
+  @objc override final public func `continue`(withApplePay applePayPaymentRequest: PassKit.PKPaymentRequest?, completionHandler: @escaping () -> Swift.Void)
+  @objc override final public func dismissCheckout(animated: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @objc override final public func safariViewControllerDidFinish(_ controller: SafariServices.SFSafariViewController)
+  @objc deinit
+}
+extension OPPWAMobile.OPPSConcreteCheckoutProvider : OPPWAMobile.OPPThreeDSEventListener {
+  @objc final public func onThreeDSConfigRequired(completion: @escaping (OPPWAMobile.OPPThreeDSConfig) -> Swift.Void)
+  @objc final public func onThreeDSChallengeRequired(completion: @escaping (UIKit.UINavigationController) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPImageLoader : ObjectiveC.NSObject {
+  public typealias ImageLoaderCompletionBlock = (UIKit.UIImage?) -> Swift.Void
+  @objc public static let shared: OPPWAMobile.OPPImageLoader
+  @objc public func addURLs(_ URLs: [Swift.String : Foundation.URL])
+  @objc public func hasURL(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public func loadLogo(forPaymentBrand paymentBrand: Swift.String, completion: @escaping OPPWAMobile.OPPImageLoader.ImageLoaderCompletionBlock)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPImageCache : ObjectiveC.NSObject {
+  @objc public static let shared: OPPWAMobile.OPPImageCache
+  @objc public var customImages: [Swift.String : UIKit.UIImage]?
+  @objc public func image(forKey key: Swift.String) -> UIKit.UIImage?
+  @objc deinit
+}
+@objc final public class OPPAmazonPayResponseParser : ObjectiveC.NSObject {
+  @objc public init(transaction: OPPWAMobile.OPPTransaction)
+  @objc final public func getRedirectUrl(from response: Any) throws -> Foundation.URL
+  @objc deinit
+}
+@objc final public class OPPEditAddressViewModel : ObjectiveC.NSObject {
+  @objc public init(address: OPPWAMobile.OPPBillingAddress)
+  @objc deinit
+}
+@objc public enum OPPPaymentSchemeSectionType : Swift.Int {
+  case tokens
+  case cards
+  case applePay
+  case other
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc final public class OPPPaymentSchemeSectionInfo : ObjectiveC.NSObject {
+  @objc final public let sectionType: OPPWAMobile.OPPPaymentSchemeSectionType
+  @objc final public var title: Swift.String?
+  @objc final public var tokens: [OPPWAMobile.OPPToken]?
+  @objc final public var paymentBrands: [Swift.String]?
+  @objc final public var sectionHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc public init(type: OPPWAMobile.OPPPaymentSchemeSectionType, title: Swift.String?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class OPPLogger : ObjectiveC.NSObject {
+  @objc public static func sharedInstance(_ loggerService: (any OPPWAMobile.OPPLoggerServiceProtocol)?) -> OPPWAMobile.OPPLogger?
+  @objc final public func updateLogLevel(withString logLevelString: Swift.String?)
+  @objc final public func log(info: Swift.String, properties: [Swift.String : Any]?, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(warning: Swift.String, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(error: Foundation.NSError?, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(debug: Swift.String, properties: [Swift.String : Any]?, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(request: Foundation.NSURLRequest, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func log(response: Foundation.URLResponse, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logConfigured(paymentBrands: [Swift.String], checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logUnconfigured(paymentBrand: Swift.String, checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logCheckoutStarted(withCheckoutID checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func logReplacing(oldCheckoutID: Swift.String, with newCheckoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode)
+  @objc final public func sendLogs()
+  @objc final public func sendOldLogs()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPKlarnaTableViewCell) @_Concurrency.MainActor @preconcurrency final public class OPPKlarnaTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var linkTextView: UIKit.UITextView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var agreementSwitcher: UIKit.UISwitch!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var termsTextView: UIKit.UITextView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var termsImageView: UIKit.UIImageView!
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol OPPWAProcessorServiceProtocol {
+  @objc func sendTransaction(for transaction: OPPWAMobile.OPPTransaction, endpoint: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc func checkoutInfo(for checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc func logoUrls(for brands: [Swift.String], _ completionHandler: @escaping ([Swift.String : Foundation.URL]?, Foundation.NSError?) -> Swift.Void)
+  @objc func sendThreeDS2(for transaction: OPPWAMobile.OPPTransaction, with authParams: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc func validation(for brands: [Swift.String], checkoutID: Swift.String, _ completionHandler: @escaping ([OPPWAMobile.OPPBrandInfo]?, Foundation.NSError?) -> Swift.Void)
+  @objc func binInfo(for bin: Swift.String, checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPBinInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc func idealBanks(for checkoutID: Swift.String, _ completionHandler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  @objc func appleToken(for checkoutID: Swift.String, _ completionHandler: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func checkoutData(for checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutData?, Foundation.NSError?) -> Swift.Void)
+}
+@objc public protocol OPPWAProcessorProtocol {
+  @objc var threeDSManager: OPPWAMobile.OPPSThreeDSManager? { get set }
+  @objc func send(transaction: OPPWAMobile.OPPTransaction, toEndPoint: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc func requestCheckoutInfo(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc func requestLogoURLs(forPaymentBrands paymentBrands: [Swift.String], _ completionHandler: @escaping ([Swift.String : Foundation.URL]?, Foundation.NSError?) -> Swift.Void)
+  @objc func sendThreeDS2(authParams: Swift.String, transaction: OPPWAMobile.OPPTransaction, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+  @objc func requestValidations(forPaymentBrands paymentBrands: [Swift.String], checkoutID: Swift.String, _ completionHandler: @escaping ([OPPWAMobile.OPPBrandInfo]?, Foundation.NSError?) -> Swift.Void)
+  @objc func requestBinInfo(withCheckoutID checkoutID: Swift.String, bin: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPBinInfo?, Foundation.NSError?) -> Swift.Void)
+  @objc @available(*, deprecated)
+  func requestIdealBanks(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping ([[Swift.String : Any]]?, Foundation.NSError?) -> Swift.Void)
+  @objc func requestApplesTokenId(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping (Swift.String?, Foundation.NSError?) -> Swift.Void)
+  @objc func requestCheckoutData(withCheckoutID checkoutID: Swift.String, _ completionHandler: @escaping (OPPWAMobile.OPPCheckoutData?, Foundation.NSError?) -> Swift.Void)
+  @objc func securityWarnings(withCompletionHandler completionHandler: @escaping ([ipworks3ds_sdk.Warning]?, Foundation.NSError?) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @objc final public class OPPUIUtil : ObjectiveC.NSObject {
+  @objc public static func findTopViewController() -> UIKit.UIViewController?
+  @objc public static func interfaceOrientation() -> UIKit.UIInterfaceOrientation
+  @objc public static func isPortraitOrientation() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum OPPNetworkResponseContentType : Swift.Int {
+  case json
+  case image
+  case html
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol OPPNetworkResponseSerializable {
+  @objc var acceptableContentTypes: Swift.Set<Swift.String> { get }
+  @objc var acceptableStatusCodes: Foundation.IndexSet { get }
+  @objc func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.OPPNetworkResponse
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkResponseSerializer : ObjectiveC.NSObject {
+  @objc public static var `default`: any OPPWAMobile.OPPNetworkResponseSerializable {
+    @objc get
+  }
+  @objc public static func serializer(contentType: OPPWAMobile.OPPNetworkResponseContentType) -> any OPPWAMobile.OPPNetworkResponseSerializable
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCardScanningResult : ObjectiveC.NSObject {
+  @objc public var expiryDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc public var cardNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPRatePayDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPRatePayDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPRatePayDetailsViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @_Concurrency.MainActor @preconcurrency @objc final public func cancelButtonAction()
+  @_Concurrency.MainActor @preconcurrency @objc final public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didBecomeActive(_ notification: Foundation.Notification)
+  @objc deinit
+}
+extension OPPWAMobile.OPPRatePayDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@_inheritsConvenienceInitializers @objc final public class OPPUtil : ObjectiveC.NSObject {
+  @objc public static func formattedAmount(amount: Foundation.NSNumber, currencyCode: Swift.String) -> Swift.String
+  @objc public static func formattedNumericDigits(for digits: Swift.String) -> Swift.String?
+  @objc public static func addWhitespaces(to text: Swift.String, pattern: Swift.String) -> Swift.String
+  @objc public static func isNumericDigit(_ digit: Foundation.unichar) -> Swift.Bool
+  @objc public static func isCardNumberFormattingAllowedWith(cardNumber: Swift.String) -> Swift.Bool
+  @objc public static func isDateValid(_ dateString: Swift.String, withFormat dateFormat: Swift.String) -> Swift.Bool
+  @objc public static func cardExpirationMonth(from expirationDate: Swift.String?) -> Swift.String?
+  @objc public static func cardExpirationYear(from expirationDate: Swift.String?) -> Swift.String?
+  @objc public static func date(from dateStr: Swift.String, withFormat dateFormat: Swift.String?) -> Foundation.Date?
+  @objc public static func string(from date: Foundation.Date?, withFormat dateFormat: Swift.String?) -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPCardsTableViewCell) @_Concurrency.MainActor @preconcurrency final public class OPPCardsTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var collectionView: UIKit.UICollectionView!
+  @objc @_Concurrency.MainActor @preconcurrency public static let OPPCardsCollectionCellWidth: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency public static let OPPCardsCollectionCellHeight: CoreFoundation.CGFloat
+  @objc @_Concurrency.MainActor @preconcurrency public static let OPPCardsCollectionCellMinItemSpace: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public enum OPPFeatureSwitch : Swift.Int {
+  case componentUI
+  case threeDSFallbackDisabled
+  case swiftImplementation
+  case swiftCheckoutProvider
+  case threeDSOOBSupported
+  case klarnaWebFlowTest
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class OPPFeatureSwitchChecker : ObjectiveC.NSObject {
+  @objc public static let shared: OPPWAMobile.OPPFeatureSwitchChecker
+  @objc final public func isActivated(for featureSwitch: OPPWAMobile.OPPFeatureSwitch) -> Swift.Bool
+  @objc final public func enable(featureSwitch: OPPWAMobile.OPPFeatureSwitch)
+  @objc final public func disable(featureSwitch: OPPWAMobile.OPPFeatureSwitch)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPLogoUtil : ObjectiveC.NSObject {
+  @objc public static func logo(forPaymentBrand paymentBrand: OPPWAMobile.OPPPaymentBrand) -> UIKit.UIImage?
+  @objc public static func logo(forPaymentBrand paymentBrand: OPPWAMobile.OPPPaymentBrand, viewSize: CoreFoundation.CGSize) -> UIKit.UIImage
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension PassKit.PKPaymentRequest {
+  @objc dynamic public func updatePaymentRequest(for mode: OPPWAMobile.OPPProviderMode, tokenId: Swift.String) -> Swift.Bool
+}
+extension OPPWAMobile.OPPCardViewController : OPPWAMobile.OPPAddressViewDelegate, OPPWAMobile.OPPEditAddressViewControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func addressViewClickedAction()
+  @_Concurrency.MainActor @preconcurrency @objc final public func updateAddress(_ address: OPPWAMobile.OPPBillingAddress)
+}
+@objc final public class OPPIkanoPrivateLabelVADetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@objc public enum OPPNetworkServiceMethod : Swift.Int {
+  case get
+  case post
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkJSONResponseSerializer : ObjectiveC.NSObject, OPPWAMobile.OPPNetworkResponseSerializable {
+  @objc final public var acceptableContentTypes: Swift.Set<Swift.String> {
+    @objc get
+  }
+  @objc final public var acceptableStatusCodes: Foundation.IndexSet {
+    @objc get
+  }
+  @objc final public func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc final public func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.OPPNetworkResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency final public class OPPCustomPresentationControllerDelegate : UIKit.UIPresentationController {
+  @objc @_Concurrency.MainActor @preconcurrency final public func adjustContentView(toHeight height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func containerViewWillLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public var frameOfPresentedViewInContainerView: CoreFoundation.CGRect {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override final public func presentationTransitionWillBegin()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func dismissalTransitionWillBegin()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func dismissalTransitionDidEnd(_ completed: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(presentedViewController: UIKit.UIViewController, presenting presentingViewController: UIKit.UIViewController?)
+  @objc deinit
+}
+@objc public class OPPCashAppPayBrandConfig : OPPWAMobile.OPPAfterpayConfig {
+  @objc public init?(minimumAmount: Swift.String, maximumAmount: Swift.String, currencyCode: Swift.String, locale: Foundation.Locale, consumerLocale: Foundation.Locale)
+  @objc override dynamic public var paymentBrand: OPPWAMobile.OPPPaymentBrand {
+    @objc get
+  }
+  @objc deinit
+}
+@objc final public class OPPChinaUnionPayDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPCardScanUtils : ObjectiveC.NSObject {
+  @objc public static func expirationDate(_ request: Vision.VNRequest, completion: (Swift.String, Vision.VNConfidence) -> Swift.Void)
+  @objc public static func cardNumber(_ request: Vision.VNRequest, completion: (Swift.String) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OPPStorePaymentDetailsView) @_Concurrency.MainActor @preconcurrency final public class OPPStorePaymentDetailsView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var label: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var switchControl: UIKit.UISwitch!
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func layoutSubviews()
+  @objc deinit
+}
+@objc public enum OPPLogLevel : Swift.Int {
+  case off = 0
+  case error = 100
+  case warning = 200
+  case info = 300
+  case debug = 1000
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc final public class OPPLogMessage : ObjectiveC.NSObject, Foundation.NSCoding {
+  @objc final public var timestamp: Foundation.TimeInterval
+  @objc final public let message: Swift.String
+  @objc final public let logLevel: OPPWAMobile.OPPLogLevel
+  @objc convenience public init?(message: Swift.String, logLevel: OPPWAMobile.OPPLogLevel, checkoutID: Swift.String)
+  @objc public static func logMessage(message: Swift.String, logLevel: OPPWAMobile.OPPLogLevel, checkoutID: Swift.String) -> Self?
+  @objc final public func isEmpty() -> Swift.Bool
+  @objc final public func getLogLevel() -> OPPWAMobile.OPPLogLevel
+  @objc final public func getTimeStamp() -> Foundation.TimeInterval
+  @objc final public func encode(with coder: Foundation.NSCoder)
+  @objc required public init?(coder: Foundation.NSCoder)
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OPPTotalAmountView) @_Concurrency.MainActor @preconcurrency final public class OPPTotalAmountView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var headerLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var amountLabel: UIKit.UILabel!
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPPaymentParamBuilder : ObjectiveC.NSObject {
+  @objc public static func createPaymentParamsWithoutUI(_ paymentBrandString: Swift.String, token: OPPWAMobile.OPPToken?) throws -> OPPWAMobile.OPPPaymentParams
+  @objc public static func update(paymentParams: OPPWAMobile.OPPPaymentParams, with checkoutId: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPWAResponseParser : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkImageResponseSerializer : ObjectiveC.NSObject, OPPWAMobile.OPPNetworkResponseSerializable {
+  @objc final public var acceptableContentTypes: Swift.Set<Swift.String> {
+    @objc get
+  }
+  @objc final public var acceptableStatusCodes: Foundation.IndexSet {
+    @objc get
+  }
+  @objc final public func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc final public func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.OPPNetworkResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(OPPCustomProgressView) @_Concurrency.MainActor @preconcurrency final public class OPPCustomProgressView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor @preconcurrency final public func hide()
+  @objc @_Concurrency.MainActor @preconcurrency final public func show()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPPaymentProcessingViewController) @_Concurrency.MainActor @preconcurrency final public class OPPPaymentProcessingViewController : OPPWAMobile.OPPRootViewController, SafariServices.SFSafariViewControllerDelegate {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPPaymentProcessingViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency @objc final public func cancelButtonAction()
+  @objc deinit
+}
+@objc final public class OPPKlarnaDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, paymentBrand: Swift.String, checkoutID: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPAddressCodes : ObjectiveC.NSObject {
+  @objc public static let kCountryCodeUSA: Swift.String
+  @objc public static let kCountryCodeCanada: Swift.String
+  @objc public static func getCountries() -> [Swift.String]
+  @objc public static func getUsStates() -> [Swift.String]
+  @objc public static func getCaStates() -> [Swift.String]
+  @objc public static func getCountryName(withCode countryCode: Swift.String) -> Swift.String?
+  @objc public static func getCountryCodeWith(name: Swift.String) -> Swift.String?
+  @objc public static func getStateName(withCode stateCode: Swift.String, countryCode: Swift.String) -> Swift.String?
+  @objc public static func getStateCode(withName state: Swift.String, countryCode: Swift.String) -> Swift.String?
+  @objc public static func isCountryCodeIsValid(_ countryCode: Swift.String) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class OPPTokensSectionDelegate : ObjectiveC.NSObject {
+  @objc public static let OPPTokenCollectionViewCellReuseId: Swift.String
+  @objc public init(tokens: [OPPWAMobile.OPPToken], didSelect: @escaping (OPPWAMobile.OPPToken) -> Swift.Void)
+  @objc deinit
+}
+extension OPPWAMobile.OPPTokensSectionDelegate : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+extension OPPWAMobile.OPPTokensSectionDelegate : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+@_hasMissingDesignatedInitializers @objc(OPPIkanoDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPIkanoDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPIkanoDetailsViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentButton(_ paymentButton: UIKit.UIButton)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didEnterBackground(_ notification: Foundation.Notification)
+  @_Concurrency.MainActor @preconcurrency @objc final public func didBecomeActive(_ notification: Foundation.Notification)
+  @objc deinit
+}
+extension OPPWAMobile.OPPIkanoDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension OPPWAMobile.OPPIkanoDetailsViewController : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textView(_ textView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+}
+public typealias OPPNetworkHeaders = [Swift.String : Swift.String]
+public typealias OPPNetworkParameters = [Swift.String : Any]
+@objc final public class OPPNetworkManager : ObjectiveC.NSObject {
+  @objc public init(logger: (any OPPWAMobile.OPPNetworkLogger)? = nil, requestSerializer: any OPPWAMobile.OPPNetworkRequestSerializable = OPPNetworkRequestSerializer.default, responseSerializer: any OPPWAMobile.OPPNetworkResponseSerializable = OPPNetworkResponseSerializer.default, networkExecutor: any OPPWAMobile.OPPNetworkExecutable = OPPNetworkExecutor())
+  @objc final public func execute(api: Swift.String, baseUrl: Foundation.URL? = nil, method: OPPWAMobile.OPPNetworkServiceMethod = .get, parameters: OPPWAMobile.OPPNetworkParameters = [:], headers: OPPWAMobile.OPPNetworkHeaders = [:], completion: @escaping (Any?, (any Swift.Error)?) -> Swift.Void)
+  @objc deinit
+}
+@objc final public class OPPInstantPayViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPBrandCollectionViewCell) @_Concurrency.MainActor @preconcurrency final public class OPPBrandCollectionViewCell : UIKit.UICollectionViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var imageView: UIKit.UIImageView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var wrapperView: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency @objc override final public var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override final public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency final public func didUpdateIsSelected()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkJSONRequestSerializer : ObjectiveC.NSObject, OPPWAMobile.OPPNetworkRequestSerializable {
+  @objc final public var contentType: OPPWAMobile.OPPNetworkRequestContentType {
+    @objc get
+  }
+  @objc final public func getUrlRequest(api: Swift.String, baseUrl: Foundation.URL?, method: OPPWAMobile.OPPNetworkServiceMethod, parameters: OPPWAMobile.OPPNetworkParameters, headers: OPPWAMobile.OPPNetworkHeaders) throws -> Foundation.URLRequest
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPTokensTableViewCell) @_Concurrency.MainActor @preconcurrency final public class OPPTokensTableViewCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak final public var collectionView: UIKit.UICollectionView!
+  @_Concurrency.MainActor @preconcurrency @objc override final public func prepareForReuse()
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension OPPWAMobile.OPPLogger {
+  @objc final public func lgf_integrationTypeString() -> Swift.String
+  @objc final public func lgf_checkoutSettingsDictionary(withSettings settings: OPPWAMobile.OPPCheckoutSettings) -> [Swift.String : Any]
+}
+@_hasMissingDesignatedInitializers @objc(OPPDirectDebitDetailsViewController) @_Concurrency.MainActor @preconcurrency final public class OPPDirectDebitDetailsViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPDirectDebitDetailsViewModel)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override final public func updateViewConstraints()
+  @_Concurrency.MainActor @preconcurrency @objc final public func cancelButtonAction()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @_Concurrency.MainActor @preconcurrency final public func configurePaymentFormHeaderView(_ formHeaderView: OPPWAMobile.OPPPaymentFormHeaderView)
+}
+extension OPPWAMobile.OPPDirectDebitDetailsViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor @preconcurrency @objc final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+}
+@objc final public class OPPAmazonPayPaymentParams : OPPWAMobile.OPPPaymentParams {
+  @objc final public let configuration: OPPWAMobile.OPPAmazonPayConfig
+  @objc public init(checkoutID: Swift.String, configuration: OPPWAMobile.OPPAmazonPayConfig) throws
+  @objc public static func amazonPayPaymentParamsWith(checkoutID: Swift.String, configuration: OPPWAMobile.OPPAmazonPayConfig) throws -> OPPWAMobile.OPPAmazonPayPaymentParams
+  @objc override final public func dictionaryForExecutingTransaction() -> [Swift.AnyHashable : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class OPPNetworkResponse : ObjectiveC.NSObject {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkHTMLResponseSerializer : ObjectiveC.NSObject, OPPWAMobile.OPPNetworkResponseSerializable {
+  @objc final public var acceptableContentTypes: Swift.Set<Swift.String> {
+    @objc get
+  }
+  @objc final public var acceptableStatusCodes: Foundation.IndexSet {
+    @objc get
+  }
+  @objc final public func validateResponse(_ response: Foundation.URLResponse?, data: Foundation.Data?) -> (any Swift.Error)?
+  @objc final public func response(data: Foundation.Data?, urlResponse: Foundation.URLResponse?) -> OPPWAMobile.OPPNetworkResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol OPPSThreeDSManagerDelegate {
+  @objc func onThreeDSChallengeRequired(with completion: @escaping (UIKit.UINavigationController?) -> Swift.Void)
+  @objc func onThreeDSConfigRequired(with completion: @escaping (OPPWAMobile.OPPThreeDSConfig?) -> Swift.Void)
+  @objc func sendThreeDS2AuthParams(params: Swift.String, transaction: OPPWAMobile.OPPTransaction, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction, Foundation.NSError?) -> Swift.Void)
+}
+@objc public class OPPSThreeDSManager : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any OPPWAMobile.OPPSThreeDSManagerDelegate)?
+  @objc public init(mode: OPPWAMobile.OPPProviderMode)
+  @objc public func proceedWithAppFlow(transaction: OPPWAMobile.OPPTransaction, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction?, Foundation.NSError?) -> Swift.Void)
+  @objc public func proceedWebFlow(with transaction: OPPWAMobile.OPPTransaction?, _ completionHandler: @escaping (OPPWAMobile.OPPTransaction?, Foundation.NSError?) -> Swift.Void)
+  @objc deinit
+}
+@objc public protocol OPPNetworkExecutable {
+  @objc func execute(request: Foundation.URLRequest, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkExecutor : ObjectiveC.NSObject, OPPWAMobile.OPPNetworkExecutable {
+  @objc final public func execute(request: Foundation.URLRequest, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(OPPKlarnaInlineViewController) @_Concurrency.MainActor @preconcurrency final public class OPPKlarnaInlineViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPKlarnaInlineViewModel)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency final public func configureUI()
+  @objc deinit
+}
+extension OPPWAMobile.OPPKlarnaInlineViewController : OPPWAMobile.OPPKlarnaPaymentViewWrapperDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func klarnaAuthorized(with paymentView: OPPWAMobile.OPPKlarnaPaymentViewWrapper, approved: Swift.Bool, authToken: Swift.String?, finalizeRequired: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc final public func klarnaFailed(in paymentView: OPPWAMobile.OPPKlarnaPaymentViewWrapper, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc final public func klarnaLoaded(with paymentView: OPPWAMobile.OPPKlarnaPaymentViewWrapper)
+}
+@objc public enum OPPNetworkRequestContentType : Swift.Int {
+  case json
+  case url
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol OPPNetworkRequestSerializable {
+  @objc var contentType: OPPWAMobile.OPPNetworkRequestContentType { get }
+  @objc func getUrlRequest(api: Swift.String, baseUrl: Foundation.URL?, method: OPPWAMobile.OPPNetworkServiceMethod, parameters: OPPWAMobile.OPPNetworkParameters, headers: OPPWAMobile.OPPNetworkHeaders) throws -> Foundation.URLRequest
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkRequestSerializer : ObjectiveC.NSObject {
+  @objc public static var `default`: any OPPWAMobile.OPPNetworkRequestSerializable {
+    @objc get
+  }
+  @objc public static func serializer(contentType: OPPWAMobile.OPPNetworkRequestContentType) -> any OPPWAMobile.OPPNetworkRequestSerializable
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class OPPLoggerService : ObjectiveC.NSObject, OPPWAMobile.OPPLoggerServiceProtocol {
+  @objc override dynamic public init()
+  @objc final public func sendLog(messages: [OPPWAMobile.OPPLogMessage], checkoutID: Swift.String, mode: OPPWAMobile.OPPProviderMode, _ completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+@objc final public class OPPListDetailsViewModel : ObjectiveC.NSObject {
+  @objc public init(checkoutProvider: OPPWAMobile.OPPCheckoutProvider, paymentBrand: Swift.String, checkoutID: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class OPPBrandsValidator : ObjectiveC.NSObject {
+  @objc public static func isCardBrand(_ paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func getLabel(forPaymentBrand paymentBrand: Swift.String) -> Swift.String
+  @objc public static func hasCustomUi(forPaymentBrand paymentBrand: Swift.String) -> Swift.Bool
+  @objc public static func getBrandsWithMissingUi() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(OPPSCheckoutTextField) @_Concurrency.MainActor @preconcurrency final public class OPPSCheckoutTextField : UIKit.UITextField {
+  @objc @_Concurrency.MainActor @preconcurrency final public var isDefaultContextMenu: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override final public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public enum OPPApplePayStatus : Swift.Int {
+  case initialized
+  case merchantRejected
+  case appleAuthorized
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc final public class OPPApplePayDelegate : ObjectiveC.NSObject {
+  @objc final public var checkoutProvider: OPPWAMobile.OPPCheckoutProvider?
+  @objc final public var successfulCompletion: ((OPPWAMobile.OPPPaymentParams) -> Swift.Void)?
+  @objc final public func cleanUp()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension OPPWAMobile.OPPApplePayDelegate : PassKit.PKPaymentAuthorizationViewControllerDelegate {
+  @objc final public func paymentAuthorizationViewController(_ controller: PassKit.PKPaymentAuthorizationViewController, didSelect shippingMethod: PassKit.PKShippingMethod, handler completion: @escaping (PassKit.PKPaymentRequestShippingMethodUpdate) -> Swift.Void)
+  @objc final public func paymentAuthorizationViewController(_ controller: PassKit.PKPaymentAuthorizationViewController, didSelectShippingContact contact: PassKit.PKContact, handler completion: @escaping (PassKit.PKPaymentRequestShippingContactUpdate) -> Swift.Void)
+  @objc final public func paymentAuthorizationViewController(_ controller: PassKit.PKPaymentAuthorizationViewController, didAuthorizePayment payment: PassKit.PKPayment, handler completion: @escaping (PassKit.PKPaymentAuthorizationResult) -> Swift.Void)
+  @objc final public func paymentAuthorizationViewControllerDidFinish(_ controller: PassKit.PKPaymentAuthorizationViewController)
+}
+@_inheritsConvenienceInitializers @objc final public class OPPNetworkURLRequestSerializer : ObjectiveC.NSObject, OPPWAMobile.OPPNetworkRequestSerializable {
+  @objc final public var contentType: OPPWAMobile.OPPNetworkRequestContentType {
+    @objc get
+  }
+  @objc final public func getUrlRequest(api: Swift.String, baseUrl: Foundation.URL?, method: OPPWAMobile.OPPNetworkServiceMethod, parameters: OPPWAMobile.OPPNetworkParameters, headers: OPPWAMobile.OPPNetworkHeaders) throws -> Foundation.URLRequest
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency final public class OPPCopyAndPayViewController : OPPWAMobile.OPPRootViewController {
+  @objc @_Concurrency.MainActor @preconcurrency public init?(viewModel: OPPWAMobile.OPPCopyAndPayViewModel?)
+  @_Concurrency.MainActor @preconcurrency @objc override final public func viewDidLoad()
+  @objc deinit
+}
+extension OPPWAMobile.OPPCopyAndPayViewController : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc final public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+}
+extension OPPWAMobile.OPPExpandIcon : Swift.Equatable {}
+extension OPPWAMobile.OPPExpandIcon : Swift.Hashable {}
+extension OPPWAMobile.OPPExpandIcon : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPAddressField : Swift.Equatable {}
+extension OPPWAMobile.OPPAddressField : Swift.Hashable {}
+extension OPPWAMobile.OPPAddressField : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPTextFieldContentType : Swift.Equatable {}
+extension OPPWAMobile.OPPTextFieldContentType : Swift.Hashable {}
+extension OPPWAMobile.OPPTextFieldContentType : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPCardBrandInfoCvvMode : Swift.Equatable {}
+extension OPPWAMobile.OPPCardBrandInfoCvvMode : Swift.Hashable {}
+extension OPPWAMobile.OPPCardBrandInfoCvvMode : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPPaymentSchemeSectionType : Swift.Equatable {}
+extension OPPWAMobile.OPPPaymentSchemeSectionType : Swift.Hashable {}
+extension OPPWAMobile.OPPPaymentSchemeSectionType : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPAmazonPayConfig.OPPAmazonPayRegion : Swift.Equatable {}
+extension OPPWAMobile.OPPAmazonPayConfig.OPPAmazonPayRegion : Swift.Hashable {}
+extension OPPWAMobile.OPPAmazonPayConfig.OPPAmazonPayRegion : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPAnalyticsDataIntegrationType : Swift.Equatable {}
+extension OPPWAMobile.OPPAnalyticsDataIntegrationType : Swift.Hashable {}
+extension OPPWAMobile.OPPAnalyticsDataIntegrationType : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPNetworkResponseContentType : Swift.Equatable {}
+extension OPPWAMobile.OPPNetworkResponseContentType : Swift.Hashable {}
+extension OPPWAMobile.OPPNetworkResponseContentType : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPFeatureSwitch : Swift.Equatable {}
+extension OPPWAMobile.OPPFeatureSwitch : Swift.Hashable {}
+extension OPPWAMobile.OPPFeatureSwitch : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPNetworkServiceMethod : Swift.Equatable {}
+extension OPPWAMobile.OPPNetworkServiceMethod : Swift.Hashable {}
+extension OPPWAMobile.OPPNetworkServiceMethod : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPLogLevel : Swift.Equatable {}
+extension OPPWAMobile.OPPLogLevel : Swift.Hashable {}
+extension OPPWAMobile.OPPLogLevel : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPNetworkRequestContentType : Swift.Equatable {}
+extension OPPWAMobile.OPPNetworkRequestContentType : Swift.Hashable {}
+extension OPPWAMobile.OPPNetworkRequestContentType : Swift.RawRepresentable {}
+extension OPPWAMobile.OPPApplePayStatus : Swift.Equatable {}
+extension OPPWAMobile.OPPApplePayStatus : Swift.Hashable {}
+extension OPPWAMobile.OPPApplePayStatus : Swift.RawRepresentable {}

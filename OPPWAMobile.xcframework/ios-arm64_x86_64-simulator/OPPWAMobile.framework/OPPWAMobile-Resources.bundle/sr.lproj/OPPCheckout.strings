@@ -1,0 +1,129 @@
+//
+// Checkout.strings
+// $$frameworkname$$
+//
+
+/// View controller titles
+"VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Izaberi način plaćanja";
+"VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Detalji plaćanja";
+"VIEW_CONTROLLER_TITLE_PROCESSING" = "Procesuiranje";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "Адреса за наплату";
+
+/// Labels
+"LABEL_TOTAL_AMOUNT" = "Ukupan iznos";
+"LABEL_MBWAY_PUSH_NOTIFICATION" = "Poslaćemo push notifikaciju na tvoj uređaj.";
+"LABEL_MBWAY_ACCEPT_PIN" = "Molimo te da prihvatiš transakciju koristeći svoj PIN MB WAY.";
+"LABEL_TERMS_AND_CONDITIONS" = "Uslovi korišćenja";
+"LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "Pročitao/la sam i prihvatam Uslove korišćenja";
+"LABEL_SWEDISH" = "Švedski";
+"LABEL_FINNISH" = "Finski";
+
+/// Messages
+"MESSAGE_PLEASE_WAIT" = "Molimo te sačekaj";
+
+/// Device owner authentication
+"DEVICE_AUTH_REASON" = "Potvrdi plaćanje";
+
+/// Button titles
+"BUTTON_TITLE_PAY" = "PLATI SAD";
+"BUTTON_TITLE_PAY_AMOUNT" = "Plati %@";
+"BUTTON_TITLE_REGISTER" = "Registruj se";
+"BUTTON_TITLE_CANCEL" = "Otkaži";
+"BUTTON_TITLE_BACK" = "Izmeni";
+"BUTTON_TITLE_DONE" = "Urađeno";
+
+/// Text field label names
+"FIELD_LABEL_CARD_HOLDER_NAME" = "Ime vlasnika kartice";
+"FIELD_LABEL_CREDIT_CARD_NUMBER" = "Broj kreditne kartice";
+"FIELD_LABEL_EXPIRY_DATE" = "Datum isteka";
+"FIELD_LABEL_CVV" = "Sigurnosni kod ili CVV";
+"FIELD_LABEL_MOBILE_PHONE_NUMBER" = "Broj mobilnog telefona";
+"FIELD_LABEL_BANK_ACCOUNT_HOLDER_NAME" = "Vlasnik računa";
+"FIELD_LABEL_IBAN" = "IBAN";
+"FIELD_LABEL_IBAN_OR_ACCOUNT_NUMBER" = "IBAN ili broj računa";
+"FIELD_LABEL_BIC_OR_BANK_CODE" = "BIC ili bankovni kod";
+"FIELD_LABEL_SELECT_COUNTRY" = "Izaberi zemlju:";
+"FIELD_LABEL_SELECT_BANK" = "Izaberi banku:";
+"FIELD_LABEL_STORE_PAYMENT_DETAILS" = "Podaci robne kuće za naredna plaćanja";
+"FIELD_LABEL_STORE_CARD_TYPE" = "Izaberi vrstu kartice:";
+"FIELD_LABEL_NUMBER_OF_INSTALLMENTS" = "Broj rata";
+"FIELD_LABEL_EMAIL" = "Imejl";
+"FIELD_LABEL_COUNTRY_CODE" = "Kod zemlje";
+"FIELD_LABEL_NATIONAL_IDENTIFIER" = "Identifikacioni broj države";
+"FIELD_LABEL_ACCOUNT_NUMBER" = "Broj računa";
+"FIELD_LABEL_ROUTING_NUMBER" = "Broj usmjeravanja";
+"FIELD_LABEL_ACCOUNT_VERIFICATION" = "Verifikacija računa";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Датум рођења";
+"FIELD_LABEL_OTP" = "Унесите код из ваше банковне апликације";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Унесите свој Блик код";
+
+/// Text field placeholders
+"FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Ime kako glasi na kartici";
+"FIELD_PLACEHOLDER_CARD_NUMBER" = "Dugački broj sa prednje strane kartice";
+"FIELD_PLACEHOLDER_EXPIRY_DATE" = "MM/GG ili MM/GGGG";
+"FIELD_PLACEHOLDER_CVV_3_DIGITS" = "3-cifreni kod";
+"FIELD_PLACEHOLDER_CVV_4_DIGITS" = "4-cifreni kod";
+"FIELD_PLACEHOLDER_BANK_ACCOUNT_HOLDER_NAME" = "Ime vlasnika računa";
+"FIELD_PLACEHOLDER_IBAN" = "Međunarodni broj bankovnog računa";
+"FIELD_PLACEHOLDER_IBAN_OR_ACCOUNT_NUMBER" = "IBAN ili broj računa";
+"FIELD_PLACEHOLDER_BIC_OR_BANK_CODE" = "BIC ili bankovni kod";
+"FIELD_PLACEHOLDER_COUNTRY_CODE" = "+xxx";
+"FIELD_PLACEHOLDER_MOBILE_PHONE_NUMBER" = "xxxxxxxxx";
+"FIELD_PLACEHOLDER_EMAIL" = "Imejl";
+"FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Identifikacioni broj države";
+"FIELD_PLACEHOLDER_ACCOUNT_NUMBER" = "Broj računa";
+"FIELD_PLACEHOLDER_ACCOUNT_VERIFICATION" = "Verifikacija računa";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "ДД.ММ.ГГГГ";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(опционо)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Држава";
+"FIELD_PLACEHOLDER_STATE" = "Држава";
+"FIELD_PLACEHOLDER_CITY" = "Цити";
+"FIELD_PLACEHOLDER_POSTCODE" = "Поштански број";
+"FIELD_PLACEHOLDER_STREET1" = "Адреса Линија 1";
+"FIELD_PLACEHOLDER_STREET2" = "Адреса Линија 2";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Broj usmjeravanja";
+
+/// Text field errors
+"FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Ime vlasnika kartice je nevažeće";
+"FIELD_ERROR_CARD_NUMBER_INVALID" = "Uneti broj kartice je nevažeći";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID" = "Datum isteka kartice je nevažeći, koristi MM/GG ili MM/GGGG format";
+"FIELD_ERROR_CARD_EXPIRED" = "Kartica je istekla";
+"FIELD_ERROR_CARD_CVV_3_DIGITS_INVALID" = "Sigurnosni kod mora da sadrži poslednje 3 cifre sa poleđine tvoje kartice";
+"FIELD_ERROR_CARD_CVV_4_DIGITS_INVALID" = "Sigurnosni kod mora da sadrži 4-cifreni broj sa prednje strane tvoje kartice";
+"FIELD_ERROR_BANK_ACCOUNT_HOLDER_INVALID" = "Ime vlasnika računa je nevažeće";
+"FIELD_ERROR_IBAN_INVALID" = "IBAN je nevažeći";
+"FIELD_ERROR_IBAN_OR_ACCOUNT_NUMBER_INVALID" = "IBAN ili broj računa su nevažeći";
+"FIELD_ERROR_BIC_OR_BANK_CODE_INVALID" = "BIC ili bankovni kod su nevažeći";
+"FIELD_ERROR_EMAIL_INVALID" = "Nevažeća imejl adresa";
+"FIELD_ERROR_MOBILE_PHONE_INVALID" = "Nevažeći broj mobilnog telefona";
+"FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Nevažeći identifikacioni broj države";
+"FIELD_ERROR_ACCOUNT_NUMBER_INVALID" = "Nevažeći broj računa";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Nevažeći broj računa";
+"FIELD_ERROR_ACCOUNT_EXPIRY_DATE_INVALID" = "Datum isteka je nevažeći, molimo te koristi format MM/GG ili MM/GGGG";
+"FIELD_ERROR_ACCOUNT_EXPIRED" = "Račun je istekao";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Неважећи датум рођења. Очекује се ДД.ММ.ГГГГ";
+"FIELD_ERROR_ADDRESS_INVALID" = "Кликните овде за адресу за обрачун";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Неважећи позивни број земље";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Унесите важећи шестоцифрени код";
+
+/// Payment method groups are displayed if tokens are received
+"PAYMENT_METHOD_GROUP_STORED" = "Zabeleženi načini plaćanja";
+"PAYMENT_METHOD_GROUP_OTHER" = "Drugi načini plaćanja";
+"PAYMENT_METHOD_GROUP_CARDS" = "Kreditne / debitne kartice";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Користите формат ММ/ГГ";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Користите код од 3 или 4 цифре";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "Датум истека картице није важећи, користите формат ММ/ГГ";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "Сигурносни код мора да садржи 3 или 4 цифре";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Скенирајте картицу";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Откажите наплату";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Платите сачуваним начином плаћања";
+"ACCESSIBILITY_PAY_WITH" = "Платити";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "Скенирање картице није успело";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Држите картицу овде.\и она ће аутоматски скенирати";
+"BUTTON_TITLE_OK" = "У реду";

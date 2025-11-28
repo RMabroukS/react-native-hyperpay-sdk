@@ -3,7 +3,10 @@ buildscript {
         repositories {
             google()
             mavenCentral()
-            jcenter()
+              flatDir {
+                 dirs 'libs'
+              }
+            // jcenter()
         }
 
         dependencies {
@@ -50,23 +53,32 @@ repositories {
     }
     google()
     mavenCentral()
-    jcenter()
+      flatDir {
+        dirs 'libs'
+    }
+    // jcenter()
 }
 
 dependencies {
 
   if (project.gradle.startParameter.taskNames.any { it.toLowerCase().contains('release') }) {
-     implementation(name:'ipworks3ds_sdk_deploy', ext:'aar')
+     implementation files('libs/ipworks3ds_sdk_9149_deploy.aar')
   }
   else {
-     implementation(name:'ipworks3ds_sdk', ext:'aar')
+    implementation files('libs/ipworks3ds_sdk_9149.aar')
   }
-  implementation(name:'oppwa.mobile-4.6.0-release', ext:'aar')
+  implementation files('libs/oppwa.mobile-6.21.0-release.aar')
   implementation "androidx.appcompat:appcompat:1.4.2"
-  implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+  implementation "androidx.recyclerview:recyclerview:1.2.1"
   implementation "androidx.browser:browser:1.4.0"
-  implementation "androidx.fragment:fragment:1.5.5"
+  implementation "androidx.fragment:fragment-ktx:1.4.1"
+  implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+  implementation "androidx.webkit:webkit:1.4.0"
   implementation "com.google.android.material:material:1.6.1"
+  implementation "com.google.code.gson:gson:2.8.9"
+  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"  // From node_modules
 

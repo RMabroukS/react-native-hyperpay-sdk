@@ -1,0 +1,124 @@
+//
+// Checkout.strings
+// $$frameworkname$$
+//
+
+/// View controller titles
+"VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Выберите способ оплаты";
+"VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Детали оплаты";
+"VIEW_CONTROLLER_TITLE_PROCESSING" = "Обработка";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "Адрес для выставления счета";
+
+/// Labels
+"LABEL_TOTAL_AMOUNT" = "Итого";
+"LABEL_MBWAY_PUSH_NOTIFICATION" = "Вам будет отправлено Push-уведомление.";
+"LABEL_MBWAY_ACCEPT_PIN" = "Пожалуйста, подтвердите транзакцию, используя ваш PIN MB WAY.";
+"LABEL_TERMS_AND_CONDITIONS" = "Условия пользовательского соглашения";
+"LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "Я прочитал и согласен с условиями пользовательского соглашения";
+"LABEL_SWEDISH" = "Шведский";
+"LABEL_FINNISH" = "Финский";
+
+/// Messages
+"MESSAGE_PLEASE_WAIT" = "Пожалуйста, подождите";
+
+/// Device owner authentication
+"DEVICE_AUTH_REASON" = "Для подтверждения оплаты";
+
+/// Button titles
+"BUTTON_TITLE_PAY" = "Оплатить";
+"BUTTON_TITLE_PAY_AMOUNT" = "Оплатить %@";
+"BUTTON_TITLE_REGISTER" = "Зарегистрировать";
+"BUTTON_TITLE_CANCEL" = "Отмена";
+"BUTTON_TITLE_BACK" = "Изменить";
+"BUTTON_TITLE_DONE" = "Готово";
+
+/// Text field label names
+"FIELD_LABEL_CARD_HOLDER_NAME" = "Имя и фамилия";
+"FIELD_LABEL_CREDIT_CARD_NUMBER" = "Номер кредитной карты";
+"FIELD_LABEL_EXPIRY_DATE" = "Срок действия";
+"FIELD_LABEL_MOBILE_PHONE_NUMBER" = "Номер телефона";
+"FIELD_LABEL_CVV" = "Код CVV2/CVC2";
+"FIELD_LABEL_BANK_ACCOUNT_HOLDER_NAME" = "Имя и фамилия";
+"FIELD_LABEL_IBAN" = "IBAN";
+"FIELD_LABEL_IBAN_OR_ACCOUNT_NUMBER" = "IBAN или номер счета";
+"FIELD_LABEL_BIC_OR_BANK_CODE" = "BIC или код банка";
+"FIELD_LABEL_SELECT_COUNTRY" = "Выберите страну:";
+"FIELD_LABEL_SELECT_BANK" = "Выберите банк:";
+"FIELD_LABEL_STORE_PAYMENT_DETAILS" = "Сохранить платежную информацию для последующих покупок";
+"FIELD_LABEL_STORE_CARD_TYPE" = "Выберите тип карты:";
+"FIELD_LABEL_NUMBER_OF_INSTALLMENTS" = "Количество платежей";
+"FIELD_LABEL_EMAIL" = "Email";
+"FIELD_LABEL_COUNTRY_CODE" = "Код страны";
+"FIELD_LABEL_NATIONAL_IDENTIFIER" = "Идентификационный номер";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Дата рождения";
+"FIELD_LABEL_ROUTING_NUMBER" = "Код банка";
+"FIELD_LABEL_OTP" = "Введите код из приложения вашего банка";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Пожалуйста, введите свой код Blik";
+
+/// Text field placeholders
+"FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Имя с лицевой части карты";
+"FIELD_PLACEHOLDER_CARD_NUMBER" = "Длинный номер с лицевой части карты";
+"FIELD_PLACEHOLDER_EXPIRY_DATE" = "MM/ГГ, ММ/ГГГГ";
+"FIELD_PLACEHOLDER_CVV_3_DIGITS" = "3-значный код";
+"FIELD_PLACEHOLDER_CVV_4_DIGITS" = "4-значный код";
+"FIELD_PLACEHOLDER_BANK_ACCOUNT_HOLDER_NAME" = "Имя владельца банковского счета";
+"FIELD_PLACEHOLDER_IBAN" = "Международный номер банк. счёта";
+"FIELD_PLACEHOLDER_IBAN_OR_ACCOUNT_NUMBER" = "IBAN или номер счета";
+"FIELD_PLACEHOLDER_BIC_OR_BANK_CODE" = "BIC или код банка";
+"FIELD_PLACEHOLDER_COUNTRY_CODE" = "+x";
+"FIELD_PLACEHOLDER_EMAIL" = "Email";
+"FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Идентификационный номер";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "ДД.ММ.ГГГГ";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(необязательно)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Страна";
+"FIELD_PLACEHOLDER_STATE" = "Состояние";
+"FIELD_PLACEHOLDER_CITY" = "Город";
+"FIELD_PLACEHOLDER_POSTCODE" = "Почтовый индекс";
+"FIELD_PLACEHOLDER_STREET1" = "Строка адреса улицы 1";
+"FIELD_PLACEHOLDER_STREET2" = "Строка адреса улицы 2";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Код банка";
+
+/// Text field errors
+"FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Неверное имя владельца карты";
+"FIELD_ERROR_CARD_NUMBER_INVALID" = "Неверный номер карты";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID" = "Неверный срок действия карты, используйте формат ММ/ГГ или ММ/ГГГГ";
+"FIELD_ERROR_CARD_EXPIRED" = "Срок действия карты истек";
+"FIELD_ERROR_CARD_CVV_3_DIGITS_INVALID" = "Неверный код, введите 3 последние цифры с обратной стороны карты";
+"FIELD_ERROR_CARD_CVV_4_DIGITS_INVALID" = "Неверный код, введите 4-значное число с лицевой стороны карты";
+"FIELD_ERROR_MOBILE_PHONE_INVALID" = "Неверный номер мобильного телефона";
+"FIELD_ERROR_BANK_ACCOUNT_HOLDER_INVALID" = "Неверное имя владельца банковского счета";
+"FIELD_ERROR_IBAN_INVALID" = "Неверный IBAN";
+"FIELD_ERROR_IBAN_OR_ACCOUNT_NUMBER_INVALID" = "Неверный IBAN или номер счета";
+"FIELD_ERROR_BIC_OR_BANK_CODE_INVALID" = "Неверный BIC или код банка";
+"FIELD_ERROR_EMAIL_INVALID" = "Неверный email";
+"FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Неверный идентификационный номер";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Неверная дата рождения. Ожидается ДД.ММ.ГГГГ";
+"FIELD_ERROR_ADDRESS_INVALID" = "Нажмите здесь, чтобы узнать платежный адрес";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Неверный код страны";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Неверный код банка";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Введите 6-значный действительный код";
+
+/// Payment method groups are displayed if tokens are received
+"PAYMENT_METHOD_GROUP_STORED" = "Сохраненные способы оплаты";
+"PAYMENT_METHOD_GROUP_OTHER" = "Другие способы оплаты";
+"PAYMENT_METHOD_GROUP_CARDS" = "Кредитные / дебетовые карты";
+
+/// Payment method names
+"PAYMENT_METHOD_TYPE_YANDEX" = "Яндекс.Деньги";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Использовать формат ММ/ГГ";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Используйте 3-х или 4-х значный код";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "Срок действия карты недействителен, используйте формат ММ/ГГ";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "Код безопасности должен содержать 3 или 4 цифры";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Сканировать карту";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Отменить оформление заказа";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Оплатить сохраненным способом оплаты";
+"ACCESSIBILITY_PAY_WITH" = "Plateste cu";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "Ошибка сканирования карты";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Держите карту здесь.\и она будет сканироваться автоматически";
+"BUTTON_TITLE_OK" = "ХОРОШО";

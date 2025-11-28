@@ -1,0 +1,121 @@
+//
+// Checkout.strings
+// $$frameworkname$$
+//
+
+/// View controller titles
+"VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "เลือกวิธีชำระเงิน";
+"VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "ข้อมูลชำระเงิน";
+"VIEW_CONTROLLER_TITLE_PROCESSING" = "กำลังดำเนินรายการ";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "ที่อยู่เรียกเก็บเงิน";
+
+/// Labels
+"LABEL_TOTAL_AMOUNT" = "ราคารวม";
+"LABEL_MBWAY_PUSH_NOTIFICATION" = "ระบบจะส่งพุชแจ้งเตือนไปที่โทรศัพท์มือถือ";
+"LABEL_MBWAY_ACCEPT_PIN" = "กรุณาใส่ PIN ของ MB WAY เพื่อยืนยันการทำรายการ";
+"LABEL_TERMS_AND_CONDITIONS" = "ข้อตกลงและเงื่อนไข";
+"LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "ยอมรับข้อตกลงและเงื่อนไข";
+"LABEL_SWEDISH" = "สวีเดน";
+"LABEL_FINNISH" = "ฟินแลนด์";
+
+/// Messages
+"MESSAGE_PLEASE_WAIT" = "กรุณารอสักครู่";
+
+/// Device owner authentication
+"DEVICE_AUTH_REASON" = "ยืนยันชำระเงิน";
+
+/// Button titles
+"BUTTON_TITLE_PAY" = "ชำระเงิน";
+"BUTTON_TITLE_PAY_AMOUNT" = "จ่าย %@";
+"BUTTON_TITLE_REGISTER" = "ลงทะเบียน";
+"BUTTON_TITLE_CANCEL" = "ยกเลิก";
+"BUTTON_TITLE_BACK" = "เปลี่ยน";
+"BUTTON_TITLE_DONE" = "สำเร็จ";
+
+/// Text field label names
+"FIELD_LABEL_CARD_HOLDER_NAME" = "ชื่อผู้ถือบัตร";
+"FIELD_LABEL_CREDIT_CARD_NUMBER" = "หมายเลขบัตรเครดิต";
+"FIELD_LABEL_EXPIRY_DATE" = "วันหมดอายุ";
+"FIELD_LABEL_CVV" = "รหัสตรวจสอบบัตร CVC";
+"FIELD_LABEL_MOBILE_PHONE_NUMBER" = "หมายเลขโทรศัพท์เคลื่อนที่";
+"FIELD_LABEL_BANK_ACCOUNT_HOLDER_NAME" = "เจ้าของบัญชี";
+"FIELD_LABEL_IBAN" = "IBAN";
+"FIELD_LABEL_IBAN_OR_ACCOUNT_NUMBER" = "IBAN หรือ เลขที่บัญชี";
+"FIELD_LABEL_BIC_OR_BANK_CODE" = "BIC หรือ รหัสธนาคาร";
+"FIELD_LABEL_SELECT_COUNTRY" = "เลือกประเทศ";
+"FIELD_LABEL_SELECT_BANK" = "เลือกธนาคาร";
+"FIELD_LABEL_STORE_PAYMENT_DETAILS" = "บันทึกข้อมูลชำระเงินสำหรับใช้ครั้งต่อไป";
+"FIELD_LABEL_STORE_CARD_TYPE" = "เลือกประเภทบัตร";
+"FIELD_LABEL_NUMBER_OF_INSTALLMENTS" = "จำนวนรอบผ่อนชำระ";
+"FIELD_LABEL_EMAIL" = "อีเมล";
+"FIELD_LABEL_COUNTRY_CODE" = "รหัสประเทศ";
+"FIELD_LABEL_NATIONAL_IDENTIFIER" = "หมายเลขบัตรประชาชน";
+"FIELD_LABEL_DATE_OF_BIRTH" = "วันเกิด";
+"FIELD_LABEL_ROUTING_NUMBER" = "เส้นทางหมายเลข";
+"FIELD_LABEL_OTP" = "ป้อนรหัสจากใบสมัครธนาคารของคุณ";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "กรุณากรอกรหัส Blik ของคุณ";
+
+/// Text field placeholders
+"FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "ชื่อบนหน้าบัตร";
+"FIELD_PLACEHOLDER_CARD_NUMBER" = "เลขบนหน้าบัตร";
+"FIELD_PLACEHOLDER_EXPIRY_DATE" = "ดด/ปป หรือ ดด/ปปปป";
+"FIELD_PLACEHOLDER_CVV_3_DIGITS" = "รหัส 3 หลัก";
+"FIELD_PLACEHOLDER_CVV_4_DIGITS" = "รหัส 4 หลัก";
+"FIELD_PLACEHOLDER_BANK_ACCOUNT_HOLDER_NAME" = "ชื่อเจ้าของบัญชี";
+"FIELD_PLACEHOLDER_IBAN" = "เลขที่บัญชีสากล";
+"FIELD_PLACEHOLDER_IBAN_OR_ACCOUNT_NUMBER" = "IBAN หรือ เลขที่บัญชี";
+"FIELD_PLACEHOLDER_BIC_OR_BANK_CODE" = "BIC หรือ รหัสธนาคาร";
+"FIELD_PLACEHOLDER_COUNTRY_CODE" = "+xx";
+"FIELD_PLACEHOLDER_EMAIL" = "อีเมล";
+"FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "หมายเลขบัตรประชาชน";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "วว.ดด.ปปปป";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(ไม่บังคับ)";
+"FIELD_PLACEHOLDER_COUNTRY" = "ประเทศ";
+"FIELD_PLACEHOLDER_STATE" = "รัฐ";
+"FIELD_PLACEHOLDER_CITY" = "ซิตี้";
+"FIELD_PLACEHOLDER_POSTCODE" = "รหัสไปรษณีย์";
+"FIELD_PLACEHOLDER_STREET1" = "ที่อยู่บรรทัดที่ 1";
+"FIELD_PLACEHOLDER_STREET2" = "ที่อยู่บรรทัดที่ 2";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "เส้นทางหมายเลข";
+
+/// Text field errors
+"FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "ชื่อผู้ถือบัตรไม่ถูกต้อง";
+"FIELD_ERROR_CARD_NUMBER_INVALID" = "หมายเลขบัตรไม่ถูกต้อง";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID" = "วันหมดอายุไม่ถูกต้อง ใช้ ดด/ปป หรือ ดด/ปปปป";
+"FIELD_ERROR_CARD_EXPIRED" = "บัตรหมดอายุ";
+"FIELD_ERROR_CARD_CVV_3_DIGITS_INVALID" = "รหัสตรวจสอบบัตรไม่ใช่เลข 3 หลักสุดท้ายบนหลังบัตร";
+"FIELD_ERROR_CARD_CVV_4_DIGITS_INVALID" = "รหัสตรวจสอบบัตรไม่ใช่เลข 4 หลักบนหน้าบัตร";
+"FIELD_ERROR_MOBILE_PHONE_INVALID" = "รหัสประเทศไม่ถูกต้อง";
+"FIELD_ERROR_BANK_ACCOUNT_HOLDER_INVALID" = "ชื่อเจ้าของบัญชีไม่ถูกต้อง";
+"FIELD_ERROR_IBAN_INVALID" = "IBAN ไม่ถูกต้อง";
+"FIELD_ERROR_IBAN_OR_ACCOUNT_NUMBER_INVALID" = "IBAN หรือ เลขที่บัญชีไม่ถูกต้อง";
+"FIELD_ERROR_BIC_OR_BANK_CODE_INVALID" = "BIC หรือ รหัสธนาคารไม่ถูกต้อง";
+"FIELD_ERROR_EMAIL_INVALID" = "อีเมลไม่ถูกต้อง";
+"FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "หมายเลขบัตรประชาชนไม่ถูกต้อง";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "วันเกิดไม่ถูกต้อง คาดว่า วว.ดด.ปปปป";
+"FIELD_ERROR_ADDRESS_INVALID" = "คลิกที่นี่เพื่อดูที่อยู่สำหรับการเรียกเก็บเงิน";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "รหัสประเทศไม่ถูกต้อง";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "หมายเลขเส้นทางไม่ถูกต้อง";
+"FIELD_ERROR_BANK_CODE_INVALID" = "กรอกรหัสที่ถูกต้อง 6 หลัก";
+
+/// Payment method groups are displayed if tokens are received
+"PAYMENT_METHOD_GROUP_STORED" = "วิธีชำระเงินที่เก็บบันทึกไว้";
+"PAYMENT_METHOD_GROUP_OTHER" = "วิธีชำระเงินอื่น";
+"PAYMENT_METHOD_GROUP_CARDS" = "บัตรเครดิต / เดบิต";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "ใช้รูปแบบ MM/YY";
+"FIELD_PLACEHOLDER_CVV_WEB" = "ใช้รหัส 3 หรือ 4 หลัก";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "วันหมดอายุของบัตรไม่ถูกต้อง ใช้รูปแบบ MM/YY";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "รหัสรักษาความปลอดภัยต้องมีตัวเลข 3 หรือ 4 หลัก";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "สแกนบัตร";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "ยกเลิกการชำระเงิน";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "ชำระเงินด้วยวิธีการชำระเงินที่เก็บไว้";
+"ACCESSIBILITY_PAY_WITH" = "ชำระเงินด้วย";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "การสแกนบัตรล้มเหลว";
+"LABEL_CARD_SCAN_HOLD_HERE" = "ถือบัตรไว้ที่นี่ ละจะสแกนโดยอัตโนมัติ";
+"BUTTON_TITLE_OK" = "ตกลง";

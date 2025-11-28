@@ -1,0 +1,127 @@
+//
+// Checkout.strings
+// $$frameworkname$$
+//
+
+/// View controller titles
+"VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Seleziona Metodo di Pagamento";
+"VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Dettagli di Pagamento";
+"VIEW_CONTROLLER_TITLE_PROCESSING" = "Processando";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "Indirizzo di fatturazione";
+
+/// Labels
+"LABEL_TOTAL_AMOUNT" = "Prezzo Totale";
+"LABEL_MBWAY_PUSH_NOTIFICATION" = "Una notifica verrà spedita al tuo dispositivo.";
+"LABEL_MBWAY_ACCEPT_PIN" = "Per favore accetta il pagamento con il tuo MB WAY PIN.";
+"LABEL_TERMS_AND_CONDITIONS" = "Termini e condizioni";
+"LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "Ho letto e concordo con i termini e le condizioni";
+"LABEL_SWEDISH" = "Svedese";
+"LABEL_FINNISH" = "Finlandese";
+
+/// Messages
+"MESSAGE_PLEASE_WAIT" = "Prego attendere";
+
+/// Device owner authentication
+"DEVICE_AUTH_REASON" = "Conferma pagamento";
+
+/// Button titles
+"BUTTON_TITLE_PAY" = "Paga";
+"BUTTON_TITLE_PAY_AMOUNT" = "Paga %@";
+"BUTTON_TITLE_REGISTER" = "Registrati";
+"BUTTON_TITLE_CANCEL" = "Annulla";
+"BUTTON_TITLE_BACK" = "Modifica";
+"BUTTON_TITLE_DONE" = "Fatto";
+
+/// Text field label names
+"FIELD_LABEL_CARD_HOLDER_NAME" = "Titolare della Carta";
+"FIELD_LABEL_CREDIT_CARD_NUMBER" = "Numero della Carta";
+"FIELD_LABEL_EXPIRY_DATE" = "Scadenza";
+"FIELD_LABEL_CVV" = "Codice di Sicurezza o CVV";
+"FIELD_LABEL_MOBILE_PHONE_NUMBER" = "Numero di telefono Cellulare";
+
+"FIELD_LABEL_BANK_ACCOUNT_HOLDER_NAME" = "Titolare Conto";
+"FIELD_LABEL_IBAN" = "IBAN";
+"FIELD_LABEL_IBAN_OR_ACCOUNT_NUMBER" = "IBAN or Numero Conto";
+"FIELD_LABEL_BIC_OR_BANK_CODE" = "BIC o Codice Istituto Bancario";
+"FIELD_LABEL_SELECT_COUNTRY" = "Seleziona Nazione";
+"FIELD_LABEL_SELECT_BANK" = "Seleziona Banca";
+"FIELD_LABEL_STORE_PAYMENT_DETAILS" = "Salva dettagli di pagamento per un futuro utilizzo";
+"FIELD_LABEL_STORE_CARD_TYPE" = "Scegli ilt tipo di Carta";
+"FIELD_LABEL_NUMBER_OF_INSTALLMENTS" = "Numero di rate";
+"FIELD_LABEL_EMAIL" = "Email";
+"FIELD_LABEL_COUNTRY_CODE" = "Prefisso internazionale";
+"FIELD_LABEL_NATIONAL_IDENTIFIER" = "Numero nazionale di identificazione";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Data di nascita";
+"FIELD_LABEL_ROUTING_NUMBER" = "Numero di instradamento";
+"FIELD_LABEL_OTP" = "Inserisci il codice dalla tua richiesta bancaria";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Inserisci il tuo codice Blik";
+
+/// Text field placeholders
+"FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Il nome così come appare sulla carta";
+"FIELD_PLACEHOLDER_CARD_NUMBER" = "Il numero riportato sul fronte della tua carta";
+"FIELD_PLACEHOLDER_EXPIRY_DATE" = "MM/AA o MM/AAAA";
+"FIELD_PLACEHOLDER_CVV_3_DIGITS" = "Codice a 3 cifre";
+"FIELD_PLACEHOLDER_CVV_4_DIGITS" = "Codice a 4 cifre";
+"FIELD_PLACEHOLDER_BANK_ACCOUNT_HOLDER_NAME" = "Nome del titolare del conto";
+"FIELD_PLACEHOLDER_IBAN" = "International Bank Account Number";
+"FIELD_PLACEHOLDER_IBAN_OR_ACCOUNT_NUMBER" = "IBAN o Numero Conto";
+"FIELD_PLACEHOLDER_BIC_OR_BANK_CODE" = "BIC o Codice Istituto Bancario";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "GG.MM.AAAA";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(facoltativo)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Paese";
+"FIELD_PLACEHOLDER_STATE" = "Stato";
+"FIELD_PLACEHOLDER_CITY" = "Città";
+"FIELD_PLACEHOLDER_POSTCODE" = "Zip / Codice postale";
+"FIELD_PLACEHOLDER_STREET1" = "Riga indirizzo 1";
+"FIELD_PLACEHOLDER_STREET2" = "Riga indirizzo 2";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Numero di instradamento";
+
+
+/// Text field errors
+"FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Nome del titolare della carta non valido";
+"FIELD_ERROR_CARD_NUMBER_INVALID" = "Numero della carta non valido";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID" = "Data di scadenza non valda, utilizza il formato MM/AA o MM/AAAA";
+"FIELD_ERROR_CARD_EXPIRED" = "La carta è scaduta";
+"FIELD_ERROR_CARD_CVV_3_DIGITS_INVALID" = "Il codice di sicurezza deve contenere le ultime 3 cifre che si trovano sul retro della tua carta";
+"FIELD_ERROR_CARD_CVV_4_DIGITS_INVALID" = "Il codice di sicurezza deve contenere le ultime 4 cifre che si trovano sul retro della tua carta";
+"FIELD_ERROR_BANK_ACCOUNT_HOLDER_INVALID" = "Il nome del titolare del conto non è valido";
+"FIELD_ERROR_IBAN_INVALID" = "IBAN non valido";
+"FIELD_ERROR_IBAN_OR_ACCOUNT_NUMBER_INVALID" = "IBAN o Numero Conto invalido";
+"FIELD_ERROR_BIC_OR_BANK_CODE_INVALID" = "BIC o Codice Istituto Bancario non valido";
+"FIELD_ERROR_EMAIL_INVALID" = "Email non valida";
+"FIELD_ERROR_MOBILE_PHONE_INVALID" = "Numero di telefono non valido";
+"FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Numero nazionale di identificazione non valido";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Data di nascita errata. GG.MM.AAAA previsto";
+"FIELD_ERROR_ADDRESS_INVALID" = "Fare clic qui per l'indirizzo di fatturazione";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Codice paese non valido";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Il numero di routing non è valido";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Inserisci un codice valido di 6 cifre";
+
+/// Payment method groups are displayed if tokens are received
+"PAYMENT_METHOD_GROUP_STORED" = "Salva Metodo di Pagamento";
+"PAYMENT_METHOD_GROUP_OTHER" = "Altri Metodi di Pagamento";
+"PAYMENT_METHOD_GROUP_CARDS" = "Carta di Credito / Carta di Debito";
+
+/// Payment method names
+"PAYMENT_METHOD_TYPE_DIRECTDEBIT_SEPA" = "Bonifico SEPA";
+"PAYMENT_METHOD_TYPE_SOFORTUEBERWEISUNG" = "SOFORT";
+"PAYMENT_METHOD_TYPE_KLARNA_PAYMENTS_PAYLATER" = "Fattura";
+"PAYMENT_METHOD_TYPE_KLARNA_PAYMENTS_PAYNOW" = "Bonifico diretto";
+"PAYMENT_METHOD_TYPE_KLARNA_PAYMENTS_ONE" = "Paga con Klarna";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Usa il formato MM/AA";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Utilizzare un codice a 3 o 4 cifre";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "La data di scadenza della carta non è valida, utilizzare il formato MM/AA";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "Il codice di sicurezza deve contenere 3 o 4 cifre";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Scansiona una carta";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Annulla il pagamento";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Paga con il metodo di pagamento memorizzato";
+"ACCESSIBILITY_PAY_WITH" = "Paga con";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "Scansione scheda non riuscita";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Tieni la carta qui.\e la scannerizzerà automaticamente";
+"BUTTON_TITLE_OK" = "OK";
