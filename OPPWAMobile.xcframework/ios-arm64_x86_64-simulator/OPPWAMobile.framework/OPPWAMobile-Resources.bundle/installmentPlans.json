@@ -1,0 +1,70 @@
+{
+   "result":{
+      "code":"000.000.000",
+      "description":"Transaction succeeded"
+   },
+   "buildNumber":"096b1f93729846d036c10a2a916cf98d04aced6e@2025-09-09 00:42:29 +0000",
+   "timestamp":"2025-09-09 06:51:57+0000",
+   "ndc":"5A527E8781790054E2212E17DC3154D7.uat01-vm-tx03",
+   "installmentOffers":[
+      {
+         "vPlanID":"c85ee4d1-fe9f-e267-b693-1f4dae82ae01",
+         "vPlanIDRef":"00000000CK",
+         "name":"VISTest6MonthSAR",
+         "type":"ISSUER_DEFAULT",
+         "numberOfInstallments":6,
+         "installmentFrequency":"MONTHLY",
+         "termsAndConditions":[
+            {
+               "url":"https://www.visa.com",
+               "version":1,
+               "text":"هذا نص نموذجي لوصف الشروط والأحكام التي تحكم خدمات أقساط التأشيرة.",
+               "languageCode":"ara"
+            },
+            {
+               "url":"https://www.visa.com",
+               "version":1,
+               "text":"This is a sample text to describe the terms and conditions that govern the Visa Installment services.",
+               "languageCode":"eng"
+            }
+         ],
+         "fundedBy":[
+            "CONSUMER"
+         ],
+         "costInfo":{
+            "annualPercentageRate":"0",
+            "feeInfo":[
+               {
+                  "type":"CONSUMER",
+                  "ratePercentage":0,
+                  "monthlyRatePercentage":0,
+                  "flatFee":1000
+               },
+               {
+                  "type":"MERCHANT_FUNDING",
+                  "ratePercentage":0,
+                  "flatFee":0
+               }
+            ],
+            "totalPlanCost":12000,
+            "totalFees":1000,
+            "totalUpfrontFees":"0",
+            "totalRecurringFees":1000,
+            "firstInstallment":{
+               "installmentFee":166,
+               "totalAmountExcludingUpfrontFee":"2000",
+               "amount":1834,
+               "upfrontFee":0,
+               "totalAmount":2000
+            },
+            "lastInstallment":{
+               "installmentFee":170,
+               "amount":1830,
+               "totalAmount":2000
+            },
+            "currency":"SAR"
+         }
+      }
+   ],
+   "id":"8ac7a4a1992b555c01992d3ed36450d2"
+}
