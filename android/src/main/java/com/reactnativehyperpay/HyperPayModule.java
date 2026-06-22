@@ -1,7 +1,6 @@
 package com.reactnativehyperpay;
 
 import android.app.Activity;
-import android.content.Context;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import com.facebook.react.bridge.Arguments;
@@ -17,7 +16,6 @@ import com.oppwa.mobile.connect.exception.PaymentError;
 import com.oppwa.mobile.connect.exception.PaymentException;
 import com.oppwa.mobile.connect.payment.BrandsValidation;
 import com.oppwa.mobile.connect.payment.CheckoutInfo;
-import com.oppwa.mobile.connect.payment.ImagesRequest;
 import com.oppwa.mobile.connect.payment.PaymentParams;
 import com.oppwa.mobile.connect.payment.card.CardPaymentParams;
 import com.oppwa.mobile.connect.provider.Connect;
@@ -31,7 +29,6 @@ import com.oppwa.mobile.connect.provider.TransactionType;
 public class HyperPayModule extends ReactContextBaseJavaModule implements ITransactionListener {
     public static final String NAME = "HyperPay";
 
-    private Context appContext;
     private Promise promisePaymentTransaction;
     private String shopperResultURL;
     private String merchantIdentifier;
@@ -40,7 +37,6 @@ public class HyperPayModule extends ReactContextBaseJavaModule implements ITrans
 
     public HyperPayModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        appContext = reactContext.getApplicationContext();
     }
 
     @Override
@@ -88,17 +84,17 @@ public class HyperPayModule extends ReactContextBaseJavaModule implements ITrans
             Transaction transaction = null;
 
             try {
-                OppPaymentProvider paymentProvider = new OppPaymentProvider(appContext, Connect.ProviderMode.TEST);
-                paymentProvider.setThreeDSWorkflowListener(new ThreeDSWorkflowListener() {
-                    @Override
-                    public Activity onThreeDSChallengeRequired() {
-                        return getCurrentActivity();
-                    }
-                });
-
-                if (mode.equals("LiveMode")) {
-                    paymentProvider.setProviderMode(Connect.ProviderMode.LIVE);
+                Activity currentActivity = getCurrentActivity();
+                if (currentActivity == null) {
+                    this.emitListeners("onProgress", false);
+                    promisePaymentTransaction.reject("NO_ACTIVITY", "No foreground activity available");
+                    return;
                 }
+                Connect.ProviderMode providerMode = (mode != null && mode.equals("LiveMode"))
+                        ? Connect.ProviderMode.LIVE
+                        : Connect.ProviderMode.TEST;
+                OppPaymentProvider paymentProvider = new OppPaymentProvider(currentActivity, providerMode);
+                paymentProvider.setThreeDSWorkflowListener(() -> getCurrentActivity());
                 transaction = new Transaction(paymentParams);
                 paymentProvider.submitTransaction(transaction, this);
             } catch (PaymentException e) {
@@ -160,24 +156,5 @@ public class HyperPayModule extends ReactContextBaseJavaModule implements ITrans
         ITransactionListener.super.paymentConfigRequestFailed(paymentError);
     }
 
-    @Override
-    public void imagesRequestSucceeded(@NonNull ImagesRequest imagesRequest) {
-        ITransactionListener.super.imagesRequestSucceeded(imagesRequest);
-    }
-
-    @Override
-    public void imagesRequestFailed() {
-        ITransactionListener.super.imagesRequestFailed();
-    }
-
-    @Override
-    public void binRequestSucceeded(@NonNull String[] strings) {
-        ITransactionListener.super.binRequestSucceeded(strings);
-    }
-
-    @Override
-    public void binRequestFailed() {
-        ITransactionListener.super.binRequestFailed();
-    }
 
 }

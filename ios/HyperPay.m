@@ -61,7 +61,7 @@ RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCT
                                                                               number:[options valueForKey:@"cardNumber"]
                                                                          expiryMonth:[options valueForKey:@"expiryMonth"]
                                                                           expiryYear:[options valueForKey:@"expiryYear"]
-                                                                                 CVV:[options valueForKey:@"cvv"]
+                                                                                 cvv:[options valueForKey:@"cvv"]
                                                                                error:&error];
 
     if (error) {
