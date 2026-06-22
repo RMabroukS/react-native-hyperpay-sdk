@@ -101,35 +101,32 @@ RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCT
 
 
 RCT_EXPORT_METHOD(applePay:(NSDictionary*)params resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject){
-  
+
   OPPCheckoutSettings *checkoutSettings = [[OPPCheckoutSettings alloc] init];
   PKPaymentRequest *paymentRequest = [OPPPaymentProvider paymentRequestWithMerchantIdentifier:merchantIdentifier countryCode:countryCode];
   paymentRequest.supportedNetworks = supportedNetworks;
-  
+//  paymentRequest.merchantCapabilities = PKMerchantCapability3DS;
 
-    if ([params valueForKey:@"companyName"]){
-        companyName=[params valueForKey:@"companyName"];
-       }
-        NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithMantissa:[[params valueForKey:@"amount"] intValue] exponent:-2 isNegative:NO];
-        paymentRequest.paymentSummaryItems = @[[PKPaymentSummaryItem summaryItemWithLabel:companyName amount:amount]];
- 
-    
-  checkoutSettings.shopperResultURL=shopperResultURL;
+  if ([params valueForKey:@"companyName"]) {
+    companyName = [params valueForKey:@"companyName"];
+  }
+
+  NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithMantissa:[[params valueForKey:@"amount"] intValue] exponent:-2 isNegative:NO];
+  paymentRequest.paymentSummaryItems = @[ [PKPaymentSummaryItem summaryItemWithLabel:companyName amount:amount] ];
+  checkoutSettings.shopperResultURL = shopperResultURL;
   checkoutSettings.applePayPaymentRequest = paymentRequest;
-  OPPCheckoutProvider *checkoutProvider = [OPPCheckoutProvider checkoutProviderWithPaymentProvider:provider
-                                                                                        checkoutID:[params valueForKey:@"checkoutID"]
-                                                                                          settings:checkoutSettings];
 
-  [checkoutProvider presentCheckoutWithPaymentBrand:@"APPLEPAY"
+  self.checkoutProvider = [OPPCheckoutProvider checkoutProviderWithPaymentProvider:provider
+                                                                        checkoutID:[params valueForKey:@"checkoutID"]
+                                                                          settings:checkoutSettings];
+  self.checkoutProvider.delegate = self;
+
+  [self.checkoutProvider presentCheckoutWithPaymentBrand:@"APPLEPAY"
     loadingHandler:^(BOOL inProgress) {
       [self sendEventWithName:@"onProgress" body:@(inProgress)];
-      // Executed whenever SDK sends request to the server or receives the response.
-      // You can start or stop loading animation based on inProgress parameter.
   } completionHandler:^(OPPTransaction * _Nullable transaction, NSError * _Nullable error) {
       if (error) {
-//          reject(@"applePay",checkoutID,error);
-        reject(@"applePay",error.localizedDescription, error);
-          // See code attribute (OPPErrorCode) and NSLocalizedDescription to identify the reason of failure.
+        reject(@"applePay", error.localizedDescription, error);
       } else {
           if (transaction.redirectURL)
               resolve(@{@"redirectURL": transaction.redirectURL.absoluteString});
@@ -137,12 +134,18 @@ RCT_EXPORT_METHOD(applePay:(NSDictionary*)params resolver:(RCTPromiseResolveBloc
               resolve(@{@"resourcePath": transaction.resourcePath});
       }
   } cancelHandler:^{
-       reject(@"applePay",@"cancel",NULL);
-      // Executed if the shopper closes the payment page prematurely.
+      reject(@"applePay", @"cancel", NULL);
   }];
 
 }
 
+#pragma mark - OPPCheckoutProviderDelegate
+
+- (void)checkoutProvider:(OPPCheckoutProvider *)checkoutProvider
+      continueSubmitting:(OPPTransaction *)transaction
+              completion:(void (^)(NSString * _Nullable, BOOL))completion {
+  completion(nil, YES);
+}
 
 @end
 
