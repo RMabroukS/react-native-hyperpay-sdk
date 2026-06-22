@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		7dlI2+7s43DzPs0PvHb0o1iDBE0=
+		HTHyGFPybGCmzgpQTqbw4ateYJk=
 		</data>
 		<key>Headers/ipworks3ds_sdk-Swift.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		u19hQPmr7uOCDxrIoEMtJvJwz2A=
+		tyC/v09o17zPtH2IGu1Ss82vBLM=
 		</data>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		86xU7FdNQzI63ef+L7uDXaK+M9s=
+		xYnV9GUE9DWXq61vVCdkxd7+dCE=
 		</data>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		u19hQPmr7uOCDxrIoEMtJvJwz2A=
+		tyC/v09o17zPtH2IGu1Ss82vBLM=
 		</data>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		w6dYVsWkwx5hjYkd3b2I8HPVl18=
+		YFrvfUXFGDGT+F/ut2/80ceTPl0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -91,11 +91,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7dlI2+7s43DzPs0PvHb0o1iDBE0=
+			HTHyGFPybGCmzgpQTqbw4ateYJk=
 			</data>
 			<key>hash2</key>
 			<data>
-			VmlTIl5jBc8Ji5xY7P6KAMSAbqJ6isjmV3GDsJML1lA=
+			6XGFvp0O7vZ3FanzAxEQYdM0WgNTVQCgEZMyHxVDux0=
 			</data>
 		</dict>
 		<key>Headers/ipworks3ds_sdk-Swift.h</key>
@@ -113,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			u19hQPmr7uOCDxrIoEMtJvJwz2A=
+			tyC/v09o17zPtH2IGu1Ss82vBLM=
 			</data>
 			<key>hash2</key>
 			<data>
-			xou6+w1zFe6yMp0YEf1BEqIqRjIaUZoeyPNKttKn8gg=
+			h4R+uOPv8PS99A98M42zzq6+TrP1GTAZiGLN/1pXvks=
 			</data>
 		</dict>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -157,22 +157,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			86xU7FdNQzI63ef+L7uDXaK+M9s=
+			xYnV9GUE9DWXq61vVCdkxd7+dCE=
 			</data>
 			<key>hash2</key>
 			<data>
-			OLdRCn9bBMG9qlQhza7NwweNziIyuC5xhjqZAqCFlAU=
+			IDi9HmVZATKciDokHDx8b5qi20p/YDHtOqvAQJQTuJI=
 			</data>
 		</dict>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			u19hQPmr7uOCDxrIoEMtJvJwz2A=
+			tyC/v09o17zPtH2IGu1Ss82vBLM=
 			</data>
 			<key>hash2</key>
 			<data>
-			xou6+w1zFe6yMp0YEf1BEqIqRjIaUZoeyPNKttKn8gg=
+			h4R+uOPv8PS99A98M42zzq6+TrP1GTAZiGLN/1pXvks=
 			</data>
 		</dict>
 		<key>Modules/ipworks3ds_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -212,11 +212,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w6dYVsWkwx5hjYkd3b2I8HPVl18=
+			YFrvfUXFGDGT+F/ut2/80ceTPl0=
 			</data>
 			<key>hash2</key>
 			<data>
-			pIzeOmNoRn461m7kat0HuYM7M86Quib79wTdA7ESu6E=
+			hTMgytqF1SC7UCROp1tfIv+EnvpTkcPbFEcDhynx0u8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

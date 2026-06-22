@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.dependency "React-Core"
   s.requires_arc = true
   # For production/release builds, replace ipworks3ds_sdk.xcframework with ipworks3ds_sdk_deploy.xcframework
-  s.vendored_frameworks = "OPPWAMobile.xcframework","ipworks3ds_sdk_deploy.xcframework"
+  s.vendored_frameworks = "OPPWAMobile.xcframework","ipworks3ds_sdk.xcframework"
 end

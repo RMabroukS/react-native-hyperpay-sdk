@@ -21927,6 +21927,69 @@
     {
       "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
       "kind": "IntegerLiteral",
+      "offset": 43365,
+      "length": 2,
+      "value": "-2"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43462,
+      "length": 5,
+      "value": "10609"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43468,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43470,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43679,
+      "length": 2,
+      "value": "31"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43683,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43686,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43689,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
+      "offset": 43741,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/build\/ipworks3ds_sdk\/ipworks3ds_sdk\/DeviceParamsCollector.swift",
+      "kind": "IntegerLiteral",
       "offset": 44579,
       "length": 4,
       "value": "8803"
@@ -23836,63 +23899,63 @@
       "value": "0"
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 761,
       "length": 26,
       "value": "\"CollapseSectionIndicator\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 941,
       "length": 24,
       "value": "\"ExpandSectionIndicator\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1119,
       "length": 24,
       "value": "\"MultiSelectionSelected\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1301,
       "length": 26,
       "value": "\"MultiSelectionUnselected\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1489,
       "length": 28,
       "value": "\"PasswordInvisibleIndicator\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1675,
       "length": 26,
       "value": "\"PasswordVisibleIndicator\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 1857,
       "length": 25,
       "value": "\"SingleSelectionSelected\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2042,
       "length": 27,
       "value": "\"SingleSelectionUnselected\""
     },
     {
-      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "filePath": "\/tmp\/iphonesimulator\/Build\/Intermediates.noindex\/ArchiveIntermediates\/ipworks3ds_sdk-Production\/IntermediateBuildFilesPath\/ipworks3ds_sdk_swift.build\/Release-iphonesimulator\/ipworks3ds_sdk-Production.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
       "offset": 2211,
       "length": 18,
