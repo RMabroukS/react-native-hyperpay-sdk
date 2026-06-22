@@ -311,11 +311,3 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines
 ## License
 
 MIT — see [LICENSE](LICENSE).
-
----
-
-<div align="center">
-
-Built for the React Native community · Powered by [HyperPay](https://www.hyperpay.com/) · [Report an Issue](https://github.com/RMabroukS/react-native-hyperpay-sdk/issues)
-
-</div>
