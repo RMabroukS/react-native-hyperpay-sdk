@@ -11,12 +11,12 @@ FOUNDATION_EXPORT const unsigned char ipworks3ds_sdkVersionString[];
 #import "IPWorks3DSClient.h"
 
 
-@interface BitPatternNameB: NSObject
+@interface AdSupportDarwin: NSObject
 
-+ (void)boolValueConfigParametersTests NS_SWIFT_NAME(boolValueConfigParametersTests());
++ (void)contentModeLeadingAnchor NS_SWIFT_NAME(contentModeLeadingAnchor());
 
-+ (void)getLabelCustomizationReloadSections: (int) flag NS_SWIFT_NAME(getLabelCustomizationReloadSections(_:));
++ (void)provisionUrlLowerBound: (int) flag NS_SWIFT_NAME(provisionUrlLowerBound(_:));
 
-+ (void)machineSwift NS_SWIFT_NAME(machineSwift());
++ (void)hexColorCodeLocalizedModel NS_SWIFT_NAME(hexColorCodeLocalizedModel());
 
 @end

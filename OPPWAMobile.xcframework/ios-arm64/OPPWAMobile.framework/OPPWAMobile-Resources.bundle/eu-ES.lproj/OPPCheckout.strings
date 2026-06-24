@@ -17,6 +17,14 @@
 "LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "Baldintzak eta betebeharrak irakurri eta onartzen ditut";
 "LABEL_SWEDISH" = "Suediera";
 "LABEL_FINNISH" = "Finlandiera";
+"LABEL_FULL_AMOUNT" = "ZENBATEKO OSOA";
+"LABEL_PROCESSING_FEE" = "Prozesatzeko kuota:";
+"LABEL_MONTHLY_RATE" = "Hileko tarifa:";
+"LABEL_WEEKLY_RATE" = "Asteko tarifa:";
+"LABEL_MONTHS" = "HILABETEAK";
+"LABEL_WEEKS" = "ASTEAK";
+"LABEL_MONTH" = "hilabetea";
+"LABEL_WEEK" = "astea";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Itxaron, mesedez";
@@ -31,6 +39,7 @@
 "BUTTON_TITLE_CANCEL" = "Utzi";
 "BUTTON_TITLE_BACK" = "Aldatu";
 "BUTTON_TITLE_DONE" = "Done";
+"BUTTON_TITLE_CONFIRM" = "Berretsi";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Txartela-titularraren izena";
@@ -54,6 +63,8 @@
 "FIELD_LABEL_ROUTING_NUMBER" = "bideratze zenbakia";
 "FIELD_LABEL_OTP" = "Sartu zure banku-aplikazioko kodea";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Mesedez, sartu zure Blik kodea";
+"FIELD_LABEL_CARD_NUMBER" = "Txartelaren zenbakia";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Zordunketa-txartelaren zenbakia";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Txartelean agertzen den izena";
@@ -118,8 +129,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Utzi ordainketa egiteko";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Ordaindu gordetako ordainketa-metodoarekin";
 "ACCESSIBILITY_PAY_WITH" = "Ordaindu";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Zatikako Plana";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Visak gaitutako zatikako ordainketa";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Txartela eskaneatzea huts egin du";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Eutsi txartela hemen.\eta automatikoki eskaneatuko da";
 "BUTTON_TITLE_OK" = "Ados";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "BSB baliogabea";
+"LABEL_PAYTO_SELECT_PAYID" = "Aukeratu PayID hurrengo aukeren artean:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "Botoi hau sakatzean, irristatzeko panel bat irekiko da ordainketa‑IDa hautatzeko";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Mesedez, hautatu identifikazio-dokumentu mota aukera hauetatik:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Nortasun agiriaren zenbakia";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Pasaportearen zenbakia";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Zerga-adierazpenaren zenbakia";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Nortasun agiriaren zenbakia";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Pasaportearen zenbakia";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Zerga-adierazpenaren zenbakia";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Nortasun agiriaren zenbaki baliogabea";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Pasaportearen zenbaki baliogabea";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Zerga-adierazpenaren zenbaki baliogabea";
+"FIELD_LABEL_IDCARD" = "Nortasun agiria";
+"FIELD_LABEL_PASSPORT" = "Pasaportea";
+"FIELD_LABEL_TAXSTATEMENT" = "Zerga‑aitorpena";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "Botoi hau sakatzean, irristatzeko panel bat irekiko da dokumentu mota hautatzeko";

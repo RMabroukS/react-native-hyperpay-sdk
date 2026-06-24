@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "Zweedse";
 "LABEL_FINNISH" = "Finse";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "Selecteer je gewenste betaalwijze:";
+"LABEL_FULL_AMOUNT" = "VOLLEDIG BEDRAG";
+"LABEL_PROCESSING_FEE" = "Verwerkingskosten:";
+"LABEL_MONTHLY_RATE" = "Maandelijks tarief:";
+"LABEL_WEEKLY_RATE" = "Weektarief:";
+"LABEL_MONTHS" = "MAANDEN";
+"LABEL_WEEKS" = "WEKEN";
+"LABEL_MONTH" = "maand";
+"LABEL_WEEK" = "week";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Even geduld alsjeblieft";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "Annuleer";
 "BUTTON_TITLE_BACK" = "Pas aan";
 "BUTTON_TITLE_DONE" = "Gereed";
+"BUTTON_TITLE_CONFIRM" = "Bevestigen";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Naam kaarthouder";
@@ -58,6 +67,8 @@
 "FIELD_LABEL_DATE_OF_BIRTH" = "Geboortedatum";
 "FIELD_LABEL_OTP" = "Voer de code uit uw bankaanvraag in";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Voer uw Blik-code in";
+"FIELD_LABEL_CARD_NUMBER" = "Kaartnummer";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Debetkaartnummer";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Naam zoals op de kaart staat";
@@ -131,8 +142,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Afrekenen annuleren";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Betaal met opgeslagen betaalmethode";
 "ACCESSIBILITY_PAY_WITH" = "Betaal met";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Afbetalingsplan";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Afbetaling mogelijk gemaakt door Visa";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Scannen van kaart mislukt";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Houd de kaart hier vast.\en het zal automatisch scannen";
 "BUTTON_TITLE_OK" = "OK";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "Ongeldige BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "Selecteer de PayID uit de volgende opties:";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "Bij het aantikken van deze knop wordt een schuifpaneel geopend om het documenttype te selecteren";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Selecteer het type identificatiedocument uit de volgende opties:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Identiteitskaartnummer";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Paspoortnummer";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Belastingaangiftenummer";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Identiteitskaartnummer";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Paspoortnummer";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Belastingaangiftenummer";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Ongeldig identiteitskaartnummer";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Ongeldig paspoortnummer";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Ongeldig belastingaangiftenummer";
+"FIELD_LABEL_IDCARD" = "Identiteitskaart";
+"FIELD_LABEL_PASSPORT" = "Paspoort";
+"FIELD_LABEL_TAXSTATEMENT" = "Belastingaangifte";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "Bij het aantikken van deze knop wordt een schuifpaneel geopend om het betalings‑ID te selecteren";

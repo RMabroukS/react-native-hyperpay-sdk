@@ -61,22 +61,19 @@ repositories {
 
 dependencies {
 
-  if (project.gradle.startParameter.taskNames.any { it.toLowerCase().contains('release') }) {
-     implementation files('libs/ipworks3ds_sdk_9149_deploy.aar')
-  }
-  else {
-    implementation files('libs/ipworks3ds_sdk_9149.aar')
-  }
-  implementation files('libs/oppwa.mobile-6.21.0-release.aar')
-  implementation "androidx.appcompat:appcompat:1.4.2"
-  implementation "androidx.recyclerview:recyclerview:1.2.1"
-  implementation "androidx.browser:browser:1.4.0"
-  implementation "androidx.fragment:fragment-ktx:1.4.1"
-  implementation "androidx.constraintlayout:constraintlayout:2.1.4"
-  implementation "androidx.webkit:webkit:1.4.0"
-  implementation "com.google.android.material:material:1.6.1"
-  implementation "com.google.code.gson:gson:2.8.9"
-  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+  // compileOnly: the host app provides oppwa.mobile + ipworks3ds at runtime via its own
+  // implementation files(...) deps. Using compileOnly here avoids duplicate-class conflicts.
+  compileOnly files('libs/ipworks3ds_sdk_9625.aar')
+  compileOnly files('libs/oppwa.mobile-7.11.0-release.aar')
+  implementation "androidx.appcompat:appcompat:1.7.0"
+  implementation "androidx.recyclerview:recyclerview:1.4.0"
+  implementation "androidx.browser:browser:1.8.0"
+  implementation "androidx.fragment:fragment-ktx:1.8.6"
+  implementation "androidx.constraintlayout:constraintlayout:2.2.1"
+  implementation "androidx.webkit:webkit:1.13.0"
+  implementation "com.google.android.material:material:1.12.0"
+  implementation "com.google.code.gson:gson:2.11.0"
+  implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7"
 
 
   //noinspection GradleDynamicVersion

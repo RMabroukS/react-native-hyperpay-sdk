@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "Švédčina";
 "LABEL_FINNISH" = "Fínčina";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "Vyberte si, prosím, spôsob platby:";
+"LABEL_FULL_AMOUNT" = "PLNÁ SUMA";
+"LABEL_PROCESSING_FEE" = "Poplatok za spracovanie:";
+"LABEL_MONTHLY_RATE" = "Mesačná sadzba:";
+"LABEL_WEEKLY_RATE" = "Týždenná sadzba:";
+"LABEL_MONTHS" = "MESIACOV";
+"LABEL_WEEKS" = "TÝŽDNE";
+"LABEL_MONTH" = "mesiac";
+"LABEL_WEEK" = "týždeň";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Čakajte, prosím...";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "Zrušiť";
 "BUTTON_TITLE_BACK" = "Zmeniť";
 "BUTTON_TITLE_DONE" = "Hotovo";
+"BUTTON_TITLE_CONFIRM" = "Potvrďte";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Meno držiteľa karty";
@@ -84,6 +93,8 @@
 "FIELD_PLACEHOLDER_STREET2" = "2. riadok adresy";
 "FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Smerovacie číslo";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Zadajte svoj Blik kód";
+"FIELD_LABEL_CARD_NUMBER" = "Číslo karty";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Číslo debetnej karty";
 
 /// Text field errors
 "FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Meno držiteľa platobnej karty je neplatné";
@@ -128,8 +139,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Zrušiť platbu";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Plaťte uloženým spôsobom platby";
 "ACCESSIBILITY_PAY_WITH" = "Platiť s";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Splátkový plán";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Splátkový platobný systém Visa umožňuje";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Skenovanie karty zlyhalo";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Tu podržte kartu.\a automaticky sa naskenuje";
 "BUTTON_TITLE_OK" = "OK";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "Neplatný BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "Vyberte PayID z nasledujúcich možností:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "Po klepnutí na toto tlačidlo sa otvorí posuvný panel na výber identifikátora platby";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Vyberte typ identifikačného dokladu z nasledujúcich možností:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Číslo občianskeho preukazu";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Číslo pasu";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Číslo daňového priznania";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Číslo občianskeho preukazu";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Číslo pasu";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Číslo daňového priznania";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Neplatné číslo občianskeho preukazu";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Neplatné číslo pasu";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Neplatné číslo daňového priznania";
+"FIELD_LABEL_IDCARD" = "Občiansky preukaz";
+"FIELD_LABEL_PASSPORT" = "Cestovný pas";
+"FIELD_LABEL_TAXSTATEMENT" = "Daňové priznanie";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "Po klepnutí na toto tlačidlo sa otvorí posuvný panel na výber typu dokumentu";

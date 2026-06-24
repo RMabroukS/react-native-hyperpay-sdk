@@ -17,6 +17,14 @@
 "LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "J'ai lu et j'accepte les conditions d'utilisation";
 "LABEL_SWEDISH" = "Suédois";
 "LABEL_FINNISH" = "Finnois";
+"LABEL_FULL_AMOUNT" = "MONTANT TOTAL";
+"LABEL_PROCESSING_FEE" = "Frais de traitement:";
+"LABEL_MONTHLY_RATE" = "Tarif mensuel:";
+"LABEL_WEEKLY_RATE" = "Tarif hebdomadaire:";
+"LABEL_MONTHS" = "MOIS";
+"LABEL_WEEKS" = "SEMAINES";
+"LABEL_MONTH" = "mois";
+"LABEL_WEEK" = "semaine";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Veuillez patienter";
@@ -31,6 +39,7 @@
 "BUTTON_TITLE_CANCEL" = "Annuler";
 "BUTTON_TITLE_BACK" = "Changer";
 "BUTTON_TITLE_DONE" = "Terminé";
+"BUTTON_TITLE_CONFIRM" = "Confirmer";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Nom du titulaire de la carte";
@@ -55,6 +64,8 @@
 "FIELD_LABEL_ROUTING_NUMBER" = "Numéro de routage";
 "FIELD_LABEL_OTP" = "Saisissez le code de votre application bancaire";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Veuillez entrer votre code Blik";
+"FIELD_LABEL_CARD_NUMBER" = "Numéro de carte";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Numéro de carte de débit";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Nom tel qu'il apparaît sur la carte";
@@ -121,8 +132,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Annuler le paiement";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Payer avec le mode de paiement enregistré";
 "ACCESSIBILITY_PAY_WITH" = "Payer avec";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Plan de versement";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Paiement échelonné activé par Visa";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "La numérisation de la carte a échoué";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Tenez la carte ici.\et elle numérisera automatiquement";
 "BUTTON_TITLE_OK" = "D'ACCORD";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "BSB invalide";
+"LABEL_PAYTO_SELECT_PAYID" = "Veuillez sélectionner le PayID parmi les options suivantes :";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "En appuyant sur ce bouton, un panneau coulissant s’ouvrira pour sélectionner l’identifiant de paiement";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Veuillez sélectionner le type de document d'identification parmi les options suivantes :";
+"FIELD_LABEL_IDCARD_NUMBER" = "Numéro de carte d'identité";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Numéro de passeport";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Numéro de déclaration de revenus";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Numéro de carte d'identité";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Numéro de passeport";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Numéro de déclaration de revenus";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Numéro de carte d'identité invalide";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Numéro de passeport invalide";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Numéro de déclaration de revenus invalide";
+"FIELD_LABEL_IDCARD" = "Carte d'identité";
+"FIELD_LABEL_PASSPORT" = "Passeport";
+"FIELD_LABEL_TAXSTATEMENT" = "Déclaration de revenus";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "En appuyant sur ce bouton, un panneau coulissant s’ouvrira pour sélectionner le type de document";

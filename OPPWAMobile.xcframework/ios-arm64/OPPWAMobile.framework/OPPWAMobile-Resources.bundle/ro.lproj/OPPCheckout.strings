@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "Suedeză";
 "LABEL_FINNISH" = "Finlandeză";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "Te rugăm să selectezi metoda de plată preferată:";
+"LABEL_FULL_AMOUNT" = "SUMA COMPLETĂ";
+"LABEL_PROCESSING_FEE" = "Taxa de procesare:";
+"LABEL_MONTHLY_RATE" = "Tarif lunar:";
+"LABEL_WEEKLY_RATE" = "Tarif săptămânal:";
+"LABEL_MONTHS" = "LUNI";
+"LABEL_WEEKS" = "SĂPTĂMÂNI";
+"LABEL_MONTH" = "lună";
+"LABEL_WEEK" = "săptămână";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Te rugăm să aștepți";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "Anulează";
 "BUTTON_TITLE_BACK" = "Modifică";
 "BUTTON_TITLE_DONE" = "Finalizare";
+"BUTTON_TITLE_CONFIRM" = "Confirma";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Numele posesorului cardului";
@@ -58,6 +67,8 @@
 "FIELD_LABEL_DATE_OF_BIRTH" = "Data de nastere";
 "FIELD_LABEL_OTP" = "Introdu codul din aplicația bancară";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Vă rugăm să introduceți codul dvs. Blik";
+"FIELD_LABEL_CARD_NUMBER" = "Numărul de card";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Numărul cardului de debit";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Numele care apare pe card";
@@ -128,8 +139,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Anulați finalizarea plății";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Plătiți cu metoda de plată stocată";
 "ACCESSIBILITY_PAY_WITH" = "Plateste cu";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Planul de rate";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Plată în rate activată de Visa";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Scanarea cardului a eșuat";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Țineți cardul aici.\și va scana automat";
 "BUTTON_TITLE_OK" = "Bine";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "BSB invalid";
+"LABEL_PAYTO_SELECT_PAYID" = "Selectați PayID din următoarele opțiuni:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "La atingerea acestui buton se va deschide un panou glisant pentru selectarea ID‑ului de plată";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Selectați tipul de document de identificare din următoarele opțiuni:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Numărul actului de identitate";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Numărul pașaportului";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Numărul declarației fiscale";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Numărul actului de identitate";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Numărul pașaportului";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Numărul declarației fiscale";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Număr de act de identitate invalid";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Număr de pașaport invalid";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Număr de declarație fiscală invalid";
+"FIELD_LABEL_IDCARD" = "Carte de identitate";
+"FIELD_LABEL_PASSPORT" = "Pașaport";
+"FIELD_LABEL_TAXSTATEMENT" = "Declarație fiscală";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "La atingerea acestui buton se va deschide un panou glisant pentru selectarea tipului de document";

@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "السويدية";
 "LABEL_FINNISH" = "الفنلندية";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "الرجاء اختيار طريقة الدفع :";
+"LABEL_FULL_AMOUNT" = "المبلغ الكامل";
+"LABEL_PROCESSING_FEE" = "رسوم المعالجة:";
+"LABEL_MONTHLY_RATE" = "السعر الشهري:";
+"LABEL_WEEKLY_RATE" = "السعر الأسبوعي:";
+"LABEL_MONTHS" = "شهور";
+"LABEL_WEEKS" = "أسابيع";
+"LABEL_MONTH" = "شهر";
+"LABEL_WEEK" = "أسبوع";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "انتظر من فضلك";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "الغاء";
 "BUTTON_TITLE_BACK" = "تغيير";
 "BUTTON_TITLE_DONE" = "تم";
+"BUTTON_TITLE_CONFIRM" = "يتأكد";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "اسم حامل البطاقة";
@@ -56,6 +65,8 @@
 "FIELD_LABEL_OTP" = "أدخل الرمز من تطبيق البنك الخاص بك";
 "FIELD_LABEL_ROUTING_NUMBER" = "رقم التوصيل";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "الرجاء إدخال رمز Blik الخاص بك";
+"FIELD_LABEL_CARD_NUMBER" = "رقم البطاقة";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "رقم بطاقة الخصم";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "الاسم كما مكتوب على البطاقة الاتمانية";
@@ -117,8 +128,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "إلغاء الخروج";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "الدفع بطريقة الدفع المخزنة";
 "ACCESSIBILITY_PAY_WITH" = "ادفع عن طريق";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "خطة التقسيط";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "إمكانية التقسيط عن طريق فيزا";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "فشل مسح البطاقة";
 "LABEL_CARD_SCAN_HOLD_HERE" = "امسك البطاقة هنا \ وسيتم مسحها ضوئيًا تلقائيًا";
 "BUTTON_TITLE_OK" = "نعم";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "BSB غير صالح";
+"LABEL_PAYTO_SELECT_PAYID" = "يرجى اختيار PayID من الخيارات التالية:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "عند النقر على هذا الزر، سيتم فتح لوحة منزلقة لاختيار معرّف الدفع";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "يرجى اختيار نوع وثيقة الهوية من الخيارات التالية:";
+"FIELD_LABEL_IDCARD_NUMBER" = "رقم بطاقة الهوية";
+"FIELD_LABEL_PASSPORT_NUMBER" = "رقم جواز السفر";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "رقم البيان الضريبي";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "رقم بطاقة الهوية";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "رقم جواز السفر";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "رقم البيان الضريبي";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "رقم بطاقة الهوية غير صالح";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "رقم جواز السفر غير صالح";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "رقم البيان الضريبي غير صالح";
+"FIELD_LABEL_IDCARD" = "بطاقة الهوية";
+"FIELD_LABEL_PASSPORT" = "جواز السفر";
+"FIELD_LABEL_TAXSTATEMENT" = "إقرار ضريبي";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "عند النقر على هذا الزر، سيتم فتح لوحة منزلقة لاختيار نوع المستند";

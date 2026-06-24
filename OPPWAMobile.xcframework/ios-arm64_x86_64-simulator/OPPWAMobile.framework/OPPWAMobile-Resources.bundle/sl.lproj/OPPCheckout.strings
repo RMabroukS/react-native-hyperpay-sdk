@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "švedščina";
 "LABEL_FINNISH" = "finščina";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "Izberi želeni način plačila:";
+"LABEL_FULL_AMOUNT" = "CELOTEN ZNESEK";
+"LABEL_PROCESSING_FEE" = "Pristojbina za obdelavo:";
+"LABEL_MONTHLY_RATE" = "Mesečna cena:";
+"LABEL_WEEKLY_RATE" = "Tedenska cena:";
+"LABEL_MONTHS" = "MESECEV";
+"LABEL_WEEKS" = "TEDNI";
+"LABEL_MONTH" = "mesec";
+"LABEL_WEEK" = "teden";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Prosimo, počakaj";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "Prekliči";
 "BUTTON_TITLE_BACK" = "Spremeni";
 "BUTTON_TITLE_DONE" = "Končano";
+"BUTTON_TITLE_CONFIRM" = "Potrdi";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Ime imetnika kartice";
@@ -58,6 +67,8 @@
 "FIELD_LABEL_DATE_OF_BIRTH" = "Datum rojstva";
 "FIELD_LABEL_OTP" = "Vnesite kodo iz vaše bančne aplikacije";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Prosimo, vnesite svojo Blik kodo";
+"FIELD_LABEL_CARD_NUMBER" = "Številka kartice";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Številka debetne kartice";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Ime, kot je navedeno na kartici";
@@ -128,8 +139,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Prekliči blagajno";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Plačajte s shranjenim plačilnim sredstvom";
 "ACCESSIBILITY_PAY_WITH" = "Plačajte z";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Obročni načrt";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Obročno plačevanje z Viso";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Skeniranje kartice ni uspelo";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Držite kartico tukaj.\in samodejno bo skenirala";
 "BUTTON_TITLE_OK" = "v redu";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "Neveljaven BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "Izberite PayID med naslednjimi možnostmi:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "Ob dotiku tega gumba se odpre drsni list za izbiro plačilnega ID-ja";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Prosimo, izberite vrsto identifikacijskega dokumenta iz naslednjih možnosti:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Številka osebne izkaznice";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Številka potnega lista";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Številka davčne napovedi";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Številka osebne izkaznice";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Številka potnega lista";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Številka davčne napovedi";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Neveljavna številka osebne izkaznice";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Neveljavna številka potnega lista";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Neveljavna številka davčne napovedi";
+"FIELD_LABEL_IDCARD" = "Osebna izkaznica";
+"FIELD_LABEL_PASSPORT" = "Potni list";
+"FIELD_LABEL_TAXSTATEMENT" = "Davčna napoved";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "Ob dotiku tega gumba se odpre drsni list za izbiro vrste dokumenta";

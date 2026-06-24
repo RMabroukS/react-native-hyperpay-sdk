@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "스웨덴어";
 "LABEL_FINNISH" = "핀란드어";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "희망하는 결제 방법을 선택하세요.";
+"LABEL_FULL_AMOUNT" = "전체 금액";
+"LABEL_PROCESSING_FEE" = "처리 수수료:";
+"LABEL_MONTHLY_RATE" = "월별 요금:";
+"LABEL_WEEKLY_RATE" = "주간 요금:";
+"LABEL_MONTHS" = "개월";
+"LABEL_WEEKS" = "주";
+"LABEL_MONTH" = "월";
+"LABEL_WEEK" = "주";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "잠시 기다려 주세요.";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "취소";
 "BUTTON_TITLE_BACK" = "수정";
 "BUTTON_TITLE_DONE" = "완료";
+"BUTTON_TITLE_CONFIRM" = "확인하다";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "카드 소지자 이름";
@@ -58,6 +67,8 @@
 "FIELD_LABEL_DATE_OF_BIRTH" = "생일";
 "FIELD_LABEL_OTP" = "은행 애플리케이션의 코드를 입력하세요.";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Blik 코드를 입력하세요";
+"FIELD_LABEL_CARD_NUMBER" = "카드번호";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "직불카드 번호";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "카드에 표시된 이름";
@@ -124,8 +135,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "체크아웃 취소";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "저장된 결제 수단으로 결제";
 "ACCESSIBILITY_PAY_WITH" = "지불";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "할부 플랜";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "비자로 가능한 할부";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "카드 스캔 실패";
 "LABEL_CARD_SCAN_HOLD_HERE" = "여기 카드를 들고 있으면 자동으로 스캔됩니다.";
 "BUTTON_TITLE_OK" = "좋아요";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "잘못된 BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "다음 옵션에서 PayID를 선택하세요:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "이 버튼을 탭하면 결제 ID를 선택할 수 있는 슬라이드 시트가 열립니다";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "다음 옵션에서 신분증 유형을 선택하세요:";
+"FIELD_LABEL_IDCARD_NUMBER" = "신분증 번호";
+"FIELD_LABEL_PASSPORT_NUMBER" = "여권 번호";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "세금 신고서 번호";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "신분증 번호";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "여권 번호";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "세금 신고서 번호";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "신분증 번호가 유효하지 않습니다";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "여권 번호가 유효하지 않습니다";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "세금 신고서 번호가 유효하지 않습니다";
+"FIELD_LABEL_IDCARD" = "신분증";
+"FIELD_LABEL_PASSPORT" = "여권";
+"FIELD_LABEL_TAXSTATEMENT" = "세금 신고서";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "이 버튼을 탭하면 문서 유형을 선택할 수 있는 슬라이드 시트가 열립니다";

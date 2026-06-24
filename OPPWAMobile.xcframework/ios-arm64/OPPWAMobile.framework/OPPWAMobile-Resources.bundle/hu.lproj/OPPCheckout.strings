@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "Svéd";
 "LABEL_FINNISH" = "Finn";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "Kérjük, válassz fizetési módot:";
+"LABEL_FULL_AMOUNT" = "TELJES ÖSSZEG";
+"LABEL_PROCESSING_FEE" = "Feldolgozási díj:";
+"LABEL_MONTHLY_RATE" = "Havi díj:";
+"LABEL_WEEKLY_RATE" = "Heti díj:";
+"LABEL_MONTHS" = "HÓNAPOK";
+"LABEL_WEEKS" = "HETEK";
+"LABEL_MONTH" = "hónap";
+"LABEL_WEEK" = "hét";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Kérjük, várj";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "Mégse";
 "BUTTON_TITLE_BACK" = "Változtatás";
 "BUTTON_TITLE_DONE" = "Kész";
+"BUTTON_TITLE_CONFIRM" = "Erősítse meg";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Kártyabirtokos neve";
@@ -58,6 +67,8 @@
 "FIELD_LABEL_DATE_OF_BIRTH" = "Születési dátum";
 "FIELD_LABEL_OTP" = "Írja be a kódot a banki alkalmazásból";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Kérjük, adja meg Blik kódját";
+"FIELD_LABEL_CARD_NUMBER" = "Kártyaszám";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Betéti kártya száma";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "A kártyán szereplő név";
@@ -128,8 +139,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "A fizetés megszakítása";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Fizessen a tárolt fizetési móddal:";
 "ACCESSIBILITY_PAY_WITH" = "Fizessen ezzel";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Részletfizetési terv";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Visa által támogatott részletfizetés";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "A kártya beolvasása nem sikerült";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Tartsa itt a kártyát.\és automatikusan beolvassa";
 "BUTTON_TITLE_OK" = "rendben";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "Érvénytelen BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "Kérjük, válassza ki a PayID-t az alábbi lehetőségek közül:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "A gomb megérintésekor egy csúsztatható panel nyílik meg a fizetési azonosító kiválasztásához";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Kérjük, válassza ki az azonosító okmány típusát az alábbi lehetőségek közül:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Személyi igazolvány száma";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Útlevélszám";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Adóbevallás száma";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Személyi igazolvány száma";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Útlevélszám";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Adóbevallás száma";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Érvénytelen személyi igazolvány szám";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Érvénytelen útlevélszám";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Érvénytelen adóbevallás szám";
+"FIELD_LABEL_IDCARD" = "Személyi igazolvány";
+"FIELD_LABEL_PASSPORT" = "Útlevél";
+"FIELD_LABEL_TAXSTATEMENT" = "Adóbevallás";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "A gomb megérintésekor egy csúsztatható panel nyílik meg a dokumentumtípus kiválasztásához";

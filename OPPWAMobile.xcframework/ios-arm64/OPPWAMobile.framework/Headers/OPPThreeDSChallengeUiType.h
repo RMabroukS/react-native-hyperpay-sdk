@@ -1,4 +1,4 @@
-//  © Copyright ACI Worldwide, Inc. 2018, 2025
+//  © Copyright ACI Worldwide, Inc. 2018, 2026
 
 #import <Foundation/Foundation.h>
 
@@ -14,5 +14,9 @@ typedef NS_OPTIONS(NSUInteger, OPPThreeDSChallengeUiType) {
     /// Format that allows to complete authentication outside of the merchant app, e.g. in issuer’s mobile app.
     OPPThreeDSChallengeUiTypeOob = 8,
     /// Format that allows to present issuer-specific designed html in a web view.
-    OPPThreeDSChallengeUiTypeHtml = 16
+    OPPThreeDSChallengeUiTypeHtml = 16,
+    /// Format that allows to present issuer-specific designed html oob in a web view.
+    OPPThreeDSChallengeUiTypeHtmlOob = 32,
+    /// Format that allows to present information to be presented.
+    OPPThreeDSChallengeUiTypeInformation = 64
 };

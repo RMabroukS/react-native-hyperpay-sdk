@@ -1,8 +1,9 @@
-//  © Copyright ACI Worldwide, Inc. 2018, 2025
+//  © Copyright ACI Worldwide, Inc. 2018, 2026
 
 #import <Foundation/Foundation.h>
 #import <UIkit/UIkit.h>
-#import "OPPToken.h"
+
+@class OPPToken;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -18,6 +18,14 @@
 "LABEL_SWEDISH" = "Svensk";
 "LABEL_FINNISH" = "Finsk";
 "LABEL_STC_PAY_SELECT_PAYMENT_METHOD" = "Hvordan vil du gerne betale";
+"LABEL_FULL_AMOUNT" = "FULD BELÆG";
+"LABEL_PROCESSING_FEE" = "Behandlingsgebyr:";
+"LABEL_MONTHLY_RATE" = "Månedlig pris:";
+"LABEL_WEEKLY_RATE" = "Ugentlig pris:";
+"LABEL_MONTHS" = "MÅNEDER";
+"LABEL_WEEKS" = "UGER";
+"LABEL_MONTH" = "måned";
+"LABEL_WEEK" = "uge";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Vent venligst";
@@ -32,6 +40,7 @@
 "BUTTON_TITLE_CANCEL" = "Afbryd";
 "BUTTON_TITLE_BACK" = "Ret";
 "BUTTON_TITLE_DONE" = "Færdig";
+"BUTTON_TITLE_CONFIRM" = "Bekræfte";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Navn på kortholder";
@@ -58,6 +67,8 @@
 "FIELD_LABEL_DATE_OF_BIRTH" = "Fødselsdato";
 "FIELD_LABEL_OTP" = "Indtast koden fra din bankapplikation";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Indtast venligst din Blik-kode";
+"FIELD_LABEL_CARD_NUMBER" = "Kortnummer";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Debetkortnummer";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Navn som det fremgår på dit kort";
@@ -129,8 +140,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Annuller kassen";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Betal med gemt betalingsmetode";
 "ACCESSIBILITY_PAY_WITH" = "Betal med";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Afdragsplan";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Afbetaling muliggjort af Visa";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Kortscanning mislykkedes";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Hold kortet her.\og det scanner automatisk";
 "BUTTON_TITLE_OK" = "Okay";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "Ugyldig BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "Vælg PayID fra følgende muligheder:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "Når denne knap trykkes, åbnes et skydepanel til valg af betalings‑ID";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Vælg typen af identifikationsdokument fra følgende muligheder:";
+"FIELD_LABEL_IDCARD_NUMBER" = "ID-kortnummer";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Pasnummer";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Skatteoplysningsnummer";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "ID-kortnummer";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Pasnummer";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Skatteoplysningsnummer";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Ugyldigt ID-kortnummer";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Ugyldigt pasnummer";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Ugyldigt skatteoplysningsnummer";
+"FIELD_LABEL_IDCARD" = "ID‑kort";
+"FIELD_LABEL_PASSPORT" = "Pas";
+"FIELD_LABEL_TAXSTATEMENT" = "Skatteopgørelse";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "Når denne knap trykkes, åbnes et skydepanel til valg af dokumenttype";

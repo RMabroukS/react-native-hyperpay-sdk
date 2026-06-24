@@ -17,6 +17,14 @@
 "LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "He llegit i accepto els termes i condicions";
 "LABEL_SWEDISH" = "Suec";
 "LABEL_FINNISH" = "Finès";
+"LABEL_FULL_AMOUNT" = "IMPORT COMPLET";
+"LABEL_PROCESSING_FEE" = "Taxa de processament:";
+"LABEL_MONTHLY_RATE" = "Tarifa mensual:";
+"LABEL_WEEKLY_RATE" = "Tarifa setmanal:";
+"LABEL_MONTHS" = "MESOS";
+"LABEL_WEEKS" = "SETMANES";
+"LABEL_MONTH" = "mes";
+"LABEL_WEEK" = "setmana";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Espera";
@@ -31,6 +39,7 @@
 "BUTTON_TITLE_CANCEL" = "Cancel·la";
 "BUTTON_TITLE_BACK" = "Canvia";
 "BUTTON_TITLE_DONE" = "Fet";
+"BUTTON_TITLE_CONFIRM" = "Confirmeu";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Nom del titular de la targeta";
@@ -54,6 +63,8 @@
 "FIELD_LABEL_OTP" = "Introduïu el codi de la vostra aplicació bancària";
 "FIELD_LABEL_ROUTING_NUMBER" = "Nombre de ruta";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Introduïu el vostre codi Blik";
+"FIELD_LABEL_CARD_NUMBER" = "Número de targeta";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Número de targeta de dèbit";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Nom tal i com apareix a la targeta";
@@ -116,8 +127,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Cancel·la la compra";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Paga amb la forma de pagament emmagatzemada";
 "ACCESSIBILITY_PAY_WITH" = "Paga amb";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Pla de fraccionament";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Pagament a terminis habilitat per Visa";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "No s'ha pogut escanejar la targeta";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Mantingueu la targeta aquí.\i escanejarà automàticament";
 "BUTTON_TITLE_OK" = "D'acord";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "BSB no vàlid";
+"LABEL_PAYTO_SELECT_PAYID" = "Seleccioneu el PayID de les opcions següents:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "En tocar aquest botó s’obrirà un panell lliscant per seleccionar l’identificador de pagament";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Seleccioneu el tipus de document d'identificació entre les opcions següents:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Número del document d'identitat";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Número de passaport";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Número de declaració d'impostos";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Número del document d'identitat";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Número de passaport";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Número de declaració d'impostos";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Número del document d'identitat no vàlid";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Número de passaport no vàlid";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Número de declaració d'impostos no vàlid";
+"FIELD_LABEL_IDCARD" = "Document d'identitat";
+"FIELD_LABEL_PASSPORT" = "Passaport";
+"FIELD_LABEL_TAXSTATEMENT" = "Declaració d'impostos";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "En tocar aquest botó s’obrirà un panell lliscant per seleccionar el tipus de document";

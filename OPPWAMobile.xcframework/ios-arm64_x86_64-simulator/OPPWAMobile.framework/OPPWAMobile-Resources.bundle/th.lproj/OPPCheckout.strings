@@ -17,6 +17,14 @@
 "LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "ยอมรับข้อตกลงและเงื่อนไข";
 "LABEL_SWEDISH" = "สวีเดน";
 "LABEL_FINNISH" = "ฟินแลนด์";
+"LABEL_FULL_AMOUNT" = "จำนวนเต็ม";
+"LABEL_PROCESSING_FEE" = "ค่าธรรมเนียมการดำเนินการ:";
+"LABEL_MONTHLY_RATE" = "อัตรารายเดือน:";
+"LABEL_WEEKLY_RATE" = "อัตรารายสัปดาห์:";
+"LABEL_MONTHS" = "เดือน";
+"LABEL_WEEKS" = "สัปดาห์";
+"LABEL_MONTH" = "เดือน";
+"LABEL_WEEK" = "สัปดาห์";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "กรุณารอสักครู่";
@@ -31,6 +39,7 @@
 "BUTTON_TITLE_CANCEL" = "ยกเลิก";
 "BUTTON_TITLE_BACK" = "เปลี่ยน";
 "BUTTON_TITLE_DONE" = "สำเร็จ";
+"BUTTON_TITLE_CONFIRM" = "ยืนยัน";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "ชื่อผู้ถือบัตร";
@@ -54,6 +63,8 @@
 "FIELD_LABEL_ROUTING_NUMBER" = "เส้นทางหมายเลข";
 "FIELD_LABEL_OTP" = "ป้อนรหัสจากใบสมัครธนาคารของคุณ";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "กรุณากรอกรหัส Blik ของคุณ";
+"FIELD_LABEL_CARD_NUMBER" = "หมายเลขบัตร";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "หมายเลขบัตรเดบิต";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "ชื่อบนหน้าบัตร";
@@ -114,8 +125,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "ยกเลิกการชำระเงิน";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "ชำระเงินด้วยวิธีการชำระเงินที่เก็บไว้";
 "ACCESSIBILITY_PAY_WITH" = "ชำระเงินด้วย";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "แผนการผ่อนชำระ";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "รองรับการผ่อนชำระด้วยวีซ่า";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "การสแกนบัตรล้มเหลว";
 "LABEL_CARD_SCAN_HOLD_HERE" = "ถือบัตรไว้ที่นี่ ละจะสแกนโดยอัตโนมัติ";
 "BUTTON_TITLE_OK" = "ตกลง";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "BSB ไม่ถูกต้อง";
+"LABEL_PAYTO_SELECT_PAYID" = "โปรดเลือก PayID จากตัวเลือกต่อไปนี้:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "เมื่อแตะปุ่มนี้ จะเปิดแผงเลื่อนเพื่อเลือกหมายเลขการชำระเงิน";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "กรุณาเลือกประเภทเอกสารประจำตัวจากตัวเลือกต่อไปนี้:";
+"FIELD_LABEL_IDCARD_NUMBER" = "หมายเลขบัตรประจำตัวประชาชน";
+"FIELD_LABEL_PASSPORT_NUMBER" = "หมายเลขหนังสือเดินทาง";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "หมายเลขเอกสารภาษี";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "หมายเลขบัตรประจำตัวประชาชน";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "หมายเลขหนังสือเดินทาง";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "หมายเลขเอกสารภาษี";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "หมายเลขบัตรประจำตัวประชาชนไม่ถูกต้อง";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "หมายเลขหนังสือเดินทางไม่ถูกต้อง";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "หมายเลขเอกสารภาษีไม่ถูกต้อง";
+"FIELD_LABEL_IDCARD" = "บัตรประจำตัวประชาชน";
+"FIELD_LABEL_PASSPORT" = "หนังสือเดินทาง";
+"FIELD_LABEL_TAXSTATEMENT" = "ใบแสดงรายการภาษี";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "เมื่อแตะปุ่มนี้ จะเปิดแผงเลื่อนเพื่อเลือกประเภทเอกสาร";

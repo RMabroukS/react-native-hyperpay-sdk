@@ -17,6 +17,14 @@
 "LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "Я прочитал и согласен с условиями пользовательского соглашения";
 "LABEL_SWEDISH" = "Шведский";
 "LABEL_FINNISH" = "Финский";
+"LABEL_FULL_AMOUNT" = "ПОЛНАЯ СУММА";
+"LABEL_PROCESSING_FEE" = "Плата за обработку:";
+"LABEL_MONTHLY_RATE" = "Ежемесячная ставка:";
+"LABEL_WEEKLY_RATE" = "Еженедельный тариф:";
+"LABEL_MONTHS" = "МЕСЯЦЫ";
+"LABEL_WEEKS" = "НЕДЕЛИ";
+"LABEL_MONTH" = "месяц";
+"LABEL_WEEK" = "неделя";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Пожалуйста, подождите";
@@ -31,6 +39,7 @@
 "BUTTON_TITLE_CANCEL" = "Отмена";
 "BUTTON_TITLE_BACK" = "Изменить";
 "BUTTON_TITLE_DONE" = "Готово";
+"BUTTON_TITLE_CONFIRM" = "Подтверждать";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Имя и фамилия";
@@ -54,6 +63,8 @@
 "FIELD_LABEL_ROUTING_NUMBER" = "Код банка";
 "FIELD_LABEL_OTP" = "Введите код из приложения вашего банка";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Пожалуйста, введите свой код Blik";
+"FIELD_LABEL_CARD_NUMBER" = "Номер карты";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Номер дебетовой карты";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Имя с лицевой части карты";
@@ -103,9 +114,6 @@
 "PAYMENT_METHOD_GROUP_OTHER" = "Другие способы оплаты";
 "PAYMENT_METHOD_GROUP_CARDS" = "Кредитные / дебетовые карты";
 
-/// Payment method names
-"PAYMENT_METHOD_TYPE_YANDEX" = "Яндекс.Деньги";
-
 /// Copy and Pay WebView
 "FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Использовать формат ММ/ГГ";
 "FIELD_PLACEHOLDER_CVV_WEB" = "Используйте 3-х или 4-х значный код";
@@ -117,8 +125,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Отменить оформление заказа";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Оплатить сохраненным способом оплаты";
 "ACCESSIBILITY_PAY_WITH" = "Plateste cu";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "Рассрочка";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Рассрочка доступна через Visa";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Ошибка сканирования карты";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Держите карту здесь.\и она будет сканироваться автоматически";
 "BUTTON_TITLE_OK" = "ХОРОШО";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "Недействительный BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "Пожалуйста, выберите PayID из следующих вариантов:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "При нажатии этой кнопки откроется выдвижная панель для выбора идентификатора платежа";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Пожалуйста, выберите тип документа, удостоверяющего личность, из следующих вариантов:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Номер удостоверения личности";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Номер паспорта";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Номер налоговой декларации";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Номер удостоверения личности";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Номер паспорта";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Номер налоговой декларации";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Недействительный номер удостоверения личности";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Недействительный номер паспорта";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Недействительный номер налоговой декларации";
+"FIELD_LABEL_IDCARD" = "Удостоверение личности";
+"FIELD_LABEL_PASSPORT" = "Паспорт";
+"FIELD_LABEL_TAXSTATEMENT" = "Налоговая декларация";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "При нажатии этой кнопки откроется выдвижная панель для выбора типа документа";

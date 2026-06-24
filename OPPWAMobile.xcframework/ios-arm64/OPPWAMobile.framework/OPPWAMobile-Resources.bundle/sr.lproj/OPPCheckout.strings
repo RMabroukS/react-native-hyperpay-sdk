@@ -17,6 +17,14 @@
 "LABEL_TERMS_AND_CONDITIONS_AGREEMENT" = "Pročitao/la sam i prihvatam Uslove korišćenja";
 "LABEL_SWEDISH" = "Švedski";
 "LABEL_FINNISH" = "Finski";
+"LABEL_FULL_AMOUNT" = "ПУН ИЗНОС";
+"LABEL_PROCESSING_FEE" = "Накнада за обраду:";
+"LABEL_MONTHLY_RATE" = "Месечна стопа:";
+"LABEL_WEEKLY_RATE" = "Недељна стопа:";
+"LABEL_MONTHS" = "МЕСЕЦИ";
+"LABEL_WEEKS" = "НЕДЕЉЕ";
+"LABEL_MONTH" = "месец";
+"LABEL_WEEK" = "недељу дана";
 
 /// Messages
 "MESSAGE_PLEASE_WAIT" = "Molimo te sačekaj";
@@ -31,6 +39,7 @@
 "BUTTON_TITLE_CANCEL" = "Otkaži";
 "BUTTON_TITLE_BACK" = "Izmeni";
 "BUTTON_TITLE_DONE" = "Urađeno";
+"BUTTON_TITLE_CONFIRM" = "Потврди";
 
 /// Text field label names
 "FIELD_LABEL_CARD_HOLDER_NAME" = "Ime vlasnika kartice";
@@ -56,6 +65,8 @@
 "FIELD_LABEL_DATE_OF_BIRTH" = "Датум рођења";
 "FIELD_LABEL_OTP" = "Унесите код из ваше банковне апликације";
 "FIELD_LABEL_BLIK_ACCESSIBILITY" = "Унесите свој Блик код";
+"FIELD_LABEL_CARD_NUMBER" = "Број картице";
+"FIELD_LABEL_DEBIT_CARD_NUMBER" = "Број дебитне картице";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Ime kako glasi na kartici";
@@ -122,8 +133,33 @@
 "ACCESSIBILITY_CANCEL_CHECKOUT" = "Откажите наплату";
 "ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Платите сачуваним начином плаћања";
 "ACCESSIBILITY_PAY_WITH" = "Платити";
+"ACCESSIBILITY_INSTALLMENT_PLAN" = "План на рате";
+"ACCESSIBILITY_INSTALLMENT_ENABLED_BY_VISA" = "Плаћање на рате омогућено Visa-ом";
 
 /// Card Scanning
 "ALERT_TITLE_CARD_SCANNING_FAILED" = "Скенирање картице није успело";
 "LABEL_CARD_SCAN_HOLD_HERE" = "Држите картицу овде.\и она ће аутоматски скенирати";
 "BUTTON_TITLE_OK" = "У реду";
+
+/// PayTo Payment Method
+"FIELD_LABEL_BSB_CODE" = "BSB";
+"FIELD_PLACEHOLDER_BSB_CODE" = "BSB";
+"FIELD_ERROR_BSB_CODE_INVALID" = "Nevažeći BSB";
+"LABEL_PAYTO_SELECT_PAYID" = "Molimo izaberite PayID iz sledećih opcija:";
+"ACCESSIBILITY_SELECT_PAYID_HINT" = "Dodirivanjem ovog dugmeta otvoriće se klizni panel za izbor identifikatora plaćanja";
+
+/// Identification Payment Method
+"LABEL_SELECT_DOCTYPE" = "Molimo izaberite vrstu identifikacionog dokumenta iz sledećih opcija:";
+"FIELD_LABEL_IDCARD_NUMBER" = "Broj lične karte";
+"FIELD_LABEL_PASSPORT_NUMBER" = "Broj pasoša";
+"FIELD_LABEL_TAXSTATEMENT_NUMBER" = "Broj poreske prijave";
+"FIELD_PLACEHOLDER_IDCARD_NUMBER" = "Broj lične karte";
+"FIELD_PLACEHOLDER_PASSPORT_NUMBER" = "Broj pasoša";
+"FIELD_PLACEHOLDER_TAXSTATEMENT_NUMBER" = "Broj poreske prijave";
+"FIELD_ERROR_IDCARD_NUMBER_INVALID" = "Nevažeći broj lične karte";
+"FIELD_ERROR_PASSPORT_NUMBER_INVALID" = "Nevažeći broj pasoša";
+"FIELD_ERROR_TAXSTATEMENT_NUMBER_INVALID" = "Nevažeći broj poreske prijave";
+"FIELD_LABEL_IDCARD" = "Lična karta";
+"FIELD_LABEL_PASSPORT" = "Pasoš";
+"FIELD_LABEL_TAXSTATEMENT" = "Poreska prijava";
+"ACCESSIBILITY_SELECT_DOCTYPE_HINT" = "Dodirivanjem ovog dugmeta otvoriće se klizni panel za izbor vrste dokumenta";

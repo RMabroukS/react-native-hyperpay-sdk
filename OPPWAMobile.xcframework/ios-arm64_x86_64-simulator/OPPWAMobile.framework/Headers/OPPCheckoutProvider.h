@@ -1,4 +1,4 @@
-//  © Copyright ACI Worldwide, Inc. 2018, 2025
+//  © Copyright ACI Worldwide, Inc. 2018, 2026
 
 @import Foundation;
 @import PassKit;
@@ -9,6 +9,7 @@
 @class OPPApplePayRequestAuthorizationResult;
 @class OPPApplePayRequestShippingContactUpdate;
 @class OPPApplePayRequestShippingMethodUpdate;
+@class OPPPaymentAddOnDetails;
 @protocol OPPCheckoutProviderDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,6 +30,19 @@ NS_ASSUME_NONNULL_BEGIN
  @param completion The completion block you should call to continue submitting transaction or abort it. In case of abortion checkout will be closed with error `OPPErrorCodeTransactionAborted`.
  */
 - (void)checkoutProvider:(OPPCheckoutProvider *)checkoutProvider continueSubmitting:(OPPTransaction *)transaction completion:(void (^)(NSString * _Nullable checkoutID, BOOL abort))completion;
+
+/**
+ Called before submitting a transaction to the Server.
+ Use this callback to recreate checkout for specific payment brand or abort transaction along getting additional details.
+ @param checkoutProvider The instance of `OPPCheckoutProvider` that is calling delegate method.
+ @param transaction The transaction with masked sensitive data.
+ @param additionalDetails additional details eg: Selected Installment Plan
+ @param completion The completion block you should call to continue submitting transaction or abort it. In case of abortion checkout will be closed with error `OPPErrorCodeTransactionAborted`.
+ */
+- (void)checkoutProvider:(OPPCheckoutProvider *)checkoutProvider
+      continueSubmitting:(OPPTransaction *)transaction
+         andAddOnDetails:( OPPPaymentAddOnDetails * _Nullable )additionalDetails
+              completion:(void (^)(NSString * _Nullable checkoutID, BOOL abort))completion;
 
 /**
  Called when card holder text field was changed or pressed Pay button on the payment detail view.
