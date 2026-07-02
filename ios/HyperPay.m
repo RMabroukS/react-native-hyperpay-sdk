@@ -3,12 +3,21 @@
 #import "HyperPay.h"
 #import <React/RCTLog.h>
 
+@interface HyperPay ()
+@property (nonatomic, copy) NSString              *checkoutID;
+@property (nonatomic, copy) NSString              *resourcePath;
+@property (nonatomic, copy) NSString              *redirectURL;
+@property (nonatomic, copy) RCTPromiseResolveBlock _resolve;
+@property (nonatomic, copy) RCTPromiseRejectBlock  _reject;
+@end
+
 @implementation HyperPay
 
 OPPPaymentProvider *provider;
 NSString *shopperResultURL = @"";
 NSString *merchantIdentifier = @"";
 NSString *countryCode = @"";
+NSString *currencyCode = @"";
 NSString *mode=@"TestMode";
 NSArray *supportedNetworks;
 NSString *companyName=@"";
@@ -17,7 +26,7 @@ RCT_EXPORT_MODULE(HyperPay)
 
 -(instancetype)init
 {
-  
+
     self = [super init];
     if (self) {
         provider = [OPPPaymentProvider paymentProviderWithMode:OPPProviderModeTest];
@@ -33,7 +42,6 @@ RCT_EXPORT_MODULE(HyperPay)
  React Native functions
  */
 
-
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setup: (NSDictionary*)options) {
     shopperResultURL=[options valueForKey:@"shopperResultURL"];
     if ([options valueForKey:@"merchantIdentifier"])
@@ -42,6 +50,8 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(setup: (NSDictionary*)options) {
         companyName=[options valueForKey:@"companyName"];
     if ([options valueForKey:@"countryCode"])
        countryCode=[options valueForKey:@"countryCode"];
+    if ([options valueForKey:@"currencyCode"])
+        currencyCode=[options valueForKey:@"currencyCode"];
     if ([options valueForKey:@"supportedNetworks"])
         supportedNetworks=[options valueForKey:@"supportedNetworks"];
     if ([[options valueForKey:@"mode"] isEqual:@"LiveMode"])
@@ -70,13 +80,13 @@ RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCT
 
     } else {
        params.shopperResultURL =shopperResultURL;
-       
+
       OPPTransaction *transaction = [OPPTransaction transactionWithPaymentParams:params];
 
       [provider submitTransaction:transaction completionHandler:^(OPPTransaction * _Nonnull transaction, NSError * _Nullable error) {
         NSDictionary *transactionResult;
         if (transaction.type == OPPTransactionTypeAsynchronous) {
-            
+
            transactionResult = @{
           @"redirectURL":transaction.redirectURL.absoluteString,
           @"status":@"pending",
@@ -99,44 +109,127 @@ RCT_EXPORT_METHOD(createPaymentTransaction: (NSDictionary*)options resolver:(RCT
 }
 
 
-
 RCT_EXPORT_METHOD(applePay:(NSDictionary*)params resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject){
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.checkoutID   = [params valueForKey:@"checkoutID"];
+        self.resourcePath = nil;
+        self._resolve      = resolve;
+        self._reject       = reject;
 
-  OPPCheckoutSettings *checkoutSettings = [[OPPCheckoutSettings alloc] init];
-  PKPaymentRequest *paymentRequest = [OPPPaymentProvider paymentRequestWithMerchantIdentifier:merchantIdentifier countryCode:countryCode];
-  paymentRequest.supportedNetworks = supportedNetworks;
-//  paymentRequest.merchantCapabilities = PKMerchantCapability3DS;
+        NSString *merchant  = [params valueForKey:@"merchantIdentifier"] ?: merchantIdentifier;
+        NSString *country   = [params valueForKey:@"countryCode"]        ?: countryCode;
+        NSString *currency  = [params valueForKey:@"currencyCode"]       ?: currencyCode;
+        NSString *company   = [params valueForKey:@"companyName"]        ?: companyName;
+        NSString *amountStr = [params valueForKey:@"amount"]             ?: @"0.00";
 
-  if ([params valueForKey:@"companyName"]) {
-    companyName = [params valueForKey:@"companyName"];
-  }
+        PKPaymentRequest *paymentRequest = [OPPPaymentProvider paymentRequestWithMerchantIdentifier:merchant countryCode:country];
+        paymentRequest.currencyCode = currency;
 
-  NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithMantissa:[[params valueForKey:@"amount"] intValue] exponent:-2 isNegative:NO];
-  paymentRequest.paymentSummaryItems = @[ [PKPaymentSummaryItem summaryItemWithLabel:companyName amount:amount] ];
-  checkoutSettings.shopperResultURL = shopperResultURL;
-  checkoutSettings.applePayPaymentRequest = paymentRequest;
+        NSArray *rawNetworks = [params valueForKey:@"supportedNetworks"] ?: supportedNetworks;
+        if (rawNetworks.count > 0 && [rawNetworks[0] isKindOfClass:[NSString class]]) {
+            NSMutableArray *mapped = [NSMutableArray array];
+            NSDictionary *networkMap = @{
+                @"visa":       PKPaymentNetworkVisa,
+                @"mastercard": PKPaymentNetworkMasterCard,
+                @"amex":       PKPaymentNetworkAmex,
+                @"mada":       PKPaymentNetworkMada,
+            };
+            for (NSString *name in rawNetworks) {
+                PKPaymentNetwork net = networkMap[[name lowercaseString]];
+                if (net) [mapped addObject:net];
+            }
+            paymentRequest.supportedNetworks = mapped.count ? mapped : rawNetworks;
+        } else {
+            paymentRequest.supportedNetworks = rawNetworks;
+        }
 
-  self.checkoutProvider = [OPPCheckoutProvider checkoutProviderWithPaymentProvider:provider
-                                                                        checkoutID:[params valueForKey:@"checkoutID"]
-                                                                          settings:checkoutSettings];
-  self.checkoutProvider.delegate = self;
+        NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:amountStr];
+        paymentRequest.paymentSummaryItems = @[ [PKPaymentSummaryItem summaryItemWithLabel:company amount:amount] ];
 
-  [self.checkoutProvider presentCheckoutWithPaymentBrand:@"APPLEPAY"
-    loadingHandler:^(BOOL inProgress) {
-      [self sendEventWithName:@"onProgress" body:@(inProgress)];
-  } completionHandler:^(OPPTransaction * _Nullable transaction, NSError * _Nullable error) {
-      if (error) {
-        reject(@"applePay", error.localizedDescription, error);
-      } else {
-          if (transaction.redirectURL)
-              resolve(@{@"redirectURL": transaction.redirectURL.absoluteString});
-          else
-              resolve(@{@"resourcePath": transaction.resourcePath});
-      }
-  } cancelHandler:^{
-      reject(@"applePay", @"cancel", NULL);
-  }];
+        if (![OPPPaymentProvider canSubmitPaymentRequest:paymentRequest]) {
+            reject(@"applePay", @"Apple Pay is not supported on this device", nil);
+            return;
+        }
 
+        PKPaymentAuthorizationViewController *vc = [[PKPaymentAuthorizationViewController alloc] initWithPaymentRequest:paymentRequest];
+        if (!vc) {
+            reject(@"applePay", @"Failed to initialise Apple Pay sheet", nil);
+            return;
+        }
+        vc.delegate = self;
+
+        UIViewController *topVC = [UIApplication sharedApplication].delegate.window.rootViewController;
+        while (topVC.presentedViewController) topVC = topVC.presentedViewController;
+        [topVC presentViewController:vc animated:YES completion:^{
+            [self sendEventWithName:@"onProgress" body:@(YES)];
+        }];
+    });
+}
+
+- (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller
+                        didAuthorizePayment:(PKPayment *)payment
+                                    handler:(void (^)(PKPaymentAuthorizationResult *))completion
+    API_AVAILABLE(ios(11.0)) {
+    NSError *error = nil;
+    OPPApplePayPaymentParams *appleParams =
+        [[OPPApplePayPaymentParams alloc] initWithCheckoutID:self.checkoutID
+                                                   tokenData:payment.token.paymentData
+                                                       error:&error];
+    if (!appleParams) {
+        completion([[PKPaymentAuthorizationResult alloc]
+                    initWithStatus:PKPaymentAuthorizationStatusFailure
+                            errors:error ? @[error] : nil]);
+        return;
+    }
+
+    appleParams.shopperResultURL = shopperResultURL;
+    OPPTransaction *transaction = [OPPTransaction transactionWithPaymentParams:appleParams];
+
+    __weak typeof(self) weakSelf = self;
+    [provider submitTransaction:transaction completionHandler:^(OPPTransaction *transaction, NSError *submitError) {
+        __strong typeof(weakSelf) _self = weakSelf;
+        if (!_self) {
+            completion([[PKPaymentAuthorizationResult alloc] initWithStatus:PKPaymentAuthorizationStatusFailure errors:nil]);
+            return;
+        }
+        if (submitError) {
+            completion([[PKPaymentAuthorizationResult alloc] initWithStatus:PKPaymentAuthorizationStatusFailure errors:nil]);
+            _self.resourcePath = nil;
+            _self._reject(@"applePay", submitError.localizedDescription, submitError);
+            _self._reject  = nil;
+            _self._resolve = nil;
+            return;
+        }
+        
+        _self.resourcePath = transaction.resourcePath;
+        _self.redirectURL = transaction.redirectURL.absoluteString;
+        completion([[PKPaymentAuthorizationResult alloc] initWithStatus:PKPaymentAuthorizationStatusSuccess errors:nil]);
+    }];
+}
+
+- (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller {
+    __weak typeof(self) weakSelf = self;
+    [controller dismissViewControllerAnimated:YES completion:^{
+        __strong typeof(weakSelf) _self = weakSelf;
+        if (!_self) return;
+
+        [_self sendEventWithName:@"onProgress" body:@(NO)];
+
+        if (!_self._resolve && !_self._reject) return;
+
+        if (_self.resourcePath || _self.redirectURL) {
+            _self._resolve(@{
+                @"resourcePath": _self.resourcePath ?: @"",
+                @"checkoutId":   _self.checkoutID   ?: @"",
+                @"redirectURL":  _self.redirectURL  ?: @"",
+            });
+        } else {
+            _self._reject(@"applePay", @"cancel", nil);
+        }
+        _self.resourcePath = nil;
+        _self._resolve     = nil;
+        _self._reject      = nil;
+    }];
 }
 
 #pragma mark - OPPCheckoutProviderDelegate
