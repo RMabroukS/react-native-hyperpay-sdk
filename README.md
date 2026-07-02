@@ -82,6 +82,7 @@ HyperPay.init({
   mode: 'TestMode',                                // 'TestMode' | 'LiveMode'
   companyName: 'Your Company',                     // displayed in Apple Pay sheet (iOS only)
   supportedNetworks: ['visa', 'masterCard'],        // Apple Pay supported networks (iOS only)
+  currencyCode: 'SAR',                              // ISO 4217 currency code, Apple Pay only (iOS only)
 });
 ```
 
@@ -95,6 +96,7 @@ HyperPay.init({
 | `mode`               | `'TestMode' \| 'LiveMode'`    | No       | Payment environment — defaults to `'TestMode'`                                |
 | `companyName`        | `string`                      | No       | Merchant name displayed in the Apple Pay sheet as "Pay `<companyName>`" (iOS only) |
 | `supportedNetworks`  | `SupportedNetworks[]`         | No       | Card networks accepted by Apple Pay (e.g. `'visa'`, `'masterCard'`, `'mada'`) (iOS only) |
+| `currencyCode`       | `string`                      | No       | ISO 4217 currency code (e.g. `'SAR'`, `'USD'`) used for Apple Pay (iOS only)   |
 
 ---
 
@@ -139,6 +141,7 @@ const result = await HyperPay.applePay({
   checkoutID: '<checkout_id_from_your_server>',
   companyName: 'Your Company',   // optional — overrides init value
   amount: '100.00',              // optional — displayed in the Apple Pay sheet
+  currencyCode: 'SAR',           // optional — overrides init value
 });
 
 // result shape:

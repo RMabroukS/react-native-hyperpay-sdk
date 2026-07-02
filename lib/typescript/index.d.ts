@@ -27,9 +27,15 @@ export interface Config {
 
     /**
      *  set up supported payment networks for apple pay
-    * @Platform IOS Only 
+    * @Platform IOS Only
     */
     supportedNetworks?: Array<SupportedNetworks>
+
+    /**
+     * ISO 4217 currency code (e.g. "SAR", "USD"), Apple Pay only
+     * @Platform IOS Only
+     */
+    currencyCode?: string;
 
 }
 
@@ -37,6 +43,11 @@ export type ApplyPayParams = {
     checkoutID:string;
     companyName?:string;
     amount?:string;
+    /**
+     * ISO 4217 currency code (e.g. "SAR", "USD") — overrides init value
+     * @Platform IOS Only
+     */
+    currencyCode?:string;
 }
 
 export type CreateTransactionParams = {
@@ -63,7 +74,8 @@ export default class HyperPay {
        * @param  {CountryCodes} countryCode 
        * @param  {string} merchantIdentifier
        * @param  {string} mode
-       * @param  {SupportedNetworks[]} supportedNetworks 
+       * @param  {SupportedNetworks[]} supportedNetworks
+       * @param  {string} currencyCode
        * @returns Config
        */
 
@@ -72,7 +84,8 @@ export default class HyperPay {
     /**
        * @param  {string} checkoutID
        * @param  {string} companyName
-       * @param  {number} amount 
+       * @param  {number} amount
+       * @param  {string} currencyCode
        * @param  {(isProgress: boolean) => void} onProgress
        * @returns ```Promise<{ redirectURL?: string,
         resourcePath?: string}>```
